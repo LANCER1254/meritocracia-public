@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>１８禁ルート案 | エロ</title>
+  <style>
+:root{
+  --bg:#0b0e14;
+  --bg2:#131926;
+  --panel:#171f2e;
+  --line:rgba(255,255,255,0.10);
+  --text:#e8edf6;
+  --muted:#9aa7bd;
+  --accent:#d7b56d;
+  --accent2:#f0d9a1;
+  --link:#9fc2ff;
+  --code:#0f1520;
+  --quote:#c2a46a;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#0f1420 100%);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  line-height:1.95;
+}
+
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.shell{
+  width:min(100%, 1080px);
+  margin:0 auto;
+  padding:20px 16px 72px;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter:blur(10px);
+  background:rgba(11,14,20,0.82);
+  border-bottom:1px solid var(--line);
+}
+
+.topbar-inner{
+  width:min(100%,1080px);
+  margin:0 auto;
+  padding:12px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.brand{
+  font-size:14px;
+  letter-spacing:.08em;
+  color:var(--accent2);
+  font-weight:700;
+}
+
+.top-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:8px 12px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.btn:hover{
+  border-color:rgba(215,181,109,0.50);
+}
+
+.hero{
+  margin-top:18px;
+  border:1px solid var(--line);
+  background:rgba(23,31,46,0.74);
+  border-radius:18px;
+  padding:18px 16px;
+}
+
+.hero h1{
+  margin:0 0 8px;
+  font-size:clamp(22px,5vw,34px);
+  line-height:1.25;
+}
+
+.hero p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.card{
+  border:1px solid var(--line);
+  background:rgba(23,31,46,0.72);
+  border-radius:18px;
+  padding:16px;
+}
+
+.list{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+
+.entry{
+  display:block;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(19,25,38,0.92);
+  padding:14px;
+}
+
+.entry:hover{
+  border-color:rgba(215,181,109,0.45);
+  text-decoration:none;
+}
+
+.entry-title{
+  font-size:17px;
+  font-weight:700;
+  color:var(--text);
+  margin:0 0 6px;
+}
+
+.entry-meta{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.reader-wrap{
+  display:grid;
+  grid-template-columns: minmax(0,1fr);
+  gap:16px;
+  margin-top:16px;
+}
+
+.meta-box{
+  border:1px solid var(--line);
+  background:rgba(23,31,46,0.72);
+  border-radius:18px;
+  padding:14px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.article{
+  border:1px solid var(--line);
+  background:rgba(19,25,38,0.92);
+  border-radius:20px;
+  padding:20px 16px;
+  overflow-wrap:anywhere;
+}
+
+.article h1,.article h2,.article h3,.article h4,.article h5,.article h6{
+  line-height:1.4;
+  margin:1.6em 0 .7em;
+  color:var(--accent2);
+}
+
+.article h1{font-size:clamp(26px,5vw,38px);margin-top:0}
+.article h2{font-size:clamp(22px,4vw,30px)}
+.article h3{font-size:clamp(19px,3.6vw,24px)}
+.article p{margin:0 0 1.05em}
+.article ul,.article ol{margin:.2em 0 1.2em 1.4em;padding:0}
+.article li{margin:.35em 0}
+.article hr{
+  border:none;
+  border-top:1px solid var(--line);
+  margin:1.4em 0;
+}
+.article blockquote{
+  margin:1.2em 0;
+  padding:.2em 0 .2em 1em;
+  border-left:3px solid var(--quote);
+  color:#d8deea;
+  background:rgba(255,255,255,0.02);
+}
+.article pre{
+  overflow:auto;
+  background:var(--code);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  line-height:1.7;
+  font-size:13px;
+}
+.article code{
+  background:rgba(255,255,255,0.06);
+  padding:.15em .35em;
+  border-radius:6px;
+  font-size:.95em;
+}
+.article pre code{
+  background:transparent;
+  padding:0;
+}
+.article img{
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:1em auto;
+  border-radius:12px;
+}
+
+.nav-row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+
+.footer-note{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:12px;
+  text-align:center;
+}
+
+@media (min-width: 860px){
+  .shell{padding-left:20px;padding-right:20px}
+  .article{padding:28px 28px}
+}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">エロ</div>
+      <div class="top-actions">
+        <a class="btn" href="index.html">一覧へ戻る</a>
+        <button class="btn" id="font-minus" type="button">A-</button>
+        <button class="btn" id="font-plus" type="button">A+</button>
+        <button class="btn" id="theme-toggle" type="button">Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="meta-box">Source: １８禁ルート案.md</div>
+
+    <div class="reader-wrap">
+      <article class="article">
+        <p>クララさんと姉ちゃんが、ガールズトークに花を咲かせている横で、オレはスコーンを頰張りながら必死に紅茶に集中していた。<br>
+「ねえクララ、最近どんなの下着つけてるの？　ジェイドがいるからって遠慮しなくていいよ〜」<br>
+「ちょっとカーネル！　いきなり何言い出すのよ……」<br>
+「ぐふっ・・・」<br>
+オレは思わずむせてしまった。姉ちゃんは何言い出してるんだ。</p>
+<p>クララさんが頰を染めながらも、どこか楽しげに笑う。<br>
+銀紫色の髪の間から覗く耳が赤い。<br>
+「ほら、白状しなさいよ！白い清楚系が好き？それとも<br>
+レースがいっぱいのエロいやつ？」<br>
+オレは思わず想像してしまって顔が熱くなる。<br>
+クララさんがくすくす笑いながら、<br>
+「ジェイド君、赤くなってる……可愛い」<br>
+「うわー！　ジェイド赤くなってる（笑）茹でダコどころかトマトみたい（笑）」<br>
+カーネルが大笑いしながらオレの肩を叩く。<br>
+もう逃げ場がない。<br>
+「……レース……とか、ちょっと透けるやつ……」<br>
+小声で呟くと、途端に二人が静かになった。<br>
+「へえ……意外とえっちなの好きなんだ」<br>
+姉ちゃんが目を細めて笑う。<br>
+まるで獲物を狙うかのように。<br>
+「ねぇ、カーネルジェイド君借りて良い？」<br>
+「え〜（笑）。どうしようかな（笑）。いいよ面白そうだから<br>
+でも私も混ぜてー（笑）」</p>
+<p>「ジェイド君、こっち来て」<br>
+そういってオレはクララさんに店の奥に連れ込まれた。<br>
+クララさんがエプロンを外し、スカートをまくりあげる。<br>
+姉ちゃんが鍵を掛けた。オレが逃げ出さないように入り口を塞いでる。<br>
+クララさんは黒のショーツの下着を履いていた。<br>
+オレはそれをまじまじとみて、視線を外せなかった。<br>
+「今日のやつ......どう？」<br>
+「えっと......そのクララさんめっちゃかわいい」<br>
+そういうやいなや、クララさんは急に怒ったような顔つきになり、<br>
+ベッドの上で押し倒されて、口を塞がれた。<br>
+ファーストキスだった。舌を入れられて、<br>
+艶めかしい音が店内に響く。<br>
+「お姉ちゃんって呼んで。クララさんはいや」<br>
+「わかった......クララお姉ちゃん」<br>
+「嬉しい」<br>
+そういってオレ達は口づけを交わすのを再開した。<br>
+「ねぇちょっと〜？私もいるの忘れてない〜？」<br>
+「あっごめんカーネル。ジェイド君かわいくてつい......」<br>
+「そうだね、ジェイドがかわいいのがいけないよね」<br>
+そういって今度は姉ちゃんがキスしてきた。<br>
+舌をいれられ、思いっきり抱きしめられ甘い吐息と香りで理性が吹き飛ぶ。<br>
+「ジェイド君の固い......お姉ちゃんにみせて？」<br>
+クララさん、いやクララ姉ちゃんが上目遣いに見つめてくる。<br>
+その甘えた声に、ズボンの中で限界まで膨らんだものが痛いほど脈打った。<br>
+「ほら、立って。姉ちゃんが脱がしてあげる」<br>
+カーネルが後ろから抱きついてきて、器用にベルトを外し、ズボンと下着を一気に下ろした。<br>
+勢いよく飛び出したオレの肉棒が、空気に触れてびくんと跳ねる。<br>
+「わぁ……すごい。ジェイド君、こんなに硬くしてるんだ……」<br>
+クララ姉ちゃんが目を細めて、熱い吐息を吹きかける。<br>
+指先でそっと先端を撫でられただけで、腰が震えた。<br>
+「うわ、ジェイドのチンポ、思ってたより立派じゃん。弟ながら褒めてあげる」<br>
+カーネルが笑いながら根元を握り、ゆっくりしごき始めた。<br>
+姉の手のひらの熱さと、慣れた手つきに頭がぼーっとする。<br>
+「私舐めたい。いいよね？」<br>
+そういってカーネル姉ちゃんに目配せして舐め始めた。<br>
+「ん……れろっ……はむっ……」<br>
+丁寧で優しい舌使い。<br>
+先端を包み込むように吸い付き、舌先で尿道口を優しくほじる。<br>
+ぬるぬるとした唾液が絡みつき、じゅるっ……じゅぽっ……と甘い水音が響く。<br>
+「はぁ……クララお姉ちゃん......」<br>
+オレが喘ぐと、クララさんは嬉しそうに目を細めながらさらに深く咥え込んだ。<br>
+その間、カーネルは後ろからオレを抱きしめ、<br>
+自分の上着をはだけさせて豊かな胸を露わにした。<br>
+「ほら、自分ばっか気持ちよくなってないで私のこともかまってよ」<br>
+カーネルがオレの頭を優しく引き寄せ、乳首を口元に押しつけてくる。<br>
+柔らかくて重みのあるおっぱいを両手で揉みながら、オレは夢中で乳首を舐め、吸った。<br>
+「んっ……あはっ、すごっ......もぅと舐めて」<br>
+カーネルが甘い声を漏らしながら、オレの頭を優しく撫でる。<br>
+時々顔を上げさせ、熱いキスを繰り返してくる。<br>
+舌を深く絡め、唾液をたっぷり交換しながら、弟を翻弄するような濃厚なキス。<br>
+「んふ……ちゅっ……はむっ……ジェイドの舌、かわいい……」<br>
+クララ姉ちゃんは下で激しくフェラを続けながら、<br>
+時折上目遣いにこちらを見て、嬉しそうに目を細めている。<br>
+カーネルがキスをしながら耳元で囁いた。<br>
+「クララの口、気持ちいいでしょ？<br>
+ジェイドが感じてる顔、すごくエッチだよ……？」<br>
+オレは姉の胸を揉みしだき、姉と深くキスを交わしながら、<br>
+クララ姉ちゃんのぬるぬるした口内に腰を小刻みに動かしていた。<br>
+「んっ……ふふ、ジェイドったら夢中だね」<br>
+カーネルがキスを一旦離して、いたずらっぽく笑った。<br>
+「クララ、ちょっと交代しようか。<br>
+ジェイドのチンポ、そろそろ限界みたいだし」<br>
+クララさんが名残惜しそうにオレの肉棒を口から離す。<br>
+透明な唾液の糸が先端と唇の間に引いて、ぷつりと切れた。<br>
+二人が立ち上がって素早くポジションを入れ替えた。<br>
+今度はクララさんが後ろからオレを抱きしめ、<br>
+柔らかい胸を背中に押しつけてくる。<br>
+カーネルが正面に跪き、橙色の髪を揺らしながらオレの肉棒を正面から見上げた。<br>
+「じゃあ今度は姉ちゃんがたっぷり味わう番だね」<br>
+カーネルは迷わず先端を咥え込んだ。<br>
+さっきまでのクララの丁寧なフェラとは違い、<br>
+一気に深く、激しく、貪るような動きでしゃぶりついてくる。<br>
+「じゅるっ！　れろれろっ！　じゅぽっ、じゅぽっ！」<br>
+激しい水音が店内に響く。<br>
+喉の奥まで何度も咥え込み、舌を激しく絡めながら根元を強くしごく。<br>
+「うわっ……！　姉ちゃん、激し……あっ！」<br>
+オレの腰がガクガクと震える。<br>
+後ろからクララさんが優しく耳を甘噛みしながら囁いてきた。<br>
+「カーネル、すごいでしょ……？<br>
+ジェイド君、我慢しないで……<br>
+お姉ちゃんの口の中に、たくさん出して？」<br>
+クララさんの甘い声と、カーネルの容赦ないフェラに理性が溶けていく。<br>
+カーネルが一旦肉棒を口から離し、にやりと笑った。<br>
+「んー、まだ我慢できそう？　じゃあ次はこれで気持ちよくしてあげるね」<br>
+カーネルは立ち上がり、上着を完全に脱ぎ捨てて豊満な胸を露わにした。<br>
+その場で膝をつき直すと、オレの熱く脈打つ肉棒を両方の胸の谷間に挟み込んだ。<br>
+「ほら……姉ちゃんのパイズリ、どう？」<br>
+柔らかくて熱い乳肉が、唾液でぬるぬるになった肉棒を包み込む。<br>
+カーネルが胸を上下に動かし始めると、むにゅむにゅ先端に触れた。<br>
+ゆっくりと腰を落としていくと、狭くて熱い肉襞がオレのものを包み込んでいく。<br>
+「うあっ……！　姉ちゃんの胸……柔らかくて……すごい……」<br>
+その時、クララさんが横から加わってきた。<br>
+「私も……混ぜて？」<br>
+クララさんも胸をはだけさせ、カーネルと向かい合う形でオレの肉棒に自分の胸を押しつける。<br>
+二人の柔らかいおっぱいが、肉棒を挟んで左右から圧先端に触れた。<br>
+ゆっくりと腰を落としていくと、狭くて熱い肉襞がオレのものを包み込んでいく。<br>
+ダブルパイズリ。<br>
+「どう……？　お姉ちゃん二人のおっぱいで挟まれて、気持ちいい？」<br>
+カーネルが意地悪く笑いながら胸を激しく上下させる。<br>
+クララさんは恥ずかしそうにしながらも、優しく胸を寄せて先端を刺激してくる。<br>
+むにゅっ、むにゅむにゅっ、ぬるぬるっ……。<br>
+二種類の違う柔らかさが交互に肉棒を包み、<br>
+先端からは先走りと二人の唾液が混じり合って卑猥に糸を引く。<br>
+「はぁ……はぁ……二人とも……やばい……」<br>
+「ふふ、ジェイドのチンポ、びくびくしてるよ？<br>
+もう出そう？」<br>
+カーネルが胸でしごきながら先端を舌でチロチロと舐め、<br>
+クララさんも反対側から舌を這わせてくる。<br>
+完全にダブルフェラ＋ダブルパイズリの同時攻撃。<br>
+オレは立っているのも辛くなり、腰をガクガク震わせながら耐えていたが、<br>
+もう限界だった。<br>
+「姉ちゃん……クララお姉ちゃん……！　出る……もう出る……！！」<br>
+「出して？　お姉ちゃんたちの胸と顔に、いっぱい出して——」<br>
+カーネルの言葉が決定的だった。<br>
+ドビュルルルッ！！　ビュルルルッ！　びゅっ、びゅるるっ！！<br>
+勢いよく飛び出した濃厚な精液が、<br>
+カーネルの胸、クララさんの頰と胸、二人それぞれの顔にかかった。<br>
+白く濁った液体が、二人の肌を汚していく。<br>
+カーネルは満足そうに笑いながら、精液のついた自分の胸を寄せて肉棒を拭うように擦り、<br>
+クララさんは少し恥ずかしそうにしながらも、指で拭った精液をそっと口に含んだ。<br>
+「はぁ……はぁ……すごかったよ、ジェイド……」<br>
+「ふふ……まだまだこれからだよ？」<br>
+二人が精液まみれの顔で、淫らに微笑みながらオレを見つめてきた。<br>
+「……すごかった……二人とも……」<br>
+「ふふ、顔真っ赤だよジェイド。可愛いなぁ」<br>
+カーネルが立ち上がってオレの頰にキスをした。<br>
+クララさんも優しく微笑みながら、オレの手を握る。<br>
+「ちょっと……ベタベタだね。シャワー浴びようか？」<br>
+粉屋の奥には小さなシャワールームがあった。<br>
+三人で少し窮屈だったけど、温かいお湯が三人を包む。<br>
+カーネルが最初にオレの胸やお腹に付いた精液を丁寧に洗い流してくれる。<br>
+クララさんは後ろから背中を優しく洗いながら、時々胸をオレの背中に押しつけてきた。<br>
+「ほら、ジェイドも私たちを洗って？」<br>
+オレは泡立てた手で、二人の胸や背中、お尻を遠慮がちに撫でる。<br>
+カーネルが笑いながらオレの手を取って、自分の胸にぐっと押し当てさせた。<br>
+「もっとちゃんと洗いなさいよ〜。弟のくせに遠慮してる場合？」<br>
+「う……ごめん……」<br>
+泡まみれの二人の体を洗っていると、さっき射精したばかりなのに、また下半身が熱くなってきてしまった。<br>
+クララさんがそれに気づいて、くすっと笑う。<br>
+「ジェイド君……まだ元気なんだ？」<br>
+「え……あ、いや……その……」<br>
+カーネルが後ろからオレの半勃起した肉棒を軽く握りながら、耳元で囁いた。<br>
+「ふーん、まだこんなに硬くしてるんだ。<br>
+さっきあんなにたくさん出したのに、欲張りだねぇ」<br>
+「だって……二人ともエロいんだもん……」<br>
+素直に呟くと、二人が同時に笑った。<br>
+「正直でよろしい」<br>
+シャワーを終えて体を拭いた後、カーネルがオレの手を引いた。<br>
+「じゃあ、続きはベッドでしようか。<br>
+ここじゃちょっと狭いし……ゆっくりジェイドを可愛がってあげたいもん」<br>
+クララさんも頰を赤らめながら頷く。<br>
+「うん……私も、ジェイド君をもっと近くで感じたい」<br>
+三人は裸のまま、粉屋の奥にある小さなベッドルームへ移動した。<br>
+カーネルがベッドに腰を下ろし、足を軽く開いてオレを手招きする。<br>
+「ほら、ジェイド。<br>
+今度はお姉ちゃんたちの番だよ？」<br>
+クララさんが後ろからオレを抱きしめながら、甘く囁いた。<br>
+「ゆっくり……いっぱい、繋がろうね？」<br>
+ベッドに三人で上がると、カーネルがオレの肩を優しく押して仰向けにさせた。<br>
+「ジェイド……初めてだよね？」<br>
+「……うん」<br>
+「じゃあ、最初はクララに譲先端に触れた。<br>
+ゆっくりと腰を落としていくと、狭くて熱い肉襞がオレのものを包み込んでいく。<br>
+優しくしてあげてね、クララ」<br>
+クララさんが少し緊張した面持ちで頷き、オレの上に跨がってきた。<br>
+銀紫色の髪を耳にかけて、オレを見つめる瞳が潤んでいる。<br>
+「ジェイド君……優しく、入れるね……？」<br>
+熱く濡れた秘部が、オレの先端に触れた。<br>
+ゆっくりと腰を落としていくと、狭くて熱い肉襞がオレのものを包み込んでいく。<br>
+「あっ……はぁ……入ってきた……」<br>
+「う……くっ……クララお姉ちゃん……熱い……」<br>
+狭い内部が、きゅうきゅうと締め付けてくる。<br>
+痛いような、気持ちいいような、初めての感覚に頭が真っ白になった。<br>
+クララさんが腰をゆっくり上下させ始め、甘い声を漏らす。<br>
+「んっ……あっ……ジェイド君の……奥まで……入ってる……」<br>
+カーネルが横に座って、二人の結合部分をじっと見ながら微笑んでいた。<br>
+「いい顔してるよ、ジェイド。<br>
+クララの中、気持ちいい？」<br>
+「……すごく……気持ちいい……」<br>
+クララさんの動きが少しずつ速くなっていく。<br>
+オレは我慢できずに腰を突き上げ、クララさんの腰を掴んだ。<br>
+「あんっ！　そこ……いい……」<br>
+クララさんが感じ始め、動きが激しくなった頃、カーネルが言った。<br>
+「そろそろ交代しようか」<br>
+クララさんが名残惜しそうにオレのものを抜き、カーネルがすぐさま跨がってきた。<br>
+「今度は姉ちゃんの番だよ」<br>
+カーネルは遠慮なく腰を落とし、一気に奥まで飲み込んだ。<br>
+姉の中はクララさんより少し緩やかで、しかし強く締め付けてくる。<br>
+「うわっ……！　姉ちゃんの中……すご……」<br>
+「ふふっ、どう？　姉ちゃんのまんこ、弟のチンポにぴったりでしょ？」<br>
+カーネルが激しく腰を振りながら、オレを翻弄する。<br>
+豊かな胸が大きく揺れ、オレは夢中でそれを探って揉んだ。<br>
+しばらくカーネルが乗った後、再びクララさんが跨がってきた。<br>
+今度はカーネルがオレの顔の上に跨がり、<br>
+濡れた秘部をオレの口元に押しつける。<br>
+「ほら、ジェイド。姉ちゃんも気持ちよくして？」<br>
+顔面騎乗されながら、クララさんが再びオレの肉棒を飲み込んでいく。<br>
+前と後ろから同時に二人の女体に襲われ、オレは夢中でクララさんの秘部に舌を這わせた。<br>
+甘酸っぱい蜜を啜りながら、クンニを続ける。<br>
+「んあっ！　ジェイド君の舌……上手……あっ、あんっ！」<br>
+「はぁ……ジェイド、もっと奥まで舌入れて……そう、いい子……」<br>
+二人の甘い喘ぎ声が部屋に響き渡る中、オレはもう自分の限界が近いことを感じていた。</p>
+      </article>
+    </div>
+
+    <nav class="nav-row">
+      <span></span>
+      <span></span>
+    </nav>
+
+    <p class="footer-note">Generated by md_to_reader_html.py</p>
+  </main>
+
+  <script>
+(function() {
+  'use strict';
+
+  const STORAGE_KEY = 'merito-reader-font-scale';
+  const THEME_KEY = 'merito-reader-theme';
+
+  function applyFontScale(scale) {
+    document.documentElement.style.fontSize = scale + 'px';
+    localStorage.setItem(STORAGE_KEY, String(scale));
+  }
+
+  function loadFontScale() {
+    const saved = parseFloat(localStorage.getItem(STORAGE_KEY) || '16');
+    if (!Number.isFinite(saved)) return 16;
+    return Math.max(14, Math.min(22, saved));
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.style.setProperty('--bg', '#f6f7fb');
+      document.documentElement.style.setProperty('--bg2', '#eef1f8');
+      document.documentElement.style.setProperty('--panel', '#ffffff');
+      document.documentElement.style.setProperty('--line', 'rgba(0,0,0,0.10)');
+      document.documentElement.style.setProperty('--text', '#1d2736');
+      document.documentElement.style.setProperty('--muted', '#5d6a7d');
+      document.documentElement.style.setProperty('--accent', '#8b6524');
+      document.documentElement.style.setProperty('--accent2', '#6d4d14');
+      document.documentElement.style.setProperty('--link', '#2357c6');
+      document.documentElement.style.setProperty('--code', '#f3f5fa');
+      document.documentElement.style.setProperty('--quote', '#a06d1d');
+    } else {
+      document.documentElement.style.removeProperty('--bg');
+      document.documentElement.style.removeProperty('--bg2');
+      document.documentElement.style.removeProperty('--panel');
+      document.documentElement.style.removeProperty('--line');
+      document.documentElement.style.removeProperty('--text');
+      document.documentElement.style.removeProperty('--muted');
+      document.documentElement.style.removeProperty('--accent');
+      document.documentElement.style.removeProperty('--accent2');
+      document.documentElement.style.removeProperty('--link');
+      document.documentElement.style.removeProperty('--code');
+      document.documentElement.style.removeProperty('--quote');
+    }
+    localStorage.setItem(THEME_KEY, theme);
+  }
+
+  function loadTheme() {
+    return localStorage.getItem(THEME_KEY) || 'dark';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    applyFontScale(loadFontScale());
+    applyTheme(loadTheme());
+
+    const plus = document.getElementById('font-plus');
+    const minus = document.getElementById('font-minus');
+    const theme = document.getElementById('theme-toggle');
+
+    if (plus) {
+      plus.addEventListener('click', function() {
+        applyFontScale(loadFontScale() + 1);
+      });
+    }
+    if (minus) {
+      minus.addEventListener('click', function() {
+        applyFontScale(loadFontScale() - 1);
+      });
+    }
+    if (theme) {
+      theme.addEventListener('click', function() {
+        const next = loadTheme() === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

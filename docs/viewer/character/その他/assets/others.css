@@ -1,0 +1,241 @@
+/* =============================================
+     DESIGN TOKENS — カテゴリ追加時はここに追記
+  ============================================= */
+  :root {
+    --bg:         #0a0a0c;
+    --bg-card:    #111116;
+    --bg-card-h:  #16161d;
+    --border:     #1e1e28;
+    --text:       #d4d0c8;
+    --text-dim:   #7a7870;
+    --text-label: #5a5860;
+
+    /* カテゴリカラー */
+    --c-fo:   #b84c2a;   /* 前線騎士団 — 炎赤 */
+    --c-zg:   #2a6eb8;   /* 中央警備隊 — 帝国青 */
+    --c-va:   #7b3fb5;   /* 監察特務隊 — 深紫 */
+    --c-ac:   #c8a45a;   /* 士官学校   — 金 */
+    --c-orc:  #4a7a3a;   /* オーク帝国 — 野営緑 */
+    --c-fg:   #4a8a8a;   /* 国外勢力   — 海碧 */
+    --c-ind:  #8a6a3a;   /* 独立勢力   — 砂漠茶 */
+
+    --gold:   #c8a45a;
+    --crimson:#8b0000;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Serif JP", serif;
+    min-height: 100vh;
+    /* 微細ノイズ風グラデーション */
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, #1a0a0a22, transparent),
+      radial-gradient(ellipse 60% 40% at 80% 80%, #0a0a1a18, transparent);
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── ナビ ── */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 28px 0 0 28px;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* ── ページヘッダー ── */
+  .page-header {
+    max-width: 960px;
+    margin: 36px auto 0;
+    padding: 0 28px;
+    border-left: 2px solid var(--crimson);
+    padding-left: 20px;
+  }
+
+  .eyebrow {
+    color: var(--text-label);
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    margin-bottom: 10px;
+  }
+
+  .page-header h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #e8e4dc;
+  }
+
+  .lead {
+    margin-top: 14px;
+    color: var(--text-dim);
+    line-height: 2;
+    font-size: 0.88rem;
+  }
+
+  /* ── セクション ── */
+  .section {
+    max-width: 960px;
+    margin: 52px auto 0;
+    padding: 0 28px;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .section-head-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  .section-title {
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--text-label);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ── カードグリッド ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 16px;
+  }
+
+  /* ── カテゴリカード ── */
+  .cat-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 22px 22px;
+    overflow: hidden;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+    cursor: pointer;
+    /* 上端のカラーライン */
+    border-top: 2px solid var(--accent, #333);
+  }
+
+  .cat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 0%, var(--accent-glow, transparent), transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent, #555);
+    background: var(--bg-card-h);
+  }
+
+  .cat-card:hover::before { opacity: 1; }
+
+  /* カード内レイアウト */
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .card-label {
+    font-family: "Cinzel", serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--accent, var(--text-label));
+    opacity: 0.85;
+    padding: 3px 7px;
+    border: 1px solid var(--accent, var(--border));
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .card-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 6px var(--accent-glow, transparent));
+  }
+
+  .card-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #e8e4dc;
+    margin-bottom: 10px;
+  }
+
+  .card-desc {
+    color: var(--text-dim);
+    font-size: 0.84rem;
+    line-height: 1.85;
+  }
+
+  .card-arrow {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: "Cinzel", serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--accent, var(--text-label));
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .cat-card:hover .card-arrow {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+
+  /* ── フッター ── */
+  .page-footer {
+    max-width: 960px;
+    margin: 64px auto 72px;
+    padding: 0 28px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-link {
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    opacity: 0.5;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+  }
+
+  .footer-link:hover { opacity: 1; }
+
+  /* =============================================
+     レスポンシブ
+  ============================================= */
+  @media (max-width: 600px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 1.5rem; }
+  }

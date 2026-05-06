@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap');
+
+/* ============================================================
+   CSS VARIABLES  （terror.css から継承）
+   ============================================================ */
+:root {
+  --bg:           #060a11;
+  --bg2:          #0a1020;
+  --bg3:          #0e1628;
+  --panel:        #0d1525;
+  --panel2:       #111d35;
+
+  --gold:         #c9a961;
+  --gold2:        #e8c97a;
+  --gold-dim:     #7a6035;
+  --gold-glow:    rgba(201,169,97,0.15);
+
+  --text:         #d8ccb4;
+  --text2:        #7a6e58;
+  --text3:        #4a4030;
+
+  --border:       rgba(201,169,97,0.14);
+  --border2:      rgba(201,169,97,0.30);
+  --border3:      rgba(201,169,97,0.50);
+
+  /* 区画カラー */
+  --d-market:     #b8860b;   /* 中央市場区   */
+  --d-east:       #3a6e5a;   /* 東住宅区     */
+  --d-admin:      #2a4a7a;   /* 行政中枢区   */
+  --d-port:       #4a4a6a;   /* 港湾物流区   */
+  --d-church:     #7a3a6a;   /* 教会旧市街   */
+  --d-officer:    #7a2a2a;   /* 士官予備区   */
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 背景テクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%,   rgba(201,169,97,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 100%,  rgba(20,40,90,0.12)  0%, transparent 60%),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 100px,
+      rgba(201,169,97,0.010) 100px, rgba(201,169,97,0.010) 101px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   SHELL
+   ============================================================ */
+.city-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+}
+
+/* ============================================================
+   ① BACK LINK
+   ============================================================ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text2);
+  text-decoration: none;
+  padding: 20px 0;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--gold); }
+
+/* ============================================================
+   ② HEADER
+   ============================================================ */
+.city-header {
+  padding: 52px 0 44px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* 金ラインアクセント */
+.city-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 140px; height: 1px;
+  background: var(--gold);
+}
+
+.city-archive-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 6px;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.city-title-ja {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.city-title-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.85rem);
+  letter-spacing: 5px;
+  color: var(--gold);
+  opacity: 0.65;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.city-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.city-meta-chip {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text2);
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   SECTION UTILITY
+   ============================================================ */
+.section-block { margin-bottom: 72px; }
+
+.section-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 60px; height: 1px;
+  background: var(--gold-dim);
+}
+
+/* ============================================================
+   ③ MAP SECTION
+   ============================================================ */
+.map-frame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* 四隅装飾 */
+.map-frame::before,
+.map-frame::after {
+  content: '';
+  position: absolute;
+  width: 20px; height: 20px;
+  border-color: var(--gold-dim);
+  border-style: solid;
+  z-index: 2;
+  pointer-events: none;
+}
+.map-frame::before {
+  top: -1px; left: -1px;
+  border-width: 1px 0 0 1px;
+}
+.map-frame::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* 追加の二隅 */
+.map-frame-inner {
+  position: relative;
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow:
+    0 0 0 1px rgba(201,169,97,0.06),
+    0 24px 60px rgba(0,0,0,0.6),
+    inset 0 0 80px rgba(0,0,0,0.3);
+}
+
+.map-frame-inner::before,
+.map-frame-inner::after {
+  content: '';
+  position: absolute;
+  width: 20px; height: 20px;
+  border-color: var(--gold-dim);
+  border-style: solid;
+  z-index: 2;
+  pointer-events: none;
+}
+.map-frame-inner::before {
+  top: 10px; right: 10px;
+  border-width: 1px 1px 0 0;
+}
+.map-frame-inner::after {
+  bottom: 10px; left: 10px;
+  border-width: 0 0 1px 1px;
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 11px;
+  /* 色味をソースに合わせてわずかに補正 */
+  filter: brightness(0.97) contrast(1.02);
+  transition: filter 0.3s;
+}
+.map-image:hover {
+  filter: brightness(1.02) contrast(1.03);
+}
+
+/* POI追加用オーバーレイ（将来の拡張用） */
+.map-poi-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  /* 将来: position:absolute の <button class="poi-pin"> を配置 */
+}
+
+/* ============================================================
+   ④ DISTRICT LEGEND
+   ============================================================ */
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.district-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.district-card:hover {
+  border-color: var(--border2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* 上部カラーバー */
+.district-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--d-color, var(--gold-dim));
+}
+
+.district-swatch {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-top: 5px;
+  background: var(--d-color, var(--gold-dim));
+  box-shadow: 0 0 6px var(--d-color, transparent);
+  opacity: 0.85;
+}
+
+.district-body {}
+
+.district-name-ja {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+
+.district-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text2);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.district-notes {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.8;
+}
+
+.district-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.district-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 2px 7px;
+  border: 1px solid var(--border);
+  color: var(--text3);
+}
+
+/* ============================================================
+   ⑤ FOOTER ANNOTATION
+   ============================================================ */
+.city-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 36px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.city-footer::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0;
+  width: 80px; height: 1px;
+  background: var(--gold-dim);
+}
+
+.footer-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 2;
+  max-width: 600px;
+}
+
+.footer-note em {
+  font-style: normal;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.footer-divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+  width: 200px;
+}
+
+.footer-copyright {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text3);
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .city-shell { padding: 0 16px 80px; }
+  .city-title-ja { font-size: 1.6rem; }
+  .district-grid { grid-template-columns: 1fr; }
+  .map-frame::before,
+  .map-frame::after { display: none; }
+}

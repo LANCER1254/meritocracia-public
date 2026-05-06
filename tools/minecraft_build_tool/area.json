@@ -1,0 +1,50 @@
+{
+  "project": "Meritocracia Minecraft Prototype",
+  "origin": [0, 1, 0],
+  "areas": [
+    {
+      "id": "jade_home",
+      "name": "ジェイドの家／パン屋レオンハルト",
+      "type": "house",
+      "from": [-44, 0, -6],
+      "to": [-34, 4, 6],
+      "material_floor": "cobblestone",
+      "material_wall": "oak_planks",
+      "material_roof": "spruce_planks"
+    },
+    {
+      "id": "daily_road",
+      "name": "家から市場への生活路地",
+      "type": "road",
+      "from": [-34, 0, -2],
+      "to": [-8, 0, 2],
+      "material": "cobblestone"
+    },
+    {
+      "id": "central_market",
+      "name": "中央市場ラフ",
+      "type": "plaza",
+      "from": [-8, 0, -16],
+      "to": [24, 0, 16],
+      "material": "stone"
+    },
+    {
+      "id": "church_route",
+      "name": "市場端から星導教会への道",
+      "type": "road",
+      "from": [24, 0, -2],
+      "to": [46, 0, 2],
+      "material": "stone_bricks"
+    },
+    {
+      "id": "starchurch",
+      "name": "星導教会ラフ",
+      "type": "church",
+      "from": [48, 0, -8],
+      "to": [1, 7, 8],
+      "material_floor": "smooth_stone",
+      "material_wall": "stone_bricks",
+      "material_roof": "deepslate_tiles"
+    }
+  ]
+}

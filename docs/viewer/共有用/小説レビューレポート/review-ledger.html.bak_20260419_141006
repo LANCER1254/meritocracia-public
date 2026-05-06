@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小説レビューレポート台帳</title>
+<style>
+body{
+  margin:0;
+  background:#0f1115;
+  color:#eee;
+  font-family:system-ui, sans-serif;
+  padding:32px;
+}
+h1{
+  margin-bottom:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#171a21;
+}
+th,td{
+  border:1px solid #333;
+  padding:12px;
+  text-align:left;
+  font-size:14px;
+}
+th{
+  background:#1f2430;
+}
+tr:hover{
+  background:#202633;
+}
+.status-done{color:#8fd18f;}
+.status-wait{color:#d6b86b;}
+.status-hold{color:#c77;}
+</style>
+</head>
+<body>
+
+<h1>📘 小説レビューレポート台帳</h1>
+
+<table>
+<thead>
+<tr>
+  <th>No</th>
+  <th>作者</th>
+  <th>作品タイトル</th>
+  <th>作品分類</th>
+  <th>テーマ</th>
+  <th>感想</th>
+  <th>読了</th>
+  <th>公開ページ</th>
+  <th>作品ページ</th>
+  <th>X返信</th>
+  <th>許諾</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>001</td>
+  <td>Resetter</td>
+  <td>とある社員寮の話 南嘉手納荘四号棟</td>
+  <td>ホラー作品</td>
+  <td>🌙 Night</td>
+  <td>甘々</td>
+  <td>9話</td>
+  <td><a href="./night-review-vol1/">公開ページ</a></td>
+  <td><a href="https://ncode.syosetu.com/n1667lx/" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td class="status-done">済</td>
+  <td class="status-done">OK</td>
+</tr>
+<tr>
+  <td>002</td>
+  <td>緑茶</td>
+  <td>剣と魔法の世界で、英雄譚ができるまで</td>
+  <td>ファンタジー</td>
+  <td>👑 Luxury</td>
+  <td>辛口</td>
+  <td>8話</td>
+  <td><a href="./作者別フォルダ/ryokutya-review/luxury.html">公開ページ</a></td>
+  <td><a href="https://kakuyomu.jp/works/822139843899183154" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td class="status-done">済</td>
+  <td class="status-done">OK</td>
+</tr>
+<tr>
+  <td>003</td>
+  <td>神崎ライ</td>
+  <td>絶望の箱庭～鳥籠の姫君～</td>
+  <td>鏡モチーフ作品</td>
+  <td>🌙 Night</td>
+  <td>甘々</td>
+  <td>9話</td>
+  <td><a href="./作者別フォルダ/神崎ライ/night.html">公開ページ</a></td>
+  <td><a href="https://ncode.syosetu.com/n3370hf/" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td>未記録</td>
+  <td>未記録</td>
+</tr>
+</tbody>
+<tr>
+  <td>003</td>
+  <td>炎山ヒロト</td>
+  <td><a href="https://ncode.syosetu.com/n0390gp/5/">魔法少女戦士マジカルファイターズ</a></td>
+  <td>🌙 Night</td>
+  <td>アイリス書簡</td>
+  <td>5話</td>
+  <td><a href="./作者別フォルダ/炎山ヒロト/night.html">公開ページ</a></td>
+</tr>
+</table>
+
+</body>
+</html>

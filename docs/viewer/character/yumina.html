@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユミナ | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #060810;
+  --panel: #0f1320;
+  --panel-2: #12192a;
+  --text: #c4cdd8;
+  --muted: #8ea0b7;
+  --line: #2e3f58;
+  --accent: #3a6898;
+  --accent-soft: #6f8fb6;
+  --gold: #b9a06a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 32px 24px 80px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+header {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(58,104,152,0.10) 0%, rgba(15,19,32,0.95) 100%);
+  padding: 34px 28px;
+  margin-bottom: 20px;
+}
+
+.header-label {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.header-sub {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.header-definition {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.color-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.color-strip span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.c1 { background: #1a2436; }
+.c2 { background: #2c4666; }
+.c3 { background: #3a6898; }
+.c4 { background: #6f8fb6; }
+.c5 { background: #9aaec7; }
+.c6 { background: #b9a06a; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  color: #d7e0ea;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 14px;
+  margin: 0;
+}
+
+.status-list dt {
+  color: var(--accent-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--accent-soft);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.note-block {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.full-section {
+  margin-bottom: 20px;
+}
+
+.full-section .card {
+  padding: 24px;
+}
+
+.concept-text {
+  margin: 0;
+}
+
+.bullet-block p {
+  margin: 0 0 12px;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="../index.html" class="back">← CHARACTER LIST</a>
+
+  <header>
+    <div class="header-label">MERITOCRACIA — INTERNAL CHARACTER DOSSIER</div>
+    <h1>ユミナ</h1>
+    <div class="header-sub">YUMINA</div>
+    <div class="header-definition">
+      正しさを体現し、制度の中で頂点に立った平民出身の教官。<br>
+      その本質は、感情ではなく責任によって動く制度側の実力者でありながら、
+      職務と人間性のあいだで静かに揺らぎ始める観測者でもある。
+    </div>
+  </header>
+
+  <div class="color-strip" aria-hidden="true">
+    <span class="c1"></span>
+    <span class="c2"></span>
+    <span class="c3"></span>
+    <span class="c4"></span>
+    <span class="c5"></span>
+    <span class="c6"></span>
+  </div>
+
+  <main>
+
+    <div class="hero-grid">
+
+      <article class="card">
+        <h2 class="card-title">Basic Profile</h2>
+        <dl class="status-list">
+          <dt>NAME</dt>
+          <dd>ユミナ</dd>
+
+          <dt>AGE</dt>
+          <dd>本編時系列：約22歳 / 前日譚（2年前）：約20歳</dd>
+
+          <dt>ORIGIN</dt>
+          <dd>平民出身</dd>
+
+          <dt>AFFILIATION</dt>
+          <dd>審問庁所属</dd>
+
+          <dt>POSITION / PRESENT</dt>
+          <dd>士官学校教官・制度側の指導者ポジション</dd>
+
+          <dt>POSITION / PAST</dt>
+          <dd>初登庁直後の新人。宗教機関監視・情報収集・各所への顔出しを担当</dd>
+
+          <dt>CAREER</dt>
+          <dd>グローリアテスト最優秀成績・一発合格</dd>
+
+          <dt>FAMILY</dt>
+          <dd>姉：クララ / 両親：平民</dd>
+
+          <dt>ROLE</dt>
+          <dd>制度・理性・責任の側から物語に関与し、ジェイドとアイリスを導く人物</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Symbol Tags</h2>
+        <div class="tag-row">
+          <span class="tag">JUSTICE</span>
+          <span class="tag">RESPONSIBILITY</span>
+          <span class="tag">COMMONER</span>
+          <span class="tag">INQUISITION</span>
+          <span class="tag">MENTOR</span>
+          <span class="tag">DUTY VS EMOTION</span>
+        </div>
+
+        <div class="note-block">
+          <p><strong>表層象徴：</strong>正しさ / 制度 / 指導 / 職務倫理 / 平民からの成り上がり</p>
+          <p><strong>深層象徴：</strong>感情の抑制 / 任務と好意の乖離 / 喪失の観測者 / 回収される未整理感情</p>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Character Definition</h2>
+        <p class="concept-text">
+          ユミナは、平民出身でありながら制度の中で頂点に立った実力者である。<br><br>
+          彼女は感情に流される人物ではなく、常に「何が正しいか」「何を果たすべきか」を基準に行動する。<br><br>
+          そのため本質的には制度側の人間であり、ジェイドのような不安定な才能や、
+          アイリスのような傷を抱えた存在に対しても、まず保護・指導・監督という形で関与する。<br><br>
+          ただし彼女は単なる冷徹な官僚ではない。<br>
+          職務として接触した相手に対して、本来切り離すべき情が生まれてしまう余地を持っており、
+          その点において制度の完成品ではなく、制度の中で揺れる人間として設計される。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Position / Career</h2>
+        <p class="concept-text">
+          ユミナは審問庁所属の人材であり、グローリアテストを最優秀成績で一発合格した経歴を持つ。<br><br>
+          平民出身でありながら制度上の頂点に到達したことそれ自体が、
+          メリトクラシアの能力主義が掲げる理想形のひとつになっている。<br><br>
+          本編では士官学校教官としてジェイドたちの前に立つが、
+          前日譚段階ではまだ初登庁直後の新人であり、宗教機関の監視、情報収集、
+          関係各所への挨拶や顔出しといった任務を担っていた。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Personality</h2>
+        <p class="concept-text">
+          ユミナは理性的で、判断基準がぶれにくい人物である。<br><br>
+          感情よりも責任を優先し、場に必要な行動を選び取る傾向が強い。<br>
+          そのため、周囲からは厳格で近寄りがたい印象を持たれることもある。<br><br>
+          しかし彼女の厳しさは他者を切り捨てるためのものではなく、
+          むしろ「守るべきものを守るために判断を誤らない」ための強さである。<br><br>
+          正しさを信じているがゆえに、正しさの名のもとで人が壊れていく危うさにも敏感であり、
+          そこにユミナという人物の倫理的な深みがある。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Role in the Story</h2>
+        <p class="concept-text">
+          物語上のユミナは、ジェイドの感情的な衝動や未成熟さに対する
+          「制度側からの導き手」として機能する。<br><br>
+          彼女は命令するだけの上位者ではなく、
+          才能を持ちながら危うさを抱える者に対して、放置ではなく導く責任を負う人物である。<br><br>
+          またアイリスにとっては、制度側にいながらも無条件に敵ではない存在であり、
+          国家の側にもまだ信頼できる人間がいることを示す役割を担う。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Iris</h2>
+        <p class="concept-text">
+          ユミナは、アイリスがダークエルフであり、かつ奴隷という複雑な立場に置かれていることを理解している。<br><br>
+          そのうえで、制度的な距離を保ちながらも、感情の面では彼女を放置できない。<br>
+          実の妹のように接し、大切にしようとする姿勢は、
+          ユミナが単なる役人ではなく、人間として他者を見ていることの証明でもある。<br><br>
+          この関係は、アイリスにとって制度側への不信をわずかに和らげる要素となりうる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Jade</h2>
+        <p class="concept-text">
+          ユミナは、ジェイドの才能を高く評価している。<br><br>
+          ただしその評価は無条件の賛美ではない。<br>
+          彼女はジェイドを、放置すれば危険な存在にもなりうると判断している。<br><br>
+          だからこそユミナにとってジェイドは、
+          単なる優秀な少年ではなく、「導くべき対象」である。<br><br>
+          ここには教師としての責任だけでなく、
+          才能が誤った方向へ進めば制度も本人も壊すという現実的な危機感が含まれている。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Reinart</h2>
+        <p class="concept-text">
+          ユミナはライナルトを、教官としては優秀な生徒だと評価している。<br><br>
+          思想の一部には共通項もあり、能力や規律を重んじる点では近い部分もある。<br>
+          しかし両者は倫理観において決定的に異なる。<br><br>
+          ユミナにとって正しさとは、責任と保護を伴うものである。<br>
+          一方でライナルトは、その正しさを手段や選別の論理へ先鋭化させる危うさを持つ。<br><br>
+          そのためユミナは彼を見込んでいるからこそ、同時に強く警戒している。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Connection to Church Arc</h2>
+        <p class="concept-text">
+          教会バイト編におけるユミナは、カーネルが働く教会を訪れる。<br><br>
+          表向きの目的は挨拶と関係構築だが、実際には監視任務と情報収集が主目的である。<br><br>
+          つまり彼女は最初から「善意だけでそこにいた人物」ではなく、
+          制度側の目として教会を観察していた。<br><br>
+          この時点でのユミナは、まだ職務を優先する新人審問庁員であり、
+          感情より任務の比重が大きい段階にある。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Kernel</h2>
+        <p class="concept-text">
+          ユミナとカーネルは、教会で複数回接触している。<br><br>
+          互いに日常会話が成立する程度には親しく、
+          表面上は軽い雑談や自然なやり取りを交わせる関係である。<br><br>
+          ただしこの関係には認識差がある。<br>
+          カーネル側は好意的で素の関係として受け取っている一方、
+          ユミナ側は当初、任務上の接触として関わっていた。<br><br>
+          それでも接触を重ねる中で、任務とは切り分けきれない好感や関心が生まれていく。<br>
+          このズレが、後の喪失や感情回収の下地になる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Duty vs Emotion</h2>
+        <p class="concept-text">
+          ユミナの重要な核は、職務と感情が完全には一致していない点にある。<br><br>
+          初期の彼女はあくまで任務対象として人に近づく。<br>
+          しかし接触を重ねた相手を、いつまでもただの対象として扱い続けることはできない。<br><br>
+          そのためユミナは、理性と責任の側に立ちながら、
+          内面では人間としての情を抱えてしまう。<br><br>
+          この構造によって彼女は、
+          「感情を捨てきれないから弱い」のではなく、
+          「感情があってもなお職務を果たそうとするからこそ苦しい」人物になる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Structural Function</h2>
+        <p class="concept-text">
+          ユミナの構造上の役割は、教会編で接点を形成し、
+          テロ事件編で喪失を経験し、本編でその感情を回収することにある。<br><br>
+          彼女はジェイドのように感情を前面に出す側ではなく、
+          むしろ理性と職務を優先する立場から同じ喪失に接続する。<br><br>
+          そのためユミナは、物語の中で
+          「制度側にも傷つく人間がいる」「責任を負う者ほど感情を後回しにしてしまう」
+          という層を担う重要人物として機能する。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Internal Keywords</h2>
+        <div class="tag-row">
+          <span class="tag">平民出身</span>
+          <span class="tag">審問庁</span>
+          <span class="tag">士官学校教官</span>
+          <span class="tag">一発合格</span>
+          <span class="tag">制度の頂点</span>
+          <span class="tag">正しさ</span>
+          <span class="tag">責任</span>
+          <span class="tag">監視任務</span>
+          <span class="tag">教会接点</span>
+          <span class="tag">カーネル接触</span>
+          <span class="tag">感情と職務の乖離</span>
+          <span class="tag">保護者的立場</span>
+          <span class="tag">ジェイド導き手</span>
+          <span class="tag">アイリスへの庇護</span>
+          <span class="tag">ライナルト警戒</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Fixed Notes</h2>
+        <div class="bullet-block">
+          <p><strong>固定1：</strong>ユミナは平民出身でありながら、制度の中で頂点に立った実力者である。</p>
+          <p><strong>固定2：</strong>感情ではなく「正しさ」と「責任」に基づいて行動する。</p>
+          <p><strong>固定3：</strong>前日譚では初登庁直後の新人として、宗教機関監視と情報収集を担う。</p>
+          <p><strong>固定4：</strong>教会でカーネルと接触し、任務と感情が完全には一致しない状態へ移行する。</p>
+          <p><strong>固定5：</strong>本編ではジェイドとアイリスに対する導き手・保護者的立場として機能する。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>制度の正しさを体現しながら、人として揺らぐ余地を捨てきれない観測者</p>
+    <small>MERITOCRACIA — INTERNAL CHARACTER DOSSIER / YUMINA CORE</small>
+  </footer>
+
+</div>
+</body>
+</html>

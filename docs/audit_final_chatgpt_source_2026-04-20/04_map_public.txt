@@ -1,0 +1,1221 @@
+bundle: map
+generated: 2026-04-20 12:26:22
+
+==================================================
+FILE: ./viewer/map/css/style.css
+--------------------------------------------------
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+/* 上部バー */
+#info {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+/* メインエリア */
+#main-container {
+  display: flex;
+  margin-top: 40px;
+  height: calc(100vh - 80px);
+}
+
+/* 地図 */
+#map {
+  flex: 1;
+  background: black;
+}
+
+/* 右サイドバー */
+#sidebar {
+  width: 320px;
+  background: rgba(20,20,20,0.95);
+  border-left: 1px solid #333;
+  overflow-y: auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* セクション */
+.panel {
+  margin-bottom: 25px;
+}
+
+.panel h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+/* リスト項目 */
+.list-item {
+  padding: 6px 8px;
+  margin: 4px 0;
+  cursor: pointer;
+  background: #222;
+  border-left: 3px solid #444;
+  transition: 0.2s;
+}
+
+.list-item:hover {
+  background: #333;
+}
+
+.list-item.active {
+  background: #0050aa;
+  border-left-color: #00aaff;
+}
+
+/* 下部レイヤータブ */
+#layerTabs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  padding: 8px;
+  text-align: center;
+}
+
+#layerTabs button {
+  margin: 0 8px;
+  padding: 6px 14px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#layerTabs button.active {
+  background: #0080ff;
+}
+
+==================================================
+FILE: ./viewer/map/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>MeritMap v3</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- 上部ステータス -->
+<div id="info">Loading...</div>
+
+<!-- メインエリア（地図 + サイドバー） -->
+<div id="main-container">
+
+    <!-- 地図 -->
+    <canvas id="map"></canvas>
+
+    <!-- 右側サイドバー -->
+    <div id="sidebar">
+
+        <div class="panel">
+            <h3>📍 都市</h3>
+            <div id="cityList"></div>
+        </div>
+
+        <div class="panel">
+            <h3>🎯 物語拠点</h3>
+            <div id="anchorList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 下部レイヤータブ -->
+<div id="layerTabs"></div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/map/js/loader.js
+--------------------------------------------------
+import { state } from "./state.js";
+
+// 🔥 GitHub Pages対応パス
+const BASE = location.hostname.includes("github.io")
+  ? "/meritocracia-team-share/viewer"
+  : "";
+
+export async function loadGrid(canvas) {
+    const res = await fetch(`${BASE}/data/grids/london_grid.csv`);
+    if (!res.ok) {
+        throw new Error("❌ Failed to load london_grid.csv: " + res.status);
+    }
+
+    const text = await res.text();
+
+    // 🔥 改行・BOM対策
+    const rows = text
+        .replace(/^\uFEFF/, "")     // BOM除去
+        .replace(/\r/g, "")         // CR除去
+        .trim()
+        .split("\n");
+
+    state.gridData = [];
+    state.minE = Infinity;
+    state.minN = Infinity;
+    state.maxE = -Infinity;
+    state.maxN = -Infinity;
+
+    for (let i = 1; i < rows.length; i++) {
+        if (!rows[i]) continue;
+
+        const cols = rows[i].split(",");
+
+        // 🔥 安全パース（trim必須）
+        const e = parseFloat(cols[0]?.trim());
+        const n = parseFloat(cols[1]?.trim());
+        const m = parseInt(cols[4]?.trim() || "0");
+
+        if (!Number.isFinite(e) || !Number.isFinite(n)) {
+            // デバッグ用（必要ならON）
+            // console.warn("⚠️ skip row:", rows[i]);
+            continue;
+        }
+
+        state.minE = Math.min(state.minE, e);
+        state.minN = Math.min(state.minN, n);
+        state.maxE = Math.max(state.maxE, e);
+        state.maxN = Math.max(state.maxN, n);
+
+        state.gridData.push({ e, n, m });
+    }
+
+    // 🔥 完全防御
+    if (state.gridData.length === 0) {
+        console.error("❌ Grid data is empty（CSVパース失敗）");
+        return;
+    }
+
+    const rangeE = state.maxE - state.minE;
+    const rangeN = state.maxN - state.minN;
+
+    const screenWidth = window.innerWidth * 0.95;
+    const screenHeight = window.innerHeight * 0.85;
+
+    const scaleByWidth = screenWidth / (rangeE / 1000);
+    const scaleByHeight = screenHeight / (rangeN / 1000);
+
+    state.CELL_SIZE = Math.min(scaleByWidth, scaleByHeight);
+
+    canvas.width = (rangeE / 1000) * state.CELL_SIZE;
+    canvas.height = (rangeN / 1000) * state.CELL_SIZE;
+
+    console.error(`🔥 Canvas size: ${canvas.width.toFixed(0)} x ${canvas.height.toFixed(0)}`);
+    console.error(`🔥 CELL_SIZE: ${state.CELL_SIZE.toFixed(2)}px`);
+    console.error(`🔥 Grid cells: ${state.gridData.length}`);
+}
+
+export async function loadCities() {
+    const res = await fetch(`${BASE}/data/reference/real_cities.csv`);
+    const text = await res.text();
+
+    const rows = text
+        .replace(/^\uFEFF/, "")
+        .replace(/\r/g, "")
+        .trim()
+        .split("\n");
+
+    state.cityData = [];
+
+    for (let i = 1; i < rows.length; i++) {
+        if (!rows[i]) continue;
+
+        const cols = rows[i].split(",");
+
+        state.cityData.push({
+            id: cols[0],
+            name_en: cols[1],
+            name_jp: cols[2],
+            e: parseFloat(cols[3]),
+            n: parseFloat(cols[4]),
+            category: cols[5]
+        });
+    }
+
+    console.error(`🔥 loadCities OK. cities= ${state.cityData.length}`);
+}
+
+export async function loadWorldLayout() {
+    const res = await fetch(`${BASE}/dist/world_layout.json`);
+
+    if (!res.ok) {
+        throw new Error("Failed to load world_layout.json: " + res.status);
+    }
+
+    const json = await res.json();
+    const layout = json.world_layout;
+
+    const anchors = Object.entries(layout.anchors).map(([id, v]) => ({
+        id,
+        label: v.label,
+        role: v.role,
+        e: v.bng[0],
+        n: v.bng[1],
+        visibility: v.visibility || {}
+    }));
+
+    state.worldLayout = {
+        crs: layout.crs,
+        travelModel: layout.travel_model,
+        anchors
+    };
+
+    console.error(`🔥 Loaded ${anchors.length} anchors`);
+}
+==================================================
+FILE: ./viewer/map/js/main.js
+--------------------------------------------------
+// canvas_v3/js/main.js
+console.error("🔥 [MeritMap] main.js TOP", new Date().toISOString());
+
+import { loadGrid, loadCities, loadWorldLayout } from "./loader.js";
+import { render } from "./renderer.js";
+import { initLayerTabs, initSidebar } from "./ui.js";
+import { state } from "./state.js";
+
+async function init() {
+  console.error("🔥 [MeritMap] init START");
+
+  const canvas = document.getElementById("map");
+  const info = document.getElementById("info");
+
+  if (!canvas) {
+    if (info) info.innerText = "Error: #map canvas not found";
+    throw new Error("canvas #map not found");
+  }
+
+  try {
+    if (info) info.innerText = "Loading grid...";
+    await loadGrid(canvas);
+    console.error("🔥 loadGrid OK. cells=", state.gridData?.length);
+
+    if (info) info.innerText = "Loading cities...";
+    await loadCities();
+    console.error("🔥 loadCities OK. cities=", state.cityData?.length);
+
+    if (info) info.innerText = "Loading layout...";
+    await loadWorldLayout();
+    console.error("🔥 loadWorldLayout OK. anchors=", state.worldLayout?.anchors?.length);
+
+    // ✅ 初回描画（ctx渡さない）
+    render(canvas);
+    console.error("🔥 render OK");
+
+    // ✅ レイヤータブ初期化
+    initLayerTabs(canvas);
+    console.error("🔥 initLayerTabs OK");
+
+    // ✅ サイドバー初期化（これが今まで無かった）
+    initSidebar(canvas);
+    console.error("🔥 initSidebar OK");
+
+    if (info) info.innerText = "✅ Ready";
+
+  } catch (err) {
+    console.error("🔥 INIT ERROR:", err);
+    if (info) info.innerText = "Error: " + (err?.message ?? String(err));
+  }
+}
+
+init();
+
+==================================================
+FILE: ./viewer/map/js/renderer.js
+--------------------------------------------------
+import { state } from "./state.js";
+import { ENtoPixel } from "./utils.js";
+
+export function render(canvas, ctx) {
+  if (!canvas || !ctx) return;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  /* ========================= */
+  /* 地形                     */
+  /* ========================= */
+
+  if (state.activeLayers.grid && state.gridData.length > 0) {
+    ctx.fillStyle = "#5aa0e6";
+
+    for (const cell of state.gridData) {
+      const pos = ENtoPixel(cell.e, cell.n, canvas);
+
+      ctx.fillRect(
+        Math.floor(pos.x),
+        Math.floor(pos.y),
+        Math.ceil(state.CELL_SIZE),
+        Math.ceil(state.CELL_SIZE)
+      );
+    }
+  }
+
+  /* ========================= */
+  /* 都市                     */
+  /* ========================= */
+
+  if (state.activeLayers.real_cities) {
+
+    if (state.selectedCity) {
+      const city = state.cityData.find(c => c.id === state.selectedCity);
+      if (city) drawCity(city, canvas, ctx);
+    } else {
+      for (const city of state.cityData) {
+        drawCity(city, canvas, ctx);
+      }
+    }
+  }
+
+  /* ========================= */
+  /* 物語拠点                 */
+  /* ========================= */
+
+  if (state.activeLayers.anchors && state.worldLayout?.anchors) {
+
+    const anchors = state.worldLayout.anchors;
+
+    if (state.selectedAnchor) {
+      const anchor = anchors.find(a => a.id === state.selectedAnchor);
+      if (anchor) drawAnchor(anchor, canvas, ctx);
+    } else {
+      for (const anchor of anchors) {
+        drawAnchor(anchor, canvas, ctx);
+      }
+    }
+  }
+
+  /* ========================= */
+  /* 軍事（今は未実装枠）     */
+  /* ========================= */
+
+  if (state.activeLayers.military) {
+    // 今後ここに軍事描画を書く
+  }
+}
+
+
+/* ========================= */
+/* 都市描画                  */
+/* ========================= */
+
+function drawCity(city, canvas, ctx) {
+  const pos = ENtoPixel(city.e, city.n, canvas);
+
+  ctx.beginPath();
+  ctx.arc(pos.x, pos.y, 6, 0, Math.PI * 2);
+  ctx.fillStyle = "#00c8ff";
+  ctx.fill();
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "bold 14px sans-serif";
+  ctx.fillText(city.name_jp || city.name_en, pos.x + 8, pos.y - 8);
+}
+
+
+/* ========================= */
+/* 拠点描画                  */
+/* ========================= */
+
+function drawAnchor(anchor, canvas, ctx) {
+  const pos = ENtoPixel(anchor.e, anchor.n, canvas);
+
+  ctx.beginPath();
+  ctx.arc(pos.x, pos.y, 7, 0, Math.PI * 2);
+  ctx.fillStyle = "#ff4dd2";
+  ctx.fill();
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "bold 14px sans-serif";
+  ctx.fillText(anchor.label, pos.x + 8, pos.y - 8);
+}
+
+==================================================
+FILE: ./viewer/map/js/state.js
+--------------------------------------------------
+// canvas_v3/js/state.js
+
+export const state = {
+  // =========================
+  // 基本設定
+  // =========================
+  CELL_SIZE: 1,
+
+  // =========================
+  // データ
+  // =========================
+  gridData: [],
+  cityData: [],
+  worldLayout: null,
+
+  // =========================
+  // マップ範囲
+  // =========================
+  minE: 0,
+  minN: 0,
+  maxE: 0,
+  maxN: 0,
+
+  // =========================
+  // レイヤー表示制御
+  // =========================
+  activeLayers: {
+    grid: true,
+    real_cities: true,
+    anchors: true,
+    military: true
+  },
+
+  // =========================
+  // 🔥 単体選択モード
+  // =========================
+  selectedCity: null,
+  selectedAnchor: null,
+
+  // =========================
+  // 🔥 表示モード
+  // =========================
+  cityDisplayMode: "single",   // "all" | "single"
+  anchorDisplayMode: "all"     // "all" | "single"
+};
+
+==================================================
+FILE: ./viewer/map/js/state/archive/state_legacy.js
+--------------------------------------------------
+// canvas_v3/js/state.js
+
+export const state = {
+  // =========================
+  // 基本設定
+  // =========================
+  CELL_SIZE: 1,
+
+  // =========================
+  // データ
+  // =========================
+  gridData: [],
+  cityData: [],
+  worldLayout: null,
+
+  // =========================
+  // マップ範囲
+  // =========================
+  minE: 0,
+  minN: 0,
+  maxE: 0,
+  maxN: 0,
+
+  // =========================
+  // レイヤー表示制御
+  // =========================
+  activeLayers: {
+    grid: true,
+    real_cities: true,
+    anchors: true,
+    military: true
+  },
+
+  // =========================
+  // 🔥 単体表示用（今回追加）
+  // =========================
+  selectedCity: null,
+  selectedAnchor: null
+};
+
+==================================================
+FILE: ./viewer/map/js/ui.js
+--------------------------------------------------
+import { state } from "./state.js";
+import { render } from "./renderer.js";
+
+/* ========================= */
+/* レイヤータブ              */
+/* ========================= */
+
+export function initLayerTabs(canvas) {
+    const container = document.getElementById("layerTabs");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const ctx = canvas.getContext("2d");
+
+    const layers = [
+        { key: "grid", label: "地形" },
+        { key: "real_cities", label: "都市" },
+        { key: "anchors", label: "拠点" },
+        { key: "military", label: "軍事" },
+    ];
+
+    layers.forEach(layer => {
+        const btn = document.createElement("button");
+        btn.textContent = layer.label;
+
+        btn.className = state.activeLayers[layer.key] ? "active" : "";
+
+        btn.onclick = () => {
+            state.activeLayers[layer.key] = !state.activeLayers[layer.key];
+            btn.className = state.activeLayers[layer.key] ? "active" : "";
+
+            render(canvas, ctx);
+        };
+
+        container.appendChild(btn);
+    });
+}
+
+/* ========================= */
+/* サイドバー初期化          */
+/* ========================= */
+
+export function initSidebar(canvas) {
+    initCityList(canvas);
+    initAnchorList(canvas);
+}
+
+/* ========================= */
+/* 都市リスト（単体表示式）  */
+/* ========================= */
+
+function initCityList(canvas) {
+    const container = document.getElementById("cityList");
+    if (!container) return;
+
+    container.innerHTML = "";
+    const ctx = canvas.getContext("2d");
+
+    state.cityData.forEach(city => {
+
+        const item = document.createElement("div");
+        item.className = "list-item";
+        item.textContent = city.name_jp;
+
+        item.onclick = () => {
+
+            // 同じ都市をクリックしたら解除（全表示）
+            if (state.selectedCity === city.id) {
+                state.selectedCity = null;
+            } else {
+                state.selectedCity = city.id;
+            }
+
+            updateActiveStyles(container);
+            render(canvas, ctx);
+        };
+
+        container.appendChild(item);
+    });
+}
+
+/* ========================= */
+/* 拠点リスト（単体表示式）  */
+/* ========================= */
+
+function initAnchorList(canvas) {
+    const container = document.getElementById("anchorList");
+    if (!container) return;
+
+    container.innerHTML = "";
+    const ctx = canvas.getContext("2d");
+
+    state.worldLayout.anchors.forEach(anchor => {
+
+        const item = document.createElement("div");
+        item.className = "list-item";
+        item.textContent = anchor.label;
+
+        item.onclick = () => {
+
+            if (state.selectedAnchor === anchor.id) {
+                state.selectedAnchor = null;
+            } else {
+                state.selectedAnchor = anchor.id;
+            }
+
+            updateActiveStyles(container);
+            render(canvas, ctx);
+        };
+
+        container.appendChild(item);
+    });
+}
+
+/* ========================= */
+/* スタイル更新              */
+/* ========================= */
+
+function updateActiveStyles(container) {
+    const items = container.querySelectorAll(".list-item");
+
+    items.forEach(item => {
+        if (
+            item.textContent === getSelectedName()
+        ) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+}
+
+function getSelectedName() {
+    if (state.selectedCity) {
+        const city = state.cityData.find(c => c.id === state.selectedCity);
+        return city?.name_jp;
+    }
+
+    if (state.selectedAnchor) {
+        const anchor = state.worldLayout.anchors.find(a => a.id === state.selectedAnchor);
+        return anchor?.label;
+    }
+
+    return null;
+}
+
+==================================================
+FILE: ./viewer/map/js/utils.js
+--------------------------------------------------
+import { state } from "./state.js";
+
+export function ENtoPixel(e, n, canvas) {
+    const x = ((e - state.minE) / 1000) * state.CELL_SIZE;
+    const y = canvas.height - ((n - state.minN) / 1000) * state.CELL_SIZE;
+    return {x, y};
+}
+
+export function colorFromMask(mask) {
+    if (mask == 0) return "#111";
+    if (mask == 1) return "#4A90E2";
+    if (mask == 2) return "#E94E4E";
+    return "#333";
+}
+
+export function cityColor(category) {
+    switch(category) {
+        case "capital": return "#ff3333";
+        case "university": return "#3399ff";
+        case "industrial": return "#888888";
+        case "coastal": return "#00cccc";
+        case "regional": return "#ffaa00";
+        default: return "#00aaff";
+    }
+}
+
+==================================================
+FILE: ./viewer/map/minecraft/assets/minecraft.css
+--------------------------------------------------
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel-2: #1e2430;
+  --text: #e8ecf3;
+  --muted: #a8b0c0;
+  --accent: #72d572;
+  --accent-2: #4ea1ff;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 12px 30px rgba(0,0,0,0.28);
+  --radius: 18px;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0d1014 0%, #141923 100%);
+  color: var(--text);
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.page-header {
+  padding: 56px 0 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.15;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.status-box {
+  margin-top: 28px;
+  background: rgba(114, 213, 114, 0.08);
+  border: 1px solid rgba(114, 213, 114, 0.22);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.status-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 22px 0 56px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(114, 213, 114, 0.35);
+  background: linear-gradient(180deg, rgba(114, 213, 114, 0.08), rgba(255,255,255,0.03));
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-badge {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--accent-2);
+}
+
+.panel {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  margin: 24px 0 56px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--accent-2);
+  font-size: 14px;
+}
+
+.devlog-content {
+  white-space: pre-wrap;
+  color: var(--text);
+}
+
+.devlog-content h1,
+.devlog-content h2,
+.devlog-content h3 {
+  line-height: 1.3;
+  margin-top: 1.4em;
+}
+
+.devlog-content p,
+.devlog-content li {
+  color: var(--text);
+}
+
+.devlog-content ul {
+  padding-left: 1.2em;
+}
+
+==================================================
+FILE: ./viewer/map/minecraft/devlog.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開発日報 | Minecraft化計画</title>
+  <link rel="stylesheet" href="./assets/minecraft.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div class="eyebrow">DEVLOG</div>
+      <h1>開発日報</h1>
+      <p class="lead">
+        Minecraft化計画に関する作業ログ閲覧ページです。
+      </p>
+      <a class="back-link" href="./index.html">← 中間ハブへ戻る</a>
+    </header>
+
+    <section class="panel">
+      <div id="devlog-content" class="devlog-content">読み込み中...</div>
+    </section>
+  </main>
+
+  <script>
+    async function loadDevlog() {
+      const target = document.getElementById('devlog-content');
+      try {
+        const res = await fetch('./logs/2026-04-17-devlog.md');
+        if (!res.ok) throw new Error('devlog not found');
+        const text = await res.text();
+
+        const escaped = text
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+
+        const html = escaped
+          .replace(/^# (.*)$/gm, '<h1>$1</h1>')
+          .replace(/^## (.*)$/gm, '<h2>$1</h2>')
+          .replace(/^- (.*)$/gm, '<li>$1</li>');
+
+        target.innerHTML = html
+          .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/^/, '<p>')
+          .replace(/$/, '</p>');
+      } catch (err) {
+        target.innerHTML = '<p>日報の読込に失敗しました。</p>';
+        console.error(err);
+      }
+    }
+
+    loadDevlog();
+  </script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/map/minecraft/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft化計画 | 中間ハブ</title>
+  <link rel="stylesheet" href="./assets/minecraft.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div class="eyebrow">MAP HUB / MINECRAFT PLAN</div>
+      <h1>Minecraft化計画</h1>
+      <p class="lead">
+        マイクラ化プロジェクトの中間ハブです。
+        現在は PoC 成功後の整理フェーズとして、
+        作業日報と進捗ボードを分けて閲覧できる構造にしています。
+      </p>
+
+      <section class="status-box">
+        <div class="status-label">CURRENT STATUS</div>
+        <strong>PoC成功・調整未着手で凍結中</strong><br>
+        白地図への複数画像オーバーレイ基盤は成立。
+        次の再開候補は、位置調整・視覚統合・UI化です。
+      </section>
+    </header>
+
+    <section class="cards">
+      <a class="card" href="./devlog.html">
+        <span class="card-icon">📝</span>
+        <h2>開発日報</h2>
+        <p>PoC成功までの作業ログ、確認事項、保留項目を閲覧します。</p>
+        <span class="card-badge">VIEW DEVLOG</span>
+      </a>
+
+      <a class="card" href="./minecraft-roadmap.html">
+        <span class="card-icon">🧱</span>
+        <h2>Minecraft化進捗ボード</h2>
+        <p>計画、進捗、今後の工程を確認するための既存ページです。</p>
+        <span class="card-badge">VIEW ROADMAP</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/map/minecraft/logs/2026-04-17-devlog.md
+--------------------------------------------------
+# 作業日報｜2026-04-17
+
+## World Terrain Prototype Engine オーバーレイ基盤PoC
+
+本日の目的は、Claude 納品版の責務分離構造を維持したまま、
+白地図ベース上に複数の詳細地図画像を重ねる基盤を試験実装し、
+その可否を確認することだった。
+
+## 結論
+
+画像オーバーレイ基盤のPoCは成功した。
+
+当初は world-data.json 不在や画像配置未反映により視覚上の変化がなく、
+構造のみ追加された状態だったが、必要ファイル補充・結線確認・可視化確認を段階的に進めた結果、
+白地図上に以下2枚を重ねて表示できることを確認した。
+
+- grand-central-map.png
+- academy-map.png
+
+## 今回確認できたこと
+
+- HTML 側の overlay レイヤー追加
+- JSON での複数画像管理
+- 専用 renderer の追加
+- 既存 zoom / pan / POI 構造との共存
+
+が成立することを実証できた。
+
+## 主作業
+
+- Claude 納品版の構造確認
+- world-data.json / 画像ファイル不足の検出と補充
+- world-overlay-renderer.js 新規作成
+- index.html に overlay-layer 追加
+- world.css に overlay 用スタイル追記
+- world-data.js に normalizeOverlay() と imageOverlays 読込処理追加
+- world.js に overlay renderer の import / 初期化 / 描画結線追加
+- world-data.json に image_overlays 追加
+- ローカルサーバー起動後、HTTP 200 応答と表示可否を確認
+- visibility check により中央へ強制配置し、2枚の画像表示成功を確認
+
+## 現段階の扱い
+
+この件は「未完成だから失敗」ではなく、
+PoC成功・調整未着手で凍結として扱う。
+
+今後は「マイクラ化プロジェクト」の一環として再開するのが妥当。
+
+## 未着手・保留
+
+- 位置調整
+- サイズ調整
+- オーバーレイ画像の視覚統合
+- upload / paste / drag による編集UI
+- 中間ハブからの進捗導線整備
+
+==================================================
+FILE: ./viewer/map/minecraft/minecraft-roadmap.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft化計画 | メリトクラシア Map HUB</title>
+  <style>
+    :root {
+      --bg: #060a11;
+      --bg-panel: #0d1525;
+      --gold: #c9a961;
+      --gold-dim: #7a6035;
+      --text: #d8ccb4;
+      --text-muted: #7a6e58;
+      --border: rgba(201,169,97,0.2);
+      --accent-green: #4ade80;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Noto Serif JP", serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .header .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .section-block {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      padding: 24px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--gold);
+      border-left: 3px solid var(--gold);
+      padding-left: 12px;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    blockquote {
+      margin: 0 0 24px 0;
+      padding: 16px;
+      background: rgba(201, 169, 97, 0.05);
+      border-left: 2px solid var(--gold-dim);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ステータスリスト */
+    .status-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--gold-dim);
+      margin-right: 12px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .checkbox.checked {
+      background-color: var(--gold-dim);
+    }
+
+    .checkbox.checked::after {
+      content: '✓';
+      position: absolute;
+      top: -2px;
+      left: 3px;
+      color: var(--bg);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .checked + span {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    /* フェーズ表示 */
+    .phase-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .phase-card {
+      border-left: 1px solid var(--gold-dim);
+      padding-left: 16px;
+    }
+
+    .phase-label {
+      font-size: 0.8rem;
+      color: var(--gold-dim);
+      font-weight: bold;
+    }
+
+    .phase-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .phase-details {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-left: 12px;
+    }
+
+    /* 工数・メモ */
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      font-size: 0.85rem;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 40px;
+      text-align: center;
+

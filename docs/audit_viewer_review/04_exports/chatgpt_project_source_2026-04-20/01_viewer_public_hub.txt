@@ -1,0 +1,570 @@
+bundle: official_site
+generated: 2026-04-20 12:26:22
+
+==================================================
+FILE: ./viewer/official-site/assets/public.css
+--------------------------------------------------
+/* ============================================================
+   MERITOCRACIA — 公開用スタイルシート
+   ファイル: assets/public.css
+   用途: index.html（一般公開）専用
+   index_internal.html とは共有しない（独立CSS）
+   ============================================================ */
+
+/* ============================================================
+   カスタムプロパティ
+   ============================================================ */
+:root {
+  --bg:      #070910;
+  --bg2:     #0b0e18;
+  --bg3:     #101420;
+  --bg4:     #161b28;
+  --gold:    #c8a45a;
+  --gold2:   #e5c97e;
+  --gold3:   #f5dfa0;
+  --text:    #cfc4ae;
+  --text2:   #7a6e5a;
+  --text3:   #3a4858;
+  --border:  rgba(200,164,90,0.12);
+  --border2: rgba(200,164,90,0.25);
+  --red:     #8b2020;
+}
+
+/* ============================================================
+   リセット & ベース
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* 背景グリッドテクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%,   rgba(200,164,90,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 100% 100%, rgba(139,32,32,0.05) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(200,164,90,0.007) 120px, rgba(200,164,90,0.007) 121px),
+    repeating-linear-gradient(0deg,  transparent, transparent 120px, rgba(200,164,90,0.007) 120px, rgba(200,164,90,0.007) 121px);
+  pointer-events: none; z-index: 0;
+}
+
+/* ============================================================
+   ヘッダー
+   ============================================================ */
+.site-header {
+  position: relative; z-index: 10;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,9,16,0.95);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 48px 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.site-title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  color: var(--text);
+  line-height: 1;
+}
+
+.site-tagline {
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: var(--text2);
+  margin-top: 8px;
+}
+
+/* 連載再開バッジ */
+.launch-badge {
+  text-align: right;
+  border: 1px solid var(--border2);
+  padding: 12px 20px;
+  background: rgba(200,164,90,0.05);
+}
+
+.badge-date {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--gold2);
+  letter-spacing: 3px;
+}
+
+.badge-text {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   ヒーロー
+   ============================================================ */
+.hero {
+  position: relative; z-index: 1;
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* 背景タイポグラフィ装飾 */
+.hero::before {
+  content: 'MERITOCRACIA';
+  position: absolute;
+  bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(200,164,90,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 10px;
+}
+
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.hero-catch {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: var(--gold2);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 15px;
+
+==================================================
+FILE: ./viewer/official-site/assets/public.js
+--------------------------------------------------
+/* ============================================================
+   MERITOCRACIA — 公開用JavaScript
+   ファイル: assets/public.js
+   用途: index.html（一般公開）専用
+
+   動作概要:
+   1. data/data_public.json を fetch
+   2. "public": true のエントリのみ抽出
+   3. セクション別にカードを生成
+   4. カードナビゲーションを生成
+   ============================================================ */
+
+// ============================================================
+// セクション定義
+// JSONのcategoryとHTMLセクションIDの対応表
+// 追加する場合はここに追記するだけでOK
+// ============================================================
+const SECTIONS = [
+  { id: 'world',     label: '世界観',   en: 'WORLD',     icon: '🌍', category: '世界観' },
+  { id: 'character', label: 'キャラ',   en: 'CHARACTER', icon: '👤', category: 'キャラクター' },
+  { id: 'story',     label: 'ストーリー', en: 'STORY',   icon: '📖', category: 'ストーリー' },
+  { id: 'news',      label: 'NEWS',     en: 'NEWS',      icon: '📢', category: 'NEWS' },
+];
+
+// ============================================================
+// メイン処理
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+
+  fetch('./data/data_public.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`data_public.json の読み込みに失敗: ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      // public: true のエントリのみ抽出
+      const publicData = data.filter(item => item.public === true);
+
+      buildCardNav(publicData);
+      buildSections(publicData);
+    })
+    .catch(err => {
+      console.error('[MERITOCRACIA]', err.message);
+      // JSONが未作成の場合でもサイト自体は表示される（エラー非表示）
+    });
+
+});
+
+// ============================================================
+// カードナビゲーション生成
+// ============================================================
+function buildCardNav(data) {
+  const nav = document.getElementById('card-nav');
+  if (!nav) return;
+
+  SECTIONS.forEach(sec => {
+    // そのセクションにデータが1件以上あるか確認
+    const hasItems = data.some(item => item.category === sec.category);
+    if (!hasItems) return; // データがないセクションはナビにも表示しない
+
+    const a = document.createElement('a');
+    a.className = 'nav-card';
+    a.href = `#${sec.id}`;
+    a.innerHTML = `
+      <span class="nav-card-icon">${sec.icon}</span>
+      <div class="nav-card-name">${sec.en}</div>
+      <div class="nav-card-ja">${sec.label}</div>
+    `;
+    nav.appendChild(a);
+  });
+}
+
+// ============================================================
+// セクション生成
+// ============================================================
+function buildSections(data) {
+  const container = document.getElementById('sections');
+  if (!container) return;
+
+  SECTIONS.forEach((sec, index) => {
+    // そのカテゴリのアイテムを抽出
+    const items = data.filter(item => item.category === sec.category);
+    if (items.length === 0) return; // データがないセクションはスキップ
+
+    const section = document.createElement('section');
+    section.className = 'section-block';
+    section.id = sec.id;
+
+    // セクションヘッダー
+    const header = `
+      <div class="section-header">
+        <span class="section-num">${String(index + 1).padStart(2, '0')} / ${sec.en}</span>
+        <h2 class="section-title">${sec.label}</h2>
+      </div>
+    `;
+
+    // コンテンツカード生成
+    const cards = items.map(item => buildContentCard(item)).join('');
+
+    section.innerHTML = `
+      <div class="section-inner">
+        ${header}
+        <div class="content-grid">${cards}</div>
+      </div>
+    `;
+
+    container.appendChild(section);
+  });
+}
+
+// ============================================================
+// コンテンツカード生成
+// item の構造:
+// {
+//   "id": "...",
+//   "category": "世界観",
+//   "tag": "WORLD",
+//   "title": "...",
+//   "desc": "...",
+//   "link": "./viewer/story/index.html",  // 省略可
+//   "link_label": "詳しく見る",            // 省略可
+//   "public": true
+// }
+// ============================================================
+function buildContentCard(item) {
+  // リンクが設定されている場合のみリンク要素を追加
+  const linkHTML = item.link
+    ? `<a href="${item.link}">${item.link_label || '詳しく見る →'}</a>`
+    : '';
+
+  return `
+    <div class="content-card">
+      <div class="content-card-tag">${item.tag || item.category.toUpperCase()}</div>
+      <div class="content-card-title">${item.title}</div>
+      <div class="content-card-desc">${item.desc || ''}</div>
+      ${linkHTML}
+    </div>
+  `;
+}
+
+==================================================
+FILE: ./viewer/official-site/data_public.json
+--------------------------------------------------
+[
+  {
+    "id": "world-001",
+    "category": "世界観",
+    "tag": "WORLD",
+    "title": "メリトクラシアとは",
+    "desc": "能力主義を国家理念に掲げる都市国家。表向きは機械的平等を標榜するが、その実態は複雑な階層構造を内包している。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "world-002",
+    "category": "世界観",
+    "tag": "SYSTEM",
+    "title": "グローリアテスト",
+    "desc": "国家が管理する選抜試験。合格者のみが審問庁や士官学校への門戸を開かれる。複数科目制で部分合格が認められる。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "world-003",
+    "category": "世界観",
+    "tag": "RELIGION",
+    "title": "天啓教と均衡解放戦線",
+    "desc": "神の啓示を信じる宗教組織と、その過激派が組織した宗教テロ組織。メリトクラシアを異端国家と見なし浄化を目論む。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "char-001",
+    "category": "キャラクター",
+    "tag": "PROTAGONIST",
+    "title": "ジェイド・レオンハルト",
+    "desc": "最下層平民出身の主人公。答えを持たないまま、制度と神と人間の狭間を進む少年。心音解析能力を持つ。",
+    "link": "./viewer/character/jade/presentation.html",
+    "link_label": "詳細を見る →",
+    "public": true
+  },
+  {
+    "id": "char-002",
+    "category": "キャラクター",
+    "tag": "RIVAL",
+    "title": "ライナルト＝グロース",
+    "desc": "正しく積み上げた者が正しく勝つ世界を信じて疑わない少年。制度の完成形として設計されたライバル。",
+    "link": "./viewer/character/reinhardt/presentation.html",
+    "link_label": "詳細を見る →",
+    "public": true
+  },
+  {
+    "id": "story-001",
+    "category": "ストーリー",
+    "tag": "PROLOGUE",
+    "title": "プロローグ：テロ事件編",
+    "desc": "Year+8。建国記念日の中央市場を舞台にした宗教テロ事件。ジェイドの人生を変えた原点となる出来事。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "story-002",
+    "category": "ストーリー",
+    "tag": "MAIN",
+    "title": "本編：グローリアテスト編",
+    "desc": "Year+10。本編開始。ジェイドがグローリアテストに挑み、審問庁への道を目指す物語の幕が上がる。",
+    "link": "./viewer/story/index.html",
+    "link_label": "タイムラインを見る →",
+    "public": true
+  },
+  {
+    "id": "news-001",
+    "category": "NEWS",
+    "tag": "ANNOUNCE",
+    "title": "連載再開のお知らせ",
+    "desc": "2025年5月8日より、小説家になろうにて連載を再開します。新章「グローリアテスト編」からお楽しみください。",
+    "link": "https://ncode.syosetu.com/",
+    "link_label": "なろうで読む →",
+    "public": true
+  },
+  {
+    "id": "internal-001",
+    "category": "制作・運営",
+    "tag": "INTERNAL",
+    "title": "制作進行管理",
+    "desc": "スタッフ内部向けの制作進行ページ。",
+    "link": null,
+    "link_label": null,
+    "public": false
+  }
+]
+
+==================================================
+FILE: ./viewer/official-site/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="『メリトクラシア -Reboot-』公式サイト。世界観、国家機関、キャラクター、年表、マップ、制作ログを公開中。">
+  <title>【公式】メリトクラシア -Reboot-｜世界観・キャラクター・公式資料</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/public.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <span class="header-label">OFFICIAL SITE</span>
+      <h1 class="site-title">MERITOCRACIA</h1>
+      <p class="site-tagline">メリトクラシア</p>
+    </div>
+    <div class="header-right">
+      <div class="launch-badge">
+        <span class="badge-date">2025.05.08</span>
+        <span class="badge-text">連載再開</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-official">『メリトクラシア -Reboot-』公式サイト</p>
+    <p class="hero-catch">功績はすべてに勝る——</p>
+    <p class="hero-sub">
+      能力主義国家メリトクラシアを舞台にした、<br>
+      制度と神と人間が衝突するダークファンタジー。
+    </p>
+    <a class="hero-cta" href="https://ncode.syosetu.com/" target="_blank" rel="noopener">
+      小説を読む →
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     固定4導線ポータル
+     ============================================================ -->
+<section class="portal-nav">
+  <div class="portal-shell">
+
+    <div class="portal-section">
+      <div class="portal-section-head">
+        <h2 class="portal-section-title">世界へ入る</h2>
+        <span class="portal-section-sub">WORLD ENTRY</span>
+      </div>
+
+      <div class="hub-grid">
+        <a class="hub-card" href="../共有用/public-character/index.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">👤</span>
+            <span class="hub-badge">CORE</span>
+          </div>
+          <h3 class="hub-title">CHARACTERS</h3>
+          <p class="hub-meta">登場人物アーカイブ</p>
+          <p class="hub-desc">主要人物と関係性の公開導線</p>
+        </a>
+
+        <a class="hub-card" href="../db/nation/index.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">🏛</span>
+            <span class="hub-badge">DB</span>
+          </div>
+          <h3 class="hub-title">NATION / DB</h3>
+          <p class="hub-meta">国家アーカイブ</p>
+          <p class="hub-desc">制度・国家機関・世界観資料</p>
+        </a>
+
+        <a class="hub-card" href="../map/index.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">🗺</span>
+            <span class="hub-badge">MAP</span>
+          </div>
+          <h3 class="hub-title">WORLD MAP</h3>
+          <p class="hub-meta">世界地図</p>
+          <p class="hub-desc">国家と地理の全体俯瞰</p>
+        </a>
+
+        <a class="hub-card hub-card-feature" href="../db/city/_local_staging_backup/grand-central_interactive_v1/">
+          <div class="hub-card-top">
+            <span class="hub-icon">🏙</span>
+            <span class="hub-badge hub-badge-green">FEATURE</span>
+          </div>
+          <h3 class="hub-title">GRAND CENTRAL</h3>
+          <p class="hub-meta">王都インタラクティブ</p>
+          <p class="hub-desc">王都を実際に歩ける先行公開MAP</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="portal-section">
+      <div class="portal-section-head">
+        <h2 class="portal-section-title">作品外周を広げる</h2>
+        <span class="portal-section-sub">OUTER ARCHIVE</span>
+      </div>
+
+      <div class="hub-grid">
+        <a class="hub-card" href="../tools/work-os/index.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">📋</span>
+            <span class="hub-badge">LOG</span>
+          </div>
+          <h3 class="hub-title">AUTHOR'S DESK</h3>
+          <p class="hub-meta">制作ログ</p>
+          <p class="hub-desc">制作進行・作業導線・運用ログ</p>
+        </a>
+
+        <a class="hub-card" href="../共有用/reading-blend/index.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">✒</span>
+            <span class="hub-badge">PROFILE</span>
+          </div>
+          <h3 class="hub-title">ABOUT AUTHOR</h3>
+          <p class="hub-meta">作者紹介</p>
+          <p class="hub-desc">Lancerと制作思想の紹介</p>
+        </a>
+
+        <a class="hub-card" href="../共有用/小説レビューレポート/review-ledger.html">
+          <div class="hub-card-top">
+            <span class="hub-icon">📘</span>
+            <span class="hub-badge">REVIEW</span>
+          </div>
+          <h3 class="hub-title">REVIEW LEDGER</h3>
+          <p class="hub-meta">感想台帳</p>
+          <p class="hub-desc">読者・作者とのレビュー記録</p>
+        </a>
+
+        <a class="hub-card hub-card-disabled" href="#">
+          <div class="hub-card-top">
+            <span class="hub-icon">🧱</span>
+            <span class="hub-badge">SUMMER</span>
+          </div>
+          <h3 class="hub-title">MINECRAFT PV</h3>
+          <p class="hub-meta">将来公開予定</p>
+          <p class="hub-desc">国家白地図 × 王都seed × 夏季PV</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ============================================================
+     JSON動的ナビ
+     ============================================================ -->
+<nav class="card-nav" id="card-nav"></nav>
+
+<!-- ============================================================
+     JSON動的セクション
+     ============================================================ -->
+<main class="sections" id="sections"></main>
+
+<section class="access-section">
+

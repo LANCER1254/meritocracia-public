@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "id": "garnet",
+    "theme": "ember-knight",
+    "default_mode": "night",
+    "template_version": "1.0"
+  },
+
+  "header": {
+    "brand_logo": "Meritocracia — Frontorden Ember Archive No.01",
+    "char_name_en": "Garnet Valgray",
+    "char_name_ja": "ガーネット・ヴァルグレイ",
+    "divider_symbol": "✦",
+    "corner_symbol": "✦",
+    "particle_count": 7,
+    "dawn_ray_count": 4
+  },
+
+  "flavor": {
+    "night": {
+      "text": "炎上する都市の中でも、<br>　　　　　最後まで剣を下ろさなかった男",
+      "sub": "— The Sword That Entered the Fire After the Sirens —"
+    },
+    "dawn": {
+      "text": "守れなかった命を背負いながらも、<br>　　　　　それでも次の市民を守るため前へ出る",
+      "sub": "— Not Salvation, But Duty Carried Into Morning —"
+    }
+  },
+
+  "color_strip": {
+    "night": ["#0a0608", "#7f0f19", "#b51f2e", "#d4a64a", "#4a0d12", "#f2e3c6"],
+    "dawn":  ["#1a1008", "#a24d1c", "#d97a2b", "#f0c86a", "#5b2e14", "#fff2d9"]
+  },
+
+  "profile": {
+    "card_title": "Front Profile",
+    "fields": [
+      { "label": "Name", "value": "ガーネット・ヴァルグレイ" },
+      { "label": "Affiliation", "value": "Frontorden（前線騎士団）" },
+      { "label": "Age", "value": "35歳" },
+      { "label": "Role", "value": "FOリーダー / 対テロ鎮圧指揮官" },
+      { "label": "Disposition", "value": "歴戦騎士 / 現実主義 / 市民防衛優先" },
+      { "label": "Weapon", "value": "聖剣" }
+    ],
+    "tags": [
+      "FO Leader",
+      "Frontorden",
+      "Veteran Knight",
+      "Holy Sword",
+      "Zero Arc Hero"
+    ]
+  },
+
+  "capability": {
+    "card_title": "Capability",
+    "bars": [
+      { "label": "前線指揮", "value": 96 },
+      { "label": "対テロ制圧", "value": 94 },
+      { "label": "市街地戦対応", "value": 92 },
+      { "label": "護衛・防衛判断", "value": 95 },
+      { "label": "政治的柔軟性", "value": 58 }
+    ]
+  },
+
+  "concept": {
+    "card_title": "Concept",
+    "text": "中央市場炎槍事件において、<em>事件後にFOを率いて現場へ突入した</em>歴戦の指揮官。<br><br>彼は英雄譚の主人公のように人々を励ます男ではない。むしろ、炎上する都市と叫ぶ市民の中で、まず最初に<strong>制圧・封鎖・救助動線</strong>を組み立てる現場の人間である。<br><br>ジェイドにとってのガーネットは、優しい救済ではなく、<em>『この国にも本物の強者はいる』</em> と焼き付けた背中そのものだった。"
+  },
+
+  "night_notes": {
+    "warning_label": "Classified — Frontorden Emergency Combat Record",
+    "entries": [
+      {
+        "title": "外見の核",
+        "body": "深い紅玉色の髪と整えられた髭を持つ中年の男。白銀の重装甲に深紅のマント、胸部や肩部にはガーネット色の意匠が組み込まれている。第一印象は豪胆ではなく、静かな威圧。"
+      },
+      {
+        "title": "目と表情",
+        "body": "瞳は赤銅寄りの暗い赤。常に燃えているわけではない。炎が消えずに奥で残っているような視線をしている。笑顔は少なく、口元がわずかに緩む程度。"
+      },
+      {
+        "title": "体格と姿勢",
+        "body": "巨漢ではないが、厚みのある実戦体型。肩幅が広く、重心が低い。儀礼向けの立ち方ではなく、いつでも抜刀・指示・突入に移れる前線指揮官の立ち方をしている。"
+      },
+      {
+        "title": "古傷",
+        "body": "顔には古い傷跡が一本だけ残る。派手ではないが、視線を受けた時に『この男は生き残ってきた』と伝わる程度の傷。勲章ではなく履歴。"
+      },
+      {
+        "title": "現実主義の意味",
+        "body": "彼の現実主義は冷笑ではない。救えない命があることを知った上で、それでも救える人数を最大化するために決断を下す思考。市民防衛優先という原則は、その冷たさの奥にある。"
+      },
+      {
+        "title": "中央市場炎槍事件での位置",
+        "body": "事件当日、FOはT+12分に出動し、ガーネットが指揮官を務めた。到着時点で市場は炎上・召喚獣暴走・市民逃走の最中であり、彼はそこで制圧戦闘と救助開始までを担う。"
+      },
+      {
+        "title": "ジェイドから見た意味",
+        "body": "幼いジェイドにとって、ガーネットは『助けてくれた誰か』ではなく『炎の中に入っていった本物の大人』である。言葉より背中が記憶に残るタイプの英雄。"
+      }
+    ],
+    "dossier": {
+      "icon": "🔥",
+      "label": "Frontorden Emergency Record →",
+      "href": "garnet_internal_record.html"
+    }
+  },
+
+  "dawn_notes": {
+    "warning_label": "Dawn Record — Public Character View",
+    "entries": [
+      {
+        "title": "英雄ではなく責任者",
+        "body": "ガーネットは民衆の前で理想を語るタイプではない。彼が守るのは秩序であり、その秩序の先にいる市民だ。だからこそ、感傷より先に配置を決め、剣を抜く。"
+      },
+      {
+        "title": "髪色の意味",
+        "body": "宝石の名を持つ彼の髪は、鮮烈な赤ではなく深く沈んだ紅玉色。燃える情熱そのものではなく、何度も焼けたあとでも残り続ける意志を象徴している。"
+      },
+      {
+        "title": "聖剣との相性",
+        "body": "聖剣使いでありながら、神話的な神聖さより『実戦で使い倒された秩序の刃』という印象が強い。祈りのための剣ではなく、都市を守るための剣。"
+      },
+      {
+        "title": "今後の運用",
+        "body": "ZERO編ではジェイドの英雄像として機能し、後の章ではFrontorden側の価値観と現場判断主義を体現する人物として機能する。レオンハルト・クロイツを追加する場合も、ガーネットは上位の象徴で残せる。"
+      }
+    ],
+    "dossier": {
+      "icon": "✨",
+      "label": "Public Character Record →",
+      "href": "garnet_internal_record.html"
+    }
+  },
+
+  "footer": {
+    "quote": "炎の中へ入るのは勇気ではない。そこに入らなければ、もっと多くが死ぬと知っているだけだ",
+    "label": "Meritocracia — Frontorden Archive / Garnet Valgray"
+  },
+
+  "relationship_axis": {
+    "vs_jade": "英雄の背中 / 強者の原像",
+    "vs_frontorden": "秩序 / 制圧 / 防衛の象徴",
+    "vs_incident": "中央市場炎槍事件の現場指揮官"
+  },
+
+  "motif": {
+    "symbols": ["聖剣", "深紅のマント", "古傷", "紅玉色の髪", "炎上都市", "白銀重装"],
+    "theme_night": "炎の中の秩序 / 現場指揮",
+    "theme_dawn": "救済ではなく責任"
+  }
+}

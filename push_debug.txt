@@ -1,0 +1,47 @@
+=== PWD ===
+/home/lancer/DOCS/meritocracia-public
+=== REMOTE ===
+origin	https://github.com/LANCER1254/meritocracia-public.git (fetch)
+origin	https://github.com/LANCER1254/meritocracia-public.git (push)
+=== BRANCH ===
+* main bfefd9c Initial public site release
+=== STATUS ===
+?? push_debug.txt
+=== OBJECT COUNT ===
+count: 1276
+size: 32.90 MiB
+in-pack: 0
+packs: 0
+size-pack: 0 bytes
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+=== REPO SIZE ===
+105M	.
+35M	.git
+=== FILE SIZE TOP 20 ===
+8494585 ./docs/viewer/official-site/recruit-planner-scenario/meritocracy_proposal_v2.pdf
+3696317 ./docs/settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/data/grids/london_grid.csv
+2774600 ./docs/viewer/db/world/_prototype_gc_overlay_ja_ui/assets/gc-overlay-debug-ja.png
+2774600 ./docs/viewer/db/world/_prototype_gc_overlay_ja_interactive/gc-overlay-debug-ja.png
+2622232 ./docs/viewer/db/nation/sanginaria/sanginaria-map/locations/haikan-monastery/haikan_monastery_map_labeled_v1.png
+2201277 ./docs/viewer/character/その他/garnet./ChatGPT Image 2026年4月17日 22_03_29.png
+2119846 ./docs/viewer/db/nation/sanginaria/sanginaria-map/base/sanginaria_base_map_labeled_v1.png
+2080417 ./docs/settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/FO/レオンハルトクロイツ/ChatGPT Image 2026年4月18日 21_13_07.png
+1920355 ./docs/settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ガレス　レオンハルト/ChatGPT Image 2026年4月18日 20_57_15.png
+1912925 ./docs/viewer/db/world/archive/world_terrain_prototype_v1_2_2026-04-16/assets/world-terrain-map.png
+1912925 ./docs/viewer/db/world/archive/world_terrain_prototype_v1_2026-04-16/assets/world-terrain-map.png
+1912925 ./docs/viewer/db/world/archive/world_terrain_prototype_v1_1_2026-04-16/assets/world-terrain-map.png
+1912925 ./docs/viewer/db/world/_prototype_v1_2_zoomtest/assets/world-terrain-map.png
+1912925 ./docs/viewer/db/world/_prototype_gc_overlay_ja/assets/world-terrain-map_backup.png
+1912925 ./docs/viewer/db/world/_prototype_gc_overlay_ja/assets/world-terrain-map.png
+1912925 ./docs/viewer/db/world/_prototype_gc_overlay_ja/assets/grand-central-overlay-ja.png
+1912925 ./docs/viewer/db/world/_prototype/assets/world-terrain-map.png
+1878440 ./docs/viewer/db/city/_local_staging_backup/grand-central_wip_2026-04-16_1811/academy/academy-map.png
+1878440 ./docs/viewer/db/city/_local_staging_backup/academy-map.png
+1867927 ./docs/viewer/db/city/grand-central/grand-central-map.png
+=== TOTAL FILES ===
+1191
+=== LAST COMMITS ===
+bfefd9c Initial public site release
+=== REMOTE MAIN CHECK ===

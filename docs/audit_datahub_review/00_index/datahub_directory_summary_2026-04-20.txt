@@ -1,0 +1,23 @@
+datahub directory summary
+
+generated: 2026-04-20 12:40:40
+
+[top-level under Meritocracia_Data_Hub]
+./settings/Meritocracia_Data_Hub/00_トップページ
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki
+./settings/Meritocracia_Data_Hub/02_制作・運営
+./settings/Meritocracia_Data_Hub/03_作品管理
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート
+./settings/Meritocracia_Data_Hub/{
+./settings/Meritocracia_Data_Hub/テコ入れ本文
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化
+
+[file counts by top-level directory]
+   182  ./settings/Meritocracia_Data_Hub/02_制作・運営
+   171  ./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート
+   126  ./settings/Meritocracia_Data_Hub/03_作品管理
+   119  ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki
+    22  ./settings/Meritocracia_Data_Hub/テコ入れ本文
+    19  ./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化
+     1  ./settings/Meritocracia_Data_Hub/00_トップページ
+     0  ./settings/Meritocracia_Data_Hub/{

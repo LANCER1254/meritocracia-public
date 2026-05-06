@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ガレス・レオンハルト | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #060810;
+  --panel: #0f1320;
+  --panel-2: #141a24;
+  --text: #cbd2dc;
+  --muted: #9aa5b4;
+  --line: #2e3945;
+  --accent: #9f6937;
+  --accent-soft: #c38a52;
+  --warm: #5f4634;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 32px 24px 80px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+header {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(159,105,55,0.12) 0%, rgba(15,19,32,0.96) 100%);
+  padding: 34px 28px;
+  margin-bottom: 20px;
+}
+
+.header-label {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.header-sub {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.header-definition {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.color-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.color-strip span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.c1 { background: #1b2230; }
+.c2 { background: #5d412f; }
+.c3 { background: #8b5b34; }
+.c4 { background: #b97a44; }
+.c5 { background: #d5c7b9; }
+.c6 { background: #4c3729; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  color: #dce3ec;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 14px;
+  margin: 0;
+}
+
+.status-list dt {
+  color: var(--accent-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--accent-soft);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.note-block {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.full-section {
+  margin-bottom: 20px;
+}
+
+.full-section .card {
+  padding: 24px;
+}
+
+.concept-text {
+  margin: 0;
+}
+
+.bullet-block p {
+  margin: 0 0 12px;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="../index.html" class="back">← CHARACTER LIST</a>
+
+  <header>
+    <div class="header-label">MERITOCRACIA — INTERNAL CHARACTER DOSSIER</div>
+    <h1>ガレス・レオンハルト</h1>
+    <div class="header-sub">GARETH LEONHARDT</div>
+    <div class="header-definition">
+      ガレス・レオンハルトは、家族を守るために感情より現実を選び続けてきた、<br>
+      不器用で寡黙な父親である。
+    </div>
+  </header>
+
+  <div class="color-strip" aria-hidden="true">
+    <span class="c1"></span>
+    <span class="c2"></span>
+    <span class="c3"></span>
+    <span class="c4"></span>
+    <span class="c5"></span>
+    <span class="c6"></span>
+  </div>
+
+  <main>
+
+    <div class="hero-grid">
+
+      <article class="card">
+        <h2 class="card-title">Basic Profile</h2>
+        <dl class="status-list">
+          <dt>NAME</dt>
+          <dd>ガレス・レオンハルト</dd>
+
+          <dt>AGE</dt>
+          <dd>38〜42歳前後</dd>
+
+          <dt>SEX</dt>
+          <dd>男性</dd>
+
+          <dt>RACE</dt>
+          <dd>人間</dd>
+
+          <dt>RANK</dt>
+          <dd>平民（ウンフェーイグ）</dd>
+
+          <dt>HEIGHT</dt>
+          <dd>178cm前後</dd>
+
+          <dt>POSITION</dt>
+          <dd>レオンハルト家の父 / 家庭の生活基盤を担う実務担当</dd>
+
+          <dt>RESIDENCE</dt>
+          <dd>メリトクラシア都市圏の平民居住区</dd>
+
+          <dt>ROLE</dt>
+          <dd>家族の現実・生活・責任を引き受ける無言の支柱</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Symbol Tags</h2>
+        <div class="tag-row">
+          <span class="tag">FATHER</span>
+          <span class="tag">REALITY</span>
+          <span class="tag">RESPONSIBILITY</span>
+          <span class="tag">COMMONER</span>
+          <span class="tag">WORKER</span>
+          <span class="tag">FOUNDATION</span>
+        </div>
+
+        <div class="note-block">
+          <p><strong>表層象徴：</strong>父 / 労働 / 生活 / 家計 / 現実 / 無言の責任</p>
+          <p><strong>深層象徴：</strong>感情を後回しにする愛情 / 家庭の土台 / 優しくない現実 / 壊れる前の家を支える柱</p>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Character Definition</h2>
+        <p class="concept-text">
+          ガレス・レオンハルトは、レオンハルト家における「現実そのもの」を担う父である。<br><br>
+          彼は理想や夢を語る人物ではない。<br>
+          この世界では、まず食うこと、生き延びること、家を回すことが先にあると知っている。<br><br>
+          そのためガレスの優しさは、言葉の慰めではなく、
+          仕事を続けること、生活を崩さないこと、家族を飢えさせないことの中に現れる。<br><br>
+          彼は厳しい。<br>
+          だがそれは冷酷だからではなく、
+          優しいだけでは守れない現実を知りすぎているからである。<br><br>
+          家族を守るために感情より現実を選び続けてきた男――
+          それがガレスの核である。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Appearance</h2>
+        <p class="concept-text">
+          ガレスは、生活に削られた実務家としての外見を持つ。<br><br>
+          年齢感は30代後半〜40代前半に見え、
+          アンバーオレンジ系の父系カラーの髪を短く、やや無造作に整えている。<br><br>
+          カーネルの父系カラーの起点となる存在であり、
+          彼女が「発光する火」なら、ガレスは「燃え残りを抱えた炉」に近い。<br><br>
+          顔立ちは整っているが、目元や輪郭には労働と責任による疲れが刻まれている。<br>
+          うっすらとした無精髭は許容範囲であり、むしろ生活感と相性が良い。<br><br>
+          体格は細マッチョではなく、前腕・肩・首筋に厚みのある実務筋肉。<br>
+          騎士のような華やかさではなく、日々の労働で作られた体として見せるのが正しい。<br><br>
+          服装は白シャツ、濃茶〜焦茶の革エプロン、袖まくり、実務用ベルト、革ブーツ。<br>
+          すべてが働く男としての説得力を優先している。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Personality</h2>
+        <p class="concept-text">
+          ガレスは寡黙で、現実主義の性格をしている。<br><br>
+          無駄口を叩かず、感情を表に出しにくい。<br>
+          怒鳴り散らすタイプではなく、低い声で短く釘を刺す人物である。<br><br>
+          しかし、優しさがないわけではない。<br>
+          ただ、その優しさを言葉に変えるのが苦手なだけで、
+          根本には家族を守る責任感が強くある。<br><br>
+          理想や感情だけでは生活が回らないことを、
+          骨の髄まで知っている男だからこそ、
+          彼の態度は常に厳しさを帯びる。<br><br>
+          それでも彼の愛情は確かに存在しており、
+          それは説明ではなく行動として現れる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Family Position</h2>
+        <p class="concept-text">
+          レオンハルト家の中で、ガレスは「生活担当」「家計の土台」「現実を引き受ける人」として機能する。<br><br>
+          母ミレイユが心と家庭の柔らかさを守るなら、
+          ガレスはその家が壊れないように支える物質的・現実的な柱である。<br><br>
+          彼がいることで、家族は今日を食べて生き延びることができる。<br>
+          その意味でガレスは、家族の中で最も派手さがない代わりに、
+          最も崩れてはいけない基盤を担っている。<br><br>
+          彼はレオンハルト家における“土台”であり、
+          だからこそ感情表現より責任が先に出る。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Mireille</h2>
+        <p class="concept-text">
+          ミレイユが家庭の柔らかさを担う存在であるのに対し、
+          ガレスは生活の現実と基盤を担う存在である。<br><br>
+          二人の関係は、派手に愛を語る夫婦ではない。<br>
+          だが、長年の役割分担と信頼によって成立している。<br><br>
+          ミレイユが心を守り、ガレスが生活を守る。<br>
+          この役割分担によって、レオンハルト家の家庭は温度差を持ちながらも一つに保たれている。<br><br>
+          彼らの関係は劇的ではない。<br>
+          しかし、その静かな信頼の積み重ねこそが、
+          家族描写に現実味と重みを与えている。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Kernel</h2>
+        <p class="concept-text">
+          カーネルは父系カラーを引き継いだ「行動」の子であり、
+          家計や生活にも手を貸す現実派の娘として設計されている。<br><br>
+          そのためガレスとカーネルは、表面上はぶつかりにくい。<br>
+          無茶をするところ、現実対応が早いところ、言葉少なでも通じるところに共通点がある。<br><br>
+          ただし、カーネルは父よりも明るく、外へ開いている。<br>
+          ガレスは彼女のその明るさを、どこか少し眩しく見ている。<br><br>
+          彼女が家の外へ光を放つ存在であるほど、
+          ガレスは家の中でその光を支える側に回る。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Jade</h2>
+        <p class="concept-text">
+          ジェイドは母似の外見と、観測・思考側の気質を持っているため、
+          ガレスとは外見も価値観もやや離れて見える。<br><br>
+          そのためガレスにとってジェイドは、
+          分かりやすく手がかからない子ではなく、
+          危うさを早く察知してしまうからこそ厳しく接する相手である。<br><br>
+          彼はジェイドを嫌っているわけではない。<br>
+          むしろ守るべき対象だと認識しているからこそ、
+          甘やかすのではなく、現実を自覚させる方向で関わる。<br><br>
+          ジェイド側も父を少し怖いと感じているが、
+          本当に家を支えているのがガレスであることは理解している。<br><br>
+          この関係は対立ではなく、
+          “優しくない形の保護”として整理するのが正しい。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Attitude toward Jade</h2>
+        <p class="concept-text">
+          ガレスは、ジェイドを甘やかす父ではない。<br><br>
+          だが、潰す父でもない。<br><br>
+          彼のスタンスは一貫している。<br>
+          「守られるだけでは生き残れない」<br><br>
+          そのため、
+          失敗は叱る。<br>
+          弱さは責めるのではなく自覚させる。<br>
+          謝罪より次の行動を求める。<br>
+          泣くなとは言わないが、泣いた後に立てと言う。<br><br>
+          この厳しさは冷酷さではなく、
+          この世界で生きるために必要な現実を教える父としての厳しさである。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Life and Labor</h2>
+        <p class="concept-text">
+          ガレスは、パン屋または市場労働を中心とした実務担当として、
+          レオンハルト家の生活圏の中心にいる父である。<br><br>
+          荷を運び、働き、朝が早く、身体を使う仕事の蓄積がそのまま彼の体と空気感に出ている。<br><br>
+          彼は家族のために働くという行為を、
+          美徳として大げさに語ることはない。<br>
+          それが当たり前だから続けているだけである。<br><br>
+          しかし、その当たり前を続けられる人間こそが家を支える。<br>
+          ガレスはまさにそのタイプであり、
+          家族が今日も食べられる状態を維持することでしか愛情を示せない男でもある。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Meaning in the Story</h2>
+        <p class="concept-text">
+          ガレスは物語前面で派手に動く人物ではない。<br><br>
+          しかし、家庭描写とジェイドの人格形成の基礎として極めて重要である。<br><br>
+          彼はレオンハルト家の生活感を成立させ、
+          メリトクラシア平民層の現実を象徴し、
+          ジェイドにとって「優しくない現実」の入口となる。<br><br>
+          また、カーネルやミレイユと対比することで、
+          レオンハルト家が単なる優しい家族ではなく、
+          現実と温かさの両方で成り立っていたことを立体的に示すことができる。<br><br>
+          カーネル喪失後の家庭崩壊も、
+          ガレスの沈黙と行動を通して見せることで強い重みを持つ。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Emotion Rules</h2>
+        <p class="concept-text">
+          ガレスの感情は、露骨に爆発させない。<br><br>
+          長広舌をさせず、泣き崩れさせず、感情説明を口でさせない。<br>
+          代わりに、行動、沈黙、視線、手の動きで見せる。<br><br>
+          たとえば、
+          食卓で無言になる。<br>
+          道具を握る手にだけ力が入る。<br>
+          返事が一拍遅れる。<br>
+          寝たはずの家族の部屋を確認しに行く。<br>
+          傷薬や作業具を黙って置いていく。<br><br>
+          こうした細部が、ガレスという人物の感情表現として最も強い。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Speech Policy</h2>
+        <p class="concept-text">
+          ガレスの台詞は短く、硬く、重くする。<br><br>
+          飾らず、余計な説明をしない。<br>
+          そのぶん、一言の重みが大きい。<br><br>
+          例としては、<br>
+          「食えるうちに食え」<br>
+          「謝る暇があるなら次を考えろ」<br>
+          「悔しいなら、忘れるな」<br>
+          「優しいだけじゃ守れん」<br>
+          「……朝になってから動け」<br>
+          「無事ならそれでいい」<br><br>
+          最後の一言だけ少し柔らかい、という温度差が最も効く。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Internal Keywords</h2>
+        <div class="tag-row">
+          <span class="tag">父親</span>
+          <span class="tag">平民</span>
+          <span class="tag">ウンフェーイグ</span>
+          <span class="tag">実務家</span>
+          <span class="tag">労働者</span>
+          <span class="tag">父系アンバーオレンジ</span>
+          <span class="tag">寡黙</span>
+          <span class="tag">現実主義</span>
+          <span class="tag">責任感</span>
+          <span class="tag">生活基盤</span>
+          <span class="tag">無言の支柱</span>
+          <span class="tag">ジェイドに厳しい</span>
+          <span class="tag">カーネル父系</span>
+          <span class="tag">感情より現実</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Fixed Notes</h2>
+        <div class="bullet-block">
+          <p><strong>固定1：</strong>ガレス・レオンハルトは、レオンハルト家の父である。</p>
+          <p><strong>固定2：</strong>外見は右案ベースを正式採用とし、生活感・責任感・疲労感を優先する。</p>
+          <p><strong>固定3：</strong>髪色は父系アンバーオレンジで、カーネルの父系カラー起点となる。</p>
+          <p><strong>固定4：</strong>寡黙・現実主義・責任感が強く、優しさを言葉ではなく行動で出す。</p>
+          <p><strong>固定5：</strong>ミレイユが家庭の柔らかさを守るのに対し、ガレスは生活の現実を守る。</p>
+          <p><strong>固定6：</strong>ジェイドには厳しいが、根底では守ろうとしている父として機能する。</p>
+          <p><strong>固定7：</strong>レオンハルト家における「土台と現実」の象徴として運用する。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>家族を支えるために、言葉より先に現実を引き受ける男</p>
+    <small>MERITOCRACIA — INTERNAL CHARACTER DOSSIER / GARETH CORE</small>
+  </footer>
+
+</div>
+</body>
+</html>

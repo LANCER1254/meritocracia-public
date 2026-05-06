@@ -1,0 +1,16 @@
+./viewer/story/academy/assets/academy.css
+./viewer/story/academy/assets/academy.js
+./viewer/story/academy/index.html
+./viewer/story/academy/phase2/assets/academy.css
+./viewer/story/academy/phase2/assets/academy.js
+./viewer/story/academy/phase2/index.html
+./viewer/story/assets/js/manuscripts.js
+./viewer/story/files(8)/draft-data.json
+./viewer/story/files(8)/index.html
+./viewer/story/files(8)/viewer.html
+./viewer/story/index.html
+./viewer/story/reboot/viewer.html
+./viewer/story/route/index.html
+./viewer/story/story-data.json
+./viewer/story/story.js
+./viewer/story/アーカイブ/index.html

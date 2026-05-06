@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミレイユ・レオンハルト | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #060810;
+  --panel: #0f1320;
+  --panel-2: #131a28;
+  --text: #cbd2dc;
+  --muted: #98a6b9;
+  --line: #2d3948;
+  --accent: #6f8c6f;
+  --accent-soft: #9bb59b;
+  --warm: #baa284;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 32px 24px 80px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+header {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(111,140,111,0.10) 0%, rgba(15,19,32,0.96) 100%);
+  padding: 34px 28px;
+  margin-bottom: 20px;
+}
+
+.header-label {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.header-sub {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.header-definition {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.color-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.color-strip span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.c1 { background: #1c2330; }
+.c2 { background: #5a6756; }
+.c3 { background: #7f8d72; }
+.c4 { background: #a8b498; }
+.c5 { background: #d5d0c7; }
+.c6 { background: #baa284; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  color: #dce3ec;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 14px;
+  margin: 0;
+}
+
+.status-list dt {
+  color: var(--accent-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--accent-soft);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.note-block {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.full-section {
+  margin-bottom: 20px;
+}
+
+.full-section .card {
+  padding: 24px;
+}
+
+.concept-text {
+  margin: 0;
+}
+
+.bullet-block p {
+  margin: 0 0 12px;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="../index.html" class="back">← CHARACTER LIST</a>
+
+  <header>
+    <div class="header-label">MERITOCRACIA — INTERNAL CHARACTER DOSSIER</div>
+    <h1>ミレイユ・レオンハルト</h1>
+    <div class="header-sub">MIREILLE LEONHARDT</div>
+    <div class="header-definition">
+      ミレイユ・レオンハルトは、レオンハルト家の温かさと平民の日常を静かに支える、<br>
+      少し疲れを抱えながらも家族を見守り続ける優しい母である。
+    </div>
+  </header>
+
+  <div class="color-strip" aria-hidden="true">
+    <span class="c1"></span>
+    <span class="c2"></span>
+    <span class="c3"></span>
+    <span class="c4"></span>
+    <span class="c5"></span>
+    <span class="c6"></span>
+  </div>
+
+  <main>
+
+    <div class="hero-grid">
+
+      <article class="card">
+        <h2 class="card-title">Basic Profile</h2>
+        <dl class="status-list">
+          <dt>NAME</dt>
+          <dd>ミレイユ・レオンハルト</dd>
+
+          <dt>AGE</dt>
+          <dd>35歳</dd>
+
+          <dt>SEX</dt>
+          <dd>女性</dd>
+
+          <dt>RACE</dt>
+          <dd>人間</dd>
+
+          <dt>RANK</dt>
+          <dd>平民（ウンフェーイグ）</dd>
+
+          <dt>RESIDENCE</dt>
+          <dd>メリトクラシア郊外都市</dd>
+
+          <dt>POSITION</dt>
+          <dd>レオンハルト家の母 / 家庭生活を支える平民女性</dd>
+
+          <dt>ROLE</dt>
+          <dd>家族の日常・平民生活・温かい家庭の象徴</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Symbol Tags</h2>
+        <div class="tag-row">
+          <span class="tag">MOTHER</span>
+          <span class="tag">FAMILY</span>
+          <span class="tag">DAILY LIFE</span>
+          <span class="tag">COMMONER</span>
+          <span class="tag">HOME</span>
+          <span class="tag">WARMTH</span>
+        </div>
+
+        <div class="note-block">
+          <p><strong>表層象徴：</strong>母 / 家 / 食卓 / 朝の空気 / 平民の暮らし / 穏やかな日常</p>
+          <p><strong>深層象徴：</strong>家庭の精神的支柱 / 守りたい日常 / 壊される平穏 / 喪失後に沈む母性</p>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Character Definition</h2>
+        <p class="concept-text">
+          ミレイユ・レオンハルトは、レオンハルト家の家庭的象徴であり、
+          平民としての暮らしと家族の日常を静かに支える母である。<br><br>
+          彼女は制度の中枢にいる人間ではなく、戦う者でもない。<br>
+          料理を用意し、家を整え、子どもたちを気にかけ、
+          その日の生活が無事に回るように支える側の人間である。<br><br>
+          だからこそミレイユは、メリトクラシアという国家の大きな理念ではなく、
+          その下で生きる平民家庭の現実を最も自然に体現する人物になる。<br><br>
+          彼女の存在は、世界の設定を説明するためではなく、
+          「この家には守る価値のある日常があった」と読者に信じさせるためにある。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Appearance</h2>
+        <p class="concept-text">
+          ミレイユはブラウンの髪とグリーンの瞳を持つ、落ち着いた雰囲気の女性である。<br><br>
+          髪は肩から胸ほどのストレートヘアで、色白で細身。
+          全体として穏やかで上品な印象を持つが、貴族的な華美さではなく、
+          生活の中にある静かな美しさが前に出ている。<br><br>
+          優しい目元と柔らかな微笑みが特徴であり、
+          その表情には家庭を支える者らしい安心感がある。<br><br>
+          一方で、どこか少し疲れた表情も見え隠れする。<br>
+          それは彼女が弱いからではなく、日々の暮らしと家族を背負う中で自然に刻まれた生活の影である。<br><br>
+          服装は一般的な平民の主婦らしく、シンプルなワンピースにエプロン、
+          家事用の布靴を合わせる。装飾品はほぼなく、実用性が前に出た格好をしている。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Personality</h2>
+        <p class="concept-text">
+          ミレイユは穏やかで優しく、家族思いの性格をしている。<br><br>
+          心配性な面があり、子どもたちの変化や小さな異変にも気づきやすい。<br>
+          しかしその心配は過干渉ではなく、あくまで静かな見守りとして現れる。<br><br>
+          子どもを強く叱るタイプではなく、
+          まず相手の様子を見て、何が起きたのかを理解しようとする。<br><br>
+          そのためミレイユの優しさは甘やかしではなく、
+          家の中に安心して戻ってこられる空気を保つための優しさとして機能している。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Role in the Leonhardt Family</h2>
+        <p class="concept-text">
+          家庭内においてミレイユは、精神的支柱の役割を担っている。<br><br>
+          父が外で働き、カーネルが明るさと行動力を担い、
+          ジェイドが観察と迷いを抱える中で、
+          ミレイユは家そのものの温度を安定させる人間である。<br><br>
+          彼女がいることで、朝食の匂い、台所の音、柔らかな声、
+          誰かを責めすぎない空気が成立する。<br><br>
+          つまりミレイユは、家族の中で最も大きな声を出す人物ではないが、
+          最も深いところで全体を支えている存在である。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Jade</h2>
+        <p class="concept-text">
+          ジェイドは母親似の顔立ちをしており、
+          髪色と瞳の色、目の形や輪郭に共通点を持つ。<br><br>
+          そのためミレイユとの関係は、血縁としての近さが視覚的にも分かりやすい。<br><br>
+          ミレイユはジェイドに対して、厳しさよりも理解を先に置く。<br>
+          異変があればすぐに気づき、無理をしていないかを気にかける。<br><br>
+          ジェイドにとって彼女は、世界の理不尽から一時的に距離を置ける
+          “帰れる場所”の象徴であり、
+          だからこそ家庭が壊れ始めた時、その揺らぎは彼の内面へ深く刻まれることになる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Kernel</h2>
+        <p class="concept-text">
+          カーネルの明るさと行動力は家の中でも強い熱量を持つが、
+          ミレイユはそれを頭ごなしには否定しない。<br><br>
+          むしろ、その勢いを受け止めながら、
+          家庭の中で危うくならないよう柔らかく整える役割を果たしている。<br><br>
+          カーネルにとってミレイユは、自由に動けるための土台であり、
+          強く前へ出られる理由の一部でもある。<br><br>
+          そのためカーネルを失った後のミレイユは、
+          単に娘を失っただけでなく、家の光の一部を失うことになる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Her Husband</h2>
+        <p class="concept-text">
+          ミレイユと夫の関係は、激情よりも生活を共に回してきた信頼に重きがある。<br><br>
+          派手な愛情表現ではなく、
+          朝の支度、仕事の分担、子どもたちへの目配りといった日々の積み重ねの中に、
+          夫婦としての結びつきがある。<br><br>
+          彼女は夫の働きや疲れを理解しており、
+          逆に夫もまたミレイユが家を支えていることを当然視ではなく前提として受け取っている。<br><br>
+          この“言葉にしすぎない信頼”が、
+          レオンハルト家の家庭描写を現実的で温かいものにしている。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Daily Life / Home Warmth</h2>
+        <p class="concept-text">
+          ミレイユの存在は、家の空気そのものに現れる。<br><br>
+          台所から漂うパンやスープの匂い、
+          食卓に並ぶ温かい料理、
+          朝の忙しさの中でもどこか穏やかさを失わない声。<br><br>
+          こうした日常の細部はすべて、
+          ミレイユという人物が家を整えているから成立する。<br><br>
+          彼女は目立った活躍をするわけではない。<br>
+          しかし、ミレイユがいることでレオンハルト家は
+          “帰ってきたい家”として成立している。<br><br>
+          物語において彼女が重要なのは、
+          まさにこの取り替えのきかない家庭の温度を背負っているからである。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Meaning in ZERO Arc</h2>
+        <p class="concept-text">
+          ZERO編におけるミレイユは、
+          世界の残酷さを直接語る人物ではなく、
+          その残酷さによって傷つけられる側の日常を代表する存在である。<br><br>
+          彼女がいることで、読者はレオンハルト家を
+          単なる主人公の背景設定ではなく、本当に失いたくない生活として受け取ることができる。<br><br>
+          また、家族が崩れる場面では、
+          ミレイユの反応そのものが喪失の重さを現実へ固定する役割を持つ。<br><br>
+          つまりミレイユは、事件を派手に動かすキャラではないが、
+          事件が奪ったものの価値を最大化するために不可欠な人物である。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Internal Keywords</h2>
+        <div class="tag-row">
+          <span class="tag">35歳</span>
+          <span class="tag">人間</span>
+          <span class="tag">平民</span>
+          <span class="tag">ウンフェーイグ</span>
+          <span class="tag">母親</span>
+          <span class="tag">家庭的象徴</span>
+          <span class="tag">平民生活</span>
+          <span class="tag">温かい家庭</span>
+          <span class="tag">ブラウンヘア</span>
+          <span class="tag">グリーンの瞳</span>
+          <span class="tag">ジェイド母似</span>
+          <span class="tag">精神的支柱</span>
+          <span class="tag">心配性</span>
+          <span class="tag">穏やかな美人</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Fixed Notes</h2>
+        <div class="bullet-block">
+          <p><strong>固定1：</strong>ミレイユ・レオンハルトは35歳、人間、平民（ウンフェーイグ）である。</p>
+          <p><strong>固定2：</strong>ブラウンの髪とグリーンの瞳を持つ、落ち着いた美人として設計される。</p>
+          <p><strong>固定3：</strong>ジェイドは外見的に母親似である。</p>
+          <p><strong>固定4：</strong>穏やかで優しく、心配性だが、子どもを強く叱らない性格を持つ。</p>
+          <p><strong>固定5：</strong>レオンハルト家の家庭的象徴であり、精神的支柱の役割を担う。</p>
+          <p><strong>固定6：</strong>ミレイユは、家族の日常・平民生活・温かい家庭を象徴する人物である。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>大きな言葉ではなく、毎日の暮らしで家族を支え続ける人</p>
+    <small>MERITOCRACIA — INTERNAL CHARACTER DOSSIER / MIREILLE CORE</small>
+  </footer>
+
+</div>
+</body>
+</html>
