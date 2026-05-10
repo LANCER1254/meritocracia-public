@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vigil Arcana | VA Archive</title>
+  <meta name="description" content="メリトクラシア監察特務隊『Vigil Arcana』の人物ハブ。極秘任務・監視・裏側の記録を扱う中間アーカイブ。">
+  <link rel="stylesheet" href="./assets/va.css">
+</head>
+<body>
+  <div class="va-page">
+
+    <!-- BACK NAV -->
+    <nav class="va-back-nav" aria-label="breadcrumb">
+      <a href="../index.html" class="va-back-link">← CHARACTER OTHER HUB</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="va-header">
+      <div class="va-header-inner">
+        <p class="va-kicker">CHARACTER ARCHIVE / SECRET DIVISION</p>
+        <h1 class="va-title">VIGIL ARCANA</h1>
+        <p class="va-subtitle">監察特務隊 / VA</p>
+
+        <div class="va-meta">
+          <span class="va-chip">STATE SHADOW UNIT</span>
+          <span class="va-chip">CLASSIFIED ROUTE</span>
+          <span class="va-chip">VA CHARACTER HUB</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- LEAD -->
+    <section class="va-lead">
+      <div class="va-section-head">
+        <span class="va-section-num">01</span>
+        <h2>概要</h2>
+      </div>
+
+      <div class="va-panel">
+        <p>
+          Vigil Arcana は、メリトクラシア国家の表舞台にはほとんど現れない監察特務隊である。
+          国境監視、未確認脅威への対処、極秘任務、記録外処理など、
+          他兵団では扱えない“国家の裏側”を担当する。
+        </p>
+        <p>
+          このページは、VA所属キャラクターおよび関連人物へ接続する中間ハブとして運用する。
+          現時点では外枠と導線を先行整備し、個別viewは順次増築する。
+        </p>
+      </div>
+    </section>
+
+    <!-- TONE / KEYWORDS -->
+    <section class="va-theme">
+      <div class="va-section-head">
+        <span class="va-section-num">02</span>
+        <h2>部隊印象</h2>
+      </div>
+
+      <div class="va-keyword-grid">
+        <div class="va-keyword-card">
+          <h3>監視</h3>
+          <p>見ているが、名乗らない。</p>
+        </div>
+        <div class="va-keyword-card">
+          <h3>秘匿</h3>
+          <p>存在は知られていても、実態は知られていない。</p>
+        </div>
+        <div class="va-keyword-card">
+          <h3>異質</h3>
+          <p>ZG・FOとは異なる、国家の暗部寄り組織。</p>
+        </div>
+        <div class="va-keyword-card">
+          <h3>記録外</h3>
+          <p>公式報告に残らない任務が多い。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER HUB -->
+    <section class="va-characters">
+      <div class="va-section-head">
+        <span class="va-section-num">03</span>
+        <h2>所属キャラクター</h2>
+      </div>
+
+      <div class="va-card-grid">
+
+        <article class="va-card va-card--stub">
+          <span class="va-card-role">VA / MAIN</span>
+          <h3 class="va-card-name">ミラ</h3>
+          <p class="va-card-desc">
+            監察特務隊の中核候補。秘密主義・監視役・国家暗部との接続を担うポジション。
+          </p>
+          <a href="./mira/index.html" class="va-card-link">個別viewへ →</a>
+        </article>
+
+        <article class="va-card va-card--stub">
+          <span class="va-card-role">VA / COMMAND</span>
+          <h3 class="va-card-name">隊長枠</h3>
+          <p class="va-card-desc">
+            未確定。異種族抜擢や国家直属の特殊人材など、VAの“異質さ”を象徴する上位枠。
+          </p>
+          <span class="va-card-link is-disabled">準備中</span>
+        </article>
+
+        <article class="va-card va-card--stub">
+          <span class="va-card-role">VA / SUB</span>
+          <h3 class="va-card-name">副官枠</h3>
+          <p class="va-card-desc">
+            隊長補佐・現場統制・記録管理を担う補助幹部。今後追加予定。
+          </p>
+          <span class="va-card-link is-disabled">準備中</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section class="va-notes">
+      <div class="va-section-head">
+        <span class="va-section-num">04</span>
+        <h2>運用メモ</h2>
+      </div>
+
+      <div class="va-panel">
+        <ul class="va-note-list">
+          <li>このページは VA 個別キャラ view の中間ハブ。</li>
+          <li>デザイン刷新ではなく、既存トーン維持を優先。</li>
+          <li>カード追加のみで増築できる構造にする。</li>
+          <li>未確定キャラは stub 表示で残し、導線だけ先に固定する。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="va-footer">
+      <p class="va-footer-label">MERITOCRACIA / CHARACTER OTHER ARCHIVE</p>
+      <p class="va-footer-copy">Vigil Arcana Character Hub</p>
+    </footer>
+
+  </div>
+</body>
+</html>

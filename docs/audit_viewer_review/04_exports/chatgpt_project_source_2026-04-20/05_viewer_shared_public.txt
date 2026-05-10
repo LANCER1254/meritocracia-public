@@ -1,0 +1,2032 @@
+bundle: shared public core
+generated: 2026-04-20 12:28:50
+
+==================================================
+FILE: ./viewer/共有用/public-character/data_public.json
+--------------------------------------------------
+[
+  {
+    "id": "world-001",
+    "category": "世界観",
+    "tag": "WORLD",
+    "title": "メリトクラシアとは",
+    "desc": "能力主義を国家理念に掲げる都市国家。グローリアテストによる選抜制度を核とし、出自より実力が優先される社会を標榜する。しかしその制度の内側には、誰も語らない歪みが宿っている。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "world-002",
+    "category": "世界観",
+    "tag": "SYSTEM",
+    "title": "グローリアテスト",
+    "desc": "国家が管理する選抜試験。合格者のみが審問庁・士官学校への門を開かれる。複数科目制で部分合格が認められており、平民にとって唯一の階層突破ルートとなっている。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "world-003",
+    "category": "世界観",
+    "tag": "NATION",
+    "title": "国家機関の構造",
+    "desc": "三兵団（ZG・FO・VA）と審問庁・士官学校統括院を中心に構成される中央政府。Duke ロータスを頂点とした統治体制が、秩序・武力・真実の三軸で国家を維持している。",
+    "link": "../db/nation/index.html",
+    "link_label": "国家アーカイブへ →",
+    "public": true
+  },
+  {
+    "id": "world-004",
+    "category": "世界観",
+    "tag": "RANK",
+    "title": "階級と出自",
+    "desc": "貴族・上位市民・平民の三層構造が存在する。建前上は能力主義だが、士官学校への推薦枠・試験情報の非対称性など、構造的な不公平は随所に残っている。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "char-001",
+    "category": "キャラクター",
+    "tag": "PROTAGONIST",
+    "title": "ジェイド・レオンハルト",
+    "desc": "最下層平民出身の主人公。答えを持たないまま、制度と人間の狭間を進む少年。グローリアテストに挑むことで、自分だけの正義を問われていく。",
+    "link": "./public-character/index.html",
+    "link_label": "キャラクター一覧へ →",
+    "public": true
+  },
+  {
+    "id": "char-002",
+    "category": "キャラクター",
+    "tag": "HEROINE",
+    "title": "アイリス＝アールグレイ",
+    "desc": "ダークエルフの少女。元戦争奴隷としてレオンハルト家に仕える。壊れる前に時間が止まったような静けさを持ち、ジェイドとの出会いで初めて「名前で呼ばれる場所」を得る。",
+    "link": "./public-character/index.html",
+    "link_label": "キャラクター一覧へ →",
+    "public": true
+  },
+  {
+    "id": "char-003",
+    "category": "キャラクター",
+    "tag": "CADET",
+    "title": "ヴィオラ＝スティルネン",
+    "desc": "中〜上位貴族出身の士官候補生。正しさを疑ったことのない少女が、制度の外側に触れたとき何を選ぶか——制度の擬人化として設計されたキャラクター。",
+    "link": "./public-character/index.html",
+    "link_label": "キャラクター一覧へ →",
+    "public": true
+  },
+  {
+    "id": "char-004",
+    "category": "キャラクター",
+    "tag": "INSTRUCTOR",
+    "title": "ユミナ",
+    "desc": "平民出身の審問庁所属教官。グローリアテスト最優秀成績で一発合格した実力者。感情ではなく正しさと責任で動く人物だが、制度の内側でその倫理観は静かに揺れている。",
+    "link": "./public-character/index.html",
+    "link_label": "キャラクター一覧へ →",
+    "public": true
+  },
+  {
+    "id": "story-001",
+    "category": "ストーリー",
+    "tag": "PROLOGUE",
+    "title": "ZERO編：テロ事件",
+    "desc": "Year+8。建国記念日の中央市場を舞台にした事件。ジェイドの原点となる出来事が幕を開ける。失ったものと、初めて見た「制度の守護者」が、この少年の方向を決定する。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "story-002",
+    "category": "ストーリー",
+    "tag": "MAIN",
+    "title": "本編：グローリアテスト編",
+    "desc": "Year+10。本編開始。ジェイドが試験に挑む中で、制度・信念・人間関係が複雑に絡み合う。正しい答えのない問いが、次々と彼の前に立ちはだかる。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "news-001",
+    "category": "NEWS",
+    "tag": "ANNOUNCE",
+    "title": "連載再開のお知らせ",
+    "desc": "2025年5月8日より、小説家になろうにて連載を再開します。新章「グローリアテスト編」からお楽しみください。",
+    "link": "https://ncode.syosetu.com/",
+    "link_label": "なろうで読む →",
+    "public": true
+  },
+  {
+    "id": "news-002",
+    "category": "NEWS",
+    "tag": "SITE",
+    "title": "公式サイト公開",
+    "desc": "MERITOCRACIA 公式サイトを公開しました。世界観・登場人物・国家制度の資料を順次公開予定です。",
+    "link": null,
+    "link_label": null,
+    "public": true
+  },
+  {
+    "id": "internal-001",
+    "category": "制作・運営",
+    "tag": "INTERNAL",
+    "title": "制作進行管理",
+    "desc": "スタッフ内部向けの制作進行ページ。",
+    "link": null,
+    "link_label": null,
+    "public": false
+  }
+]
+
+==================================================
+FILE: ./viewer/共有用/public-character/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MERITOCRACIA | 公式キャラクターアーカイブ">
+  <title>CHARACTERS | MERITOCRACIA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../official-site/assets/public.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <span class="header-label">CHARACTER ARCHIVE</span>
+      <h1 class="site-title">MERITOCRACIA</h1>
+      <p class="site-tagline">登場人物データベース</p>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-catch">人物から世界へ入る——</p>
+    <p class="hero-sub">
+      メリトクラシアを形作る主要人物たち。<br>
+      物語の入口となる4名を公開中。
+    </p>
+  </div>
+</section>
+
+<section class="archive-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-num">CHARACTERS</span>
+      <h2 class="section-title">主要人物</h2>
+    </div>
+
+    <div class="content-grid">
+
+      <div class="content-card">
+        <div class="content-card-tag">PROTAGONIST</div>
+        <div class="content-card-title">ジェイド・レオンハルト</div>
+        <div class="content-card-desc">
+          最下層平民出身の少年。能力主義国家の試験に挑み、自分だけの正義を探して進む。
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-card-tag">HEROINE</div>
+        <div class="content-card-title">アイリス＝アールグレイ</div>
+        <div class="content-card-desc">
+          ダークエルフの少女。静かな孤独を抱えながら、ジェイドとの出会いで変わり始める。
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-card-tag">CADET</div>
+        <div class="content-card-title">ヴィオラ＝スティルネン</div>
+        <div class="content-card-desc">
+          正しさを疑わない士官候補生。制度の象徴としてジェイドと交差する。
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-card-tag">INSTRUCTOR</div>
+        <div class="content-card-title">ユミナ</div>
+        <div class="content-card-desc">
+          審問庁所属の教官。責任と倫理で動く、制度側の導き手。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo">MERITOCRACIA</span>
+    <span class="footer-copy">© 2026 Lancer. Character Archive</span>
+  </div>
+</footer>
+
+</body>
+</html>
+==================================================
+FILE: ./viewer/共有用/public-character/public.css
+--------------------------------------------------
+/* ============================================================
+   MERITOCRACIA — 公開用スタイルシート
+   ファイル: assets/public.css
+   用途: index.html（一般公開）専用
+   index_internal.html とは共有しない（独立CSS）
+   ============================================================ */
+
+/* ============================================================
+   カスタムプロパティ
+   ============================================================ */
+:root {
+  --bg:      #070910;
+  --bg2:     #0b0e18;
+  --bg3:     #101420;
+  --bg4:     #161b28;
+  --gold:    #c8a45a;
+  --gold2:   #e5c97e;
+  --gold3:   #f5dfa0;
+  --text:    #cfc4ae;
+  --text2:   #7a6e5a;
+  --text3:   #3a4858;
+  --border:  rgba(200,164,90,0.12);
+  --border2: rgba(200,164,90,0.25);
+  --red:     #8b2020;
+}
+
+/* ============================================================
+   リセット & ベース
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* 背景グリッドテクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%,   rgba(200,164,90,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 100% 100%, rgba(139,32,32,0.05) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(200,164,90,0.007) 120px, rgba(200,164,90,0.007) 121px),
+    repeating-linear-gradient(0deg,  transparent, transparent 120px, rgba(200,164,90,0.007) 120px, rgba(200,164,90,0.007) 121px);
+  pointer-events: none; z-index: 0;
+}
+
+/* ============================================================
+   ヘッダー
+   ============================================================ */
+.site-header {
+  position: relative; z-index: 10;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,9,16,0.95);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 48px 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.site-title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  color: var(--text);
+  line-height: 1;
+}
+
+.site-tagline {
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: var(--text2);
+  margin-top: 8px;
+}
+
+/* 連載再開バッジ */
+.launch-badge {
+  text-align: right;
+  border: 1px solid var(--border2);
+  padding: 12px 20px;
+  background: rgba(200,164,90,0.05);
+}
+
+.badge-date {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--gold2);
+  letter-spacing: 3px;
+}
+
+.badge-text {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   ヒーロー
+   ============================================================ */
+.hero {
+  position: relative; z-index: 1;
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* 背景タイポグラフィ装飾 */
+.hero::before {
+  content: 'MERITOCRACIA';
+  position: absolute;
+  bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(200,164,90,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 10px;
+}
+
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.hero-catch {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: var(--gold2);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 15px;
+
+==================================================
+FILE: ./viewer/共有用/reading-blend/author.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Profile | Lancer's Reading Blend</title>
+<link rel="stylesheet" href="./blend.css">
+</head>
+<body>
+
+<header class="blend-header" style="padding:50px 20px 40px;">
+  <span class="header-brand">Lancer's Reading Blend</span>
+  <p class="header-subtitle" style="margin-top:8px;">AUTHOR PROFILE</p>
+</header>
+
+<nav class="blend-nav">
+  <a href="./index.html">← Lounge</a>
+  <a href="../index.html">Hub</a>
+</nav>
+
+<div class="profile-wrapper">
+
+  <!-- Hero -->
+  <div class="profile-hero" id="profile-hero">
+    <div id="avatar-wrap"></div>
+    <span class="section-eyebrow" id="disp-blend-type">Selected Blender</span>
+    <h1 class="profile-name" id="disp-name">—</h1>
+    <span class="profile-name-en" id="disp-name-en"></span>
+    <p class="profile-catchphrase" id="disp-catchphrase"></p>
+    <div class="tag-row" id="disp-tags" style="justify-content:center; margin-top:16px;"></div>
+  </div>
+
+  <!-- Bio -->
+  <div class="profile-card">
+    <span class="section-eyebrow">Description</span>
+    <p id="disp-bio" style="margin-top:14px; font-size:0.97rem; color:var(--text-sub); line-height:1.95;"></p>
+  </div>
+
+  <!-- Lancer's Note -->
+  <div class="profile-card" id="note-card">
+    <div class="lancer-note" style="border-radius:12px;">
+      <span class="lancer-note-label" id="note-curator-label">Lancer's Note</span>
+      <p class="lancer-note-text" id="disp-note"></p>
+    </div>
+  </div>
+
+  <!-- Works -->
+  <div class="profile-card" id="works-card" style="display:none;">
+    <span class="section-eyebrow">Works</span>
+    <ul id="disp-works" style="margin-top:14px; list-style:none; display:flex; flex-direction:column; gap:8px;"></ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-group" id="disp-ctas" style="margin-top:28px;"></div>
+
+  <!-- permission -->
+  <p class="permission-note" id="disp-permission" style="text-align:center; margin-top:24px;"></p>
+
+  <!-- Back -->
+  <div style="text-align:center;">
+    <a href="./index.html" class="back-link">← Return to Lounge</a>
+  </div>
+
+</div>
+
+<footer class="blend-footer">
+  <p>LANCER'S READING BLEND — MERITOCRACIA OFFICIAL SITE</p>
+</footer>
+
+<button class="mode-toggle" id="mode-toggle-btn">Night</button>
+
+<script src="./blend.js"></script>
+<script>
+/* ── author.js (インライン) ── */
+
+const PLATFORM_LABEL = {
+  narou:    'なろうで読む',
+  kakuyomu: 'カクヨムで読む',
+};
+
+async function init() {
+  const params   = new URLSearchParams(window.location.search);
+  const authorId = params.get('id');
+
+  const data = await fetchAuthors('./authors.json');
+  if (!data) {
+    document.getElementById('disp-name').textContent = 'データ読み込みエラー';
+    return;
+  }
+
+  const author = authorId
+    ? data.authors.find(a => a.id === authorId)
+    : data.authors[0];
+
+  if (!author) {
+    document.getElementById('disp-name').textContent = '作者が見つかりませんでした';
+    return;
+  }
+
+  /* ページタイトル */
+  document.title = `${author.name} | Lancer's Reading Blend`;
+
+  /* アバター */
+  document.getElementById('avatar-wrap').appendChild(makeAvatar(author, 'lg'));
+
+  /* 基本情報 */
+  document.getElementById('disp-blend-type').textContent = author.blend_type || 'Selected Blender';
+  document.getElementById('disp-name').textContent       = author.name;
+  document.getElementById('disp-name-en').textContent    = author.name_en;
+  document.getElementById('disp-catchphrase').textContent = author.catchphrase;
+
+  /* タグ */
+  const tagsWrap = document.getElementById('disp-tags');
+  (author.tags || []).forEach(t => {
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill';
+    pill.textContent = t;
+    tagsWrap.appendChild(pill);
+  });
+
+  /* Bio */
+  document.getElementById('disp-bio').textContent = author.bio;
+
+  /* Lancer's Note */
+  const curator = data.portal?.curator || 'Lancer';
+  document.getElementById('note-curator-label').textContent = `${curator}'s Note`;
+  document.getElementById('disp-note').textContent = author.lancer_note
+    ? `「${author.lancer_note}」`
+    : '—';
+
+  /* Works */
+  if (author.works && author.works.length) {
+    const worksCard = document.getElementById('works-card');
+    worksCard.style.display = '';
+    const ul = document.getElementById('disp-works');
+    author.works.forEach(w => {
+      const li = document.createElement('li');
+      li.style.cssText = 'font-size:0.9rem; color:var(--text-sub); display:flex; align-items:center; gap:8px;';
+      li.innerHTML = `<span style="color:var(--blend-gold);">◆</span> ${w.title}
+        <span style="font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em;">${w.platform?.toUpperCase() || ''}</span>`;
+      ul.appendChild(li);
+    });
+  }
+
+  /* CTA */
+  const ctas = document.getElementById('disp-ctas');
+  const links = author.links || {};
+
+  const nrBtn = makeCtaBtn('なろうで読む', links.narou, 'primary icon-nr');
+  if (nrBtn) ctas.appendChild(nrBtn);
+
+  const kkBtn = makeCtaBtn('カクヨムで読む', links.kakuyomu, 'icon-kk');
+  if (kkBtn) ctas.appendChild(kkBtn);
+
+  if (links.x) {
+    const xBtn = makeCtaBtn('X をフォロー', links.x, 'icon-x');
+    if (xBtn) ctas.appendChild(xBtn);
+  }
+
+  if (links.official) {
+
+==================================================
+FILE: ./viewer/共有用/reading-blend/authors.json
+--------------------------------------------------
+{
+  "portal": {
+    "title": "Lancer's Reading Blend",
+    "subtitle": "今夜、おすすめしたい物語",
+    "tagline": "SELECTORS LOUNGE",
+    "curator": "Lancer"
+  },
+  "authors": [
+    {
+      "id": "sample_author_01",
+      "name": "架空の作者 １",
+      "name_en": "Sample Author 01",
+      "catchphrase": "静かな夜に沁みる一杯",
+      "genre": "異世界戦記 / 心理描写",
+      "blend_type": "Master Blender",
+      "permission_date": "2025-04-01",
+      "avatar": "",
+      "avatar_fallback": "架空の作者 １",
+      "bio": "緻密な設定と心理描写で描かれる異世界戦記。国家の在り方を問うその姿勢は、メリトクラシアの世界観とも深く共鳴します。琥珀色の空気が漂う、静謐な筆致が魅力です。",
+      "lancer_note": "この物語は、まるで冷え切った夜に差し出される熱いアールグレイのようです。一口ごとに、閉ざされていた心がほどけていく感覚を味わってください。静かに燃え続ける問いが、読後もずっと胸に残ります。",
+      "works": [
+        { "title": "サンプル作品 A", "platform": "narou" },
+        { "title": "サンプル作品 A", "platform": "kakuyomu" }
+      ],
+      "links": {
+        "narou": "https://ncode.syosetu.com/",
+        "kakuyomu": "https://kakuyomu.jp/",
+        "x": "https://x.com/",
+        "official": ""
+      },
+      "tags": ["戦記", "能力主義", "心理描写", "哲学的"],
+      "featured": true
+    },
+    {
+      "id": "sample_author_02",
+      "name": "架空の作者 ２",
+      "name_en": "Sample Author 02",
+      "catchphrase": "夜と記憶をたゆたう",
+      "genre": "都市ファンタジー / ミステリ",
+      "blend_type": "Selected Blender",
+      "permission_date": "2025-04-03",
+      "avatar": "",
+      "avatar_fallback": "架空の作者 ２",
+      "bio": "現代都市を舞台に、記憶と喪失を織り交ぜた幻想的なミステリ。淡く滲む光と影の描写は、他に類を見ない独自の文体で読者を別世界へと誘います。",
+      "lancer_note": "深夜の読書にこそふさわしい一冊。ページをめくるたびに、自分の記憶と物語の境界が溶けていく奇妙な感覚があります。これはミステリである前に、喪失についての詩です。",
+      "works": [
+        { "title": "サンプル作品 B", "platform": "kakuyomu" }
+      ],
+      "links": {
+        "narou": "",
+        "kakuyomu": "https://kakuyomu.jp/",
+        "x": "https://x.com/",
+        "official": ""
+      },
+      "tags": ["都市", "幻想", "ミステリ", "詩的"],
+      "featured": false
+    }
+  ]
+}
+==================================================
+FILE: ./viewer/共有用/reading-blend/blend.css
+--------------------------------------------------
+/* ============================================================
+   LANCER'S READING BLEND — Shared Stylesheet
+   琥珀 × 羊皮紙 × 夜読書ラウンジ
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap');
+
+/* ────── カラー変数 ────── */
+:root {
+  --amber-darkest: #1c1008;
+  --amber-dark:    #2a1a0e;
+  --amber-mid:     #3d2410;
+  --amber-warm:    #6b3a1a;
+  --amber-light:   #a0521a;
+  --blend-gold:    #c4803a;
+  --blend-gold2:   #d9954d;
+  --parchment:     #FFF8E7;
+  --parchment-d:   #f5e8c8;
+  --parchment-dd:  #e8d5a8;
+  --text-main:     #3d2410;
+  --text-sub:      #6d4c31;
+  --text-muted:    #9a7a5a;
+  --border-light:  rgba(160,82,26,0.12);
+  --border-gold:   rgba(196,128,58,0.35);
+  --shadow-warm:   rgba(61,36,16,0.08);
+}
+
+/* ────── Night Mode ────── */
+body.night-mode {
+  --parchment:    #1c1008;
+  --parchment-d:  #251508;
+  --parchment-dd: #2a1a0e;
+  --text-main:    #f0e0c0;
+  --text-sub:     #c8a878;
+  --text-muted:   #907060;
+  --border-light: rgba(196,128,58,0.15);
+  --border-gold:  rgba(196,128,58,0.4);
+  --shadow-warm:  rgba(0,0,0,0.4);
+}
+
+/* ────── ベース ────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--parchment);
+  color: var(--text-main);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  line-height: 1.8;
+  transition: background-color 0.6s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* 羊皮紙テクスチャ（body::before） */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* ────── タイポグラフィ ────── */
+.font-display  { font-family: 'Cormorant Garamond', serif; }
+.font-italic   { font-family: 'IM Fell English', serif; font-style: italic; }
+.font-body     { font-family: 'Noto Serif JP', serif; }
+
+/* ────── ヘッダー：ティーラベル ────── */
+.blend-header {
+  position: relative;
+  padding: 80px 24px 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+  background: linear-gradient(to bottom, var(--parchment-d) 0%, var(--parchment) 100%);
+  overflow: hidden;
+}
+
+.blend-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: min(600px, 100%);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--blend-gold), transparent);
+}
+
+.blend-header::after {
+  content: '✦';
+  position: absolute;
+  bottom: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--parchment);
+  color: var(--blend-gold);
+  padding: 0 16px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.header-brand {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.25em;
+  color: var(--blend-gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.header-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ────── ナビゲーション ────── */
+.blend-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.blend-nav a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blend-nav a:hover { color: var(--blend-gold); }
+
+/* ────── コンテナ ────── */
+.blend-container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+/* ────── セクションラベル ────── */
+.section-eyebrow {
+
+==================================================
+FILE: ./viewer/共有用/reading-blend/blend.js
+--------------------------------------------------
+/* ============================================================
+   LANCER'S READING BLEND — Shared JS
+   責務: Night Mode / ストレージ永続化 / fetch utility
+   ============================================================ */
+'use strict';
+
+/* ── Night Mode ── */
+const STORAGE_KEY = 'blend_night';
+
+function applyNightMode(on) {
+  document.body.classList.toggle('night-mode', on);
+  const btn = document.getElementById('mode-toggle-btn');
+  if (btn) btn.textContent = on ? 'Day' : 'Night';
+  localStorage.setItem(STORAGE_KEY, on ? '1' : '0');
+}
+
+function initNightMode() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  // デフォルト: 22時〜6時は自動Night
+  const hour = new Date().getHours();
+  const autoNight = hour >= 22 || hour < 6;
+  const on = saved !== null ? saved === '1' : autoNight;
+  applyNightMode(on);
+
+  const btn = document.getElementById('mode-toggle-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      applyNightMode(!document.body.classList.contains('night-mode'));
+    });
+  }
+}
+
+/* ── fetch authors.json ── */
+async function fetchAuthors(path = './authors.json') {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    console.error('[Reading Blend] authors.json 読み込み失敗:', err);
+    return null;
+  }
+}
+
+/* ── アバター要素生成 ── */
+function makeAvatar(author, size = 'sm') {
+  const wrap = document.createElement('div');
+  wrap.className = size === 'lg' ? 'profile-avatar-lg' : 'author-avatar';
+
+  if (author.avatar) {
+    const img = document.createElement('img');
+    img.src = author.avatar;
+    img.alt = author.name;
+    img.onerror = () => {
+      img.remove();
+      const fb = document.createElement('span');
+      fb.className = size === 'lg' ? 'profile-avatar-fallback-lg' : 'author-avatar-fallback';
+      fb.textContent = author.avatar_fallback || author.name[0];
+      wrap.appendChild(fb);
+    };
+    wrap.appendChild(img);
+  } else {
+    const fb = document.createElement('span');
+    fb.className = size === 'lg' ? 'profile-avatar-fallback-lg' : 'author-avatar-fallback';
+    fb.textContent = author.avatar_fallback || author.name[0];
+    wrap.appendChild(fb);
+  }
+  return wrap;
+}
+
+/* ── CTAボタン生成 ── */
+function makeCtaBtn(label, href, cls = '') {
+  if (!href) return null;
+  const a = document.createElement('a');
+  a.href = href;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.className = `cta-btn ${cls}`;
+  a.textContent = label;
+  return a;
+}
+
+/* ── タグ要素生成 ── */
+function makeTagRow(tags) {
+  const row = document.createElement('div');
+  row.className = 'tag-row';
+  (tags || []).forEach(t => {
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill';
+    pill.textContent = t;
+    row.appendChild(pill);
+  });
+  return row;
+}
+
+/* ── permission date フォーマット ── */
+function fmtDate(str) {
+  if (!str) return '';
+  const d = new Date(str);
+  return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日 掲載許諾`;
+}
+
+/* ── DOMContentLoaded で Night Mode 初期化 ── */
+document.addEventListener('DOMContentLoaded', initNightMode);
+
+==================================================
+FILE: ./viewer/共有用/reading-blend/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lancer's Reading Blend | MERITOCRACIA</title>
+  <meta name="description" content="Lancerによる読書企画・作者紹介ラウンジ">
+  <link rel="stylesheet" href="./blend.css">
+</head>
+<body>
+
+<header class="blend-header">
+  <span class="header-brand">Lancer's Reading Blend</span>
+  <h1 class="header-title">今夜、おすすめしたい物語</h1>
+  <p class="header-subtitle">SELECTORS LOUNGE</p>
+</header>
+
+<nav class="blend-nav">
+  <a href="./index.html">Lounge</a>
+  <a href="../index.html">← Hub</a>
+</nav>
+
+<main class="blend-container">
+
+  <!-- 企画説明 -->
+  <section class="blend-card">
+    <span class="featured-banner">— Review Event —</span>
+    <h2 style="margin-bottom:16px;">#RTした人の小説を読みに行く</h2>
+    <p class="author-bio">
+      Xで開催中の読書感想企画です。<br>
+      先着順で順番に読み、あなたの希望スタイルに合わせて感想をお届けします。
+    </p>
+  </section>
+
+  <!-- 感想ルール -->
+  <section class="blend-card">
+    <h2 style="margin-bottom:16px;">📘 企画ルール</h2>
+    <p class="author-bio">
+      ・<strong>一日一作品（1名）</strong> ずつ読みます。<br>
+      ・ご希望の感想オプションに合わせて返信します。<br>
+      ・掲載希望の方は <strong>DM または対象ツイートへの返信</strong> にて受付します。<br>
+      ・GW明けより <strong>小説紹介サイトの正式運営</strong> を開始予定です。
+    </p>
+  </section>
+
+  <!-- 感想スタイル -->
+  <section class="blend-card">
+    <h2 style="margin-bottom:16px;">☕ 感想スタイル</h2>
+    <p class="author-bio">
+      🔥 激辛 … 構造や改善点までしっかり指摘<br>
+      🌶 辛口 … 改善点多め＋良い点も明示<br>
+      ☕ 甘口 … 良い点中心＋軽い改善提案<br>
+      🫖 甘々 … <strong>メインヒロインのメイド口調</strong>で全力で癒します
+    </p>
+  </section>
+
+  <!-- サイト告知 -->
+  <section class="blend-card">
+    <h2 style="margin-bottom:16px;">🌐 小説紹介サイトについて</h2>
+    <p class="author-bio">
+      GW明けより正式に小説紹介サイトの運営を開始します。<br>
+      掲載希望の作者様は、DMまたは企画ツイートへの返信でお気軽にご相談ください。<br>
+      世界観資料や作者紹介も順次公開予定です。
+    </p>
+  </section>
+
+</main>
+
+<footer class="blend-footer">
+  <p>LANCER'S READING BLEND — MERITOCRACIA OFFICIAL SITE</p>
+</footer>
+
+<button class="mode-toggle" id="mode-toggle-btn">Night</button>
+<script src="./blend.js"></script>
+
+</body>
+</html>
+==================================================
+FILE: ./viewer/共有用/work-os-demo/app.js
+--------------------------------------------------
+/* ============================================================
+   MERITOCRACIA OS — 作業卓 / app.js  v2
+   責務: 時計 / 週間スケジュール / ポモドーロ / 初期化
+   ============================================================ */
+'use strict';
+
+/* ══════════════════════════════════════
+   定数・ユーティリティ
+══════════════════════════════════════ */
+const DAY_KEYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+const DAYS_JP  = ['日','月','火','水','木','金','土'];
+const BLOCKS   = [
+  { key: 'morning',   label: 'MORNING   06:00–12:00', min: [6*60, 12*60] },
+  { key: 'afternoon', label: 'AFTERNOON 12:00–18:00', min: [12*60, 18*60] },
+  { key: 'night',     label: 'NIGHT     18:00–06:00', min: [18*60, 30*60] },
+];
+
+const pad = n => String(n).padStart(2, '0');
+
+/** "HH:MM" → 分数（深夜0〜5時は+24h） */
+function t2m(t) {
+  const [h, m] = t.split(':').map(Number);
+  return (h < 6 ? h + 24 : h) * 60 + m;
+}
+
+/** 現在分数（深夜補正） */
+function nowMin() {
+  const d = new Date();
+  const h = d.getHours();
+  return (h < 6 ? h + 24 : h) * 60 + d.getMinutes();
+}
+
+/** 今日の DAY_KEY ("MON"〜"SUN") */
+function todayKey() {
+  return DAY_KEYS[new Date().getDay()];
+}
+
+/* ══════════════════════════════════════
+   時計
+══════════════════════════════════════ */
+function updateClock() {
+  const now = new Date();
+  document.getElementById('ps-clock-time').textContent =
+    `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  document.getElementById('ps-clock-date').textContent =
+    `${now.getFullYear()}/${pad(now.getMonth()+1)}/${pad(now.getDate())} (${DAYS_JP[now.getDay()]})`;
+}
+
+/* ══════════════════════════════════════
+   週間プログレス
+══════════════════════════════════════ */
+function renderProgress(pct) {
+  const fill = document.getElementById('ps-wp-fill');
+  const label = document.getElementById('ps-wp-pct');
+  if (!fill || !label) return;
+  const v = Math.min(100, Math.max(0, pct));
+  fill.style.width = v + '%';
+  label.textContent = v + '%';
+}
+
+/* ══════════════════════════════════════
+   スケジュール描画
+══════════════════════════════════════ */
+let _scheduleData  = null;  // fetch済みデータを保持
+let _activeDay     = null;  // 現在表示中の day key
+
+/** タブのアクティブ状態を更新 */
+function setActiveTab(dayKey) {
+  document.querySelectorAll('.ps-day-tab').forEach(btn => {
+    const isActive = btn.dataset.day === dayKey;
+    // Firefox safe: classList
+    btn.classList.toggle('ps-active', isActive);
+  });
+  _activeDay = dayKey;
+}
+
+/** タスクカードを1枚生成して返す */
+function makeTaskCard(task, nm) {
+  const m   = t2m(task.time);
+  const end = _scheduleData
+    ? (() => {
+        const tasks = _scheduleData.days[_activeDay]?.tasks ?? [];
+        const idx   = tasks.indexOf(task);
+        return idx + 1 < tasks.length ? t2m(tasks[idx+1].time) : m + 24*60;
+      })()
+    : m + 60;
+
+  const isCurrent = nm >= m && nm < end;
+  const isPast    = nm >= end;
+
+  const card = document.createElement('div');
+  card.className = 'ps-task-card';
+  // Firefox safe classList
+  if (isCurrent) card.classList.add('ps-current');
+  else if (isPast) card.classList.add('ps-past');
+
+  const catClass = {
+    writing: 'ps-cat-writing',
+    dev:     'ps-cat-dev',
+    meeting: 'ps-cat-meeting',
+    rest:    'ps-cat-rest',
+  }[task.cat] || 'ps-cat-rest';
+
+  card.innerHTML = `
+    <span class="ps-task-time">${task.time}</span>
+    <span class="ps-task-cat ${catClass}">${task.cat?.toUpperCase() ?? ''}</span>
+    <span class="ps-task-label">${task.label}</span>
+    <span class="ps-task-dot"></span>
+  `;
+  return card;
+}
+
+/**
+ * 指定 dayKey のスケジュールを描画する。
+ * 当日ならNOWバナーも更新。
+ */
+function renderDay(dayKey) {
+  if (!_scheduleData) return;
+  setActiveTab(dayKey);
+
+  const dayData = _scheduleData.days[dayKey];
+  const container = document.getElementById('ps-blocks');
+  container.innerHTML = '';
+
+  const nm      = nowMin();
+  const isToday = dayKey === todayKey();
+
+  // NOWバナー
+  const banner = document.getElementById('ps-now-banner');
+  if (isToday) {
+    banner.classList.remove('ps-hidden');
+    updateNowBanner(dayData?.tasks ?? []);
+  } else {
+    banner.classList.add('ps-hidden');
+  }
+
+  if (!dayData || !dayData.tasks.length) {
+    container.innerHTML = '<div class="ps-no-tasks">— 予定なし —</div>';
+    return;
+  }
+
+  // time-of-day ブロックに分類
+  BLOCKS.forEach(block => {
+    const inBlock = dayData.tasks.filter(task => {
+      const m = t2m(task.time);
+      return m >= block.min[0] && m < block.min[1];
+    });
+    if (!inBlock.length) return;
+
+    const section = document.createElement('div');
+    section.className = 'ps-time-block';
+
+    const label = document.createElement('div');
+    label.className = 'ps-block-label';
+    label.textContent = block.label;
+    section.appendChild(label);
+
+    inBlock.forEach(task => {
+      section.appendChild(makeTaskCard(task, isToday ? nm : -1));
+    });
+
+==================================================
+FILE: ./viewer/共有用/work-os-demo/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MERITOCRACIA OS — 作業卓</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="ps-wrap">
+
+  <!-- ヘッダー -->
+  <div class="ps-top-bar">
+    <div class="ps-site-label">MERITOCRACIA — 作業卓</div>
+    <div class="ps-clock-block">
+      <div id="ps-clock-time">00:00:00</div>
+      <div id="ps-clock-date">----/--/--</div>
+    </div>
+  </div>
+
+  <!-- 週間プログレス -->
+  <div class="ps-weekly-progress">
+    <div class="ps-wp-header">
+      <span class="ps-wp-label">WEEKLY PROGRESS</span>
+      <span id="ps-wp-pct">0%</span>
+    </div>
+    <div class="ps-wp-bar">
+      <div class="ps-wp-fill" id="ps-wp-fill"></div>
+    </div>
+  </div>
+
+  <!-- 2カラム -->
+  <div class="ps-main-grid">
+
+    <!-- ポモドーロ -->
+    <div class="ps-card">
+      <span class="ps-card-label">POMODORO TIMER</span>
+      <div id="ps-pomo-mode">WORK</div>
+
+      <div class="ps-ring-wrap">
+        <svg class="ps-ring-svg" viewBox="0 0 100 100">
+          <circle class="ps-ring-bg" cx="50" cy="50" r="42"/>
+          <circle class="ps-ring-prog" id="ps-ring" cx="50" cy="50" r="42"
+            stroke-dasharray="263.9"
+            stroke-dashoffset="0"/>
+        </svg>
+        <div class="ps-ring-center">
+          <div id="ps-pomo-timer">25:00</div>
+          <div id="ps-pomo-session">SESSION 1</div>
+        </div>
+      </div>
+
+      <div class="ps-pomo-btns">
+        <button class="ps-pomo-btn ps-primary" id="ps-btn-start">START</button>
+        <button class="ps-pomo-btn" id="ps-btn-pause">PAUSE</button>
+        <button class="ps-pomo-btn" id="ps-btn-reset">RESET</button>
+      </div>
+    </div>
+
+    <!-- 週間時間割 -->
+    <div class="ps-card ps-schedule-card">
+      <span class="ps-card-label">WEEKLY SCHEDULE</span>
+
+      <!-- day tabs -->
+      <div class="ps-day-tabs" id="ps-day-tabs">
+        <button class="ps-day-tab" data-day="MON">月</button>
+        <button class="ps-day-tab" data-day="TUE">火</button>
+        <button class="ps-day-tab" data-day="WED">水</button>
+        <button class="ps-day-tab" data-day="THU">木</button>
+        <button class="ps-day-tab" data-day="FRI">金</button>
+        <button class="ps-day-tab" data-day="SAT">土</button>
+        <button class="ps-day-tab" data-day="SUN">日</button>
+      </div>
+
+      <!-- NOW バナー（当日タブのみ表示） -->
+      <div class="ps-now-banner" id="ps-now-banner">
+        <div class="ps-now-label">NOW</div>
+        <div id="ps-now-task">—</div>
+        <div id="ps-now-remaining">次の予定まで —</div>
+      </div>
+
+      <!-- time-of-day ブロック -->
+      <div id="ps-blocks"></div>
+    </div>
+
+  </div>
+
+  <div class="ps-footer-note">LOCAL — NO SERVER — NO EXTERNAL ASSETS</div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/共有用/work-os-demo/schedule.json
+--------------------------------------------------
+{
+  "week": "2025-W15",
+  "weekly_progress": 42,
+  "days": {
+    "MON": {
+      "label": "月",
+      "tasks": [
+        { "time": "18:00", "label": "執筆", "cat": "writing", "block": "night" },
+        { "time": "22:00", "label": "シーン確認", "cat": "writing", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "TUE": {
+      "label": "火",
+      "tasks": [
+        { "time": "18:00", "label": "執筆", "cat": "writing", "block": "night" },
+        { "time": "19:30", "label": "仮眠", "cat": "rest", "block": "night" },
+        { "time": "22:00", "label": "会議", "cat": "meeting", "block": "night" },
+        { "time": "23:00", "label": "シーン27以降", "cat": "writing", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "WED": {
+      "label": "水",
+      "tasks": [
+        { "time": "14:00", "label": "シナリオ会議", "cat": "meeting", "block": "afternoon" },
+        { "time": "18:00", "label": "ep06 本編執筆", "cat": "writing", "block": "night" },
+        { "time": "23:00", "label": "Viewer UI調整", "cat": "dev", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "THU": {
+      "label": "木",
+      "tasks": [
+        { "time": "18:00", "label": "執筆", "cat": "writing", "block": "night" },
+        { "time": "22:00", "label": "RAG確認", "cat": "dev", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "FRI": {
+      "label": "金",
+      "tasks": [
+        { "time": "18:00", "label": "執筆", "cat": "writing", "block": "night" },
+        { "time": "21:00", "label": "査読・校閲", "cat": "writing", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "SAT": {
+      "label": "土",
+      "tasks": [
+        { "time": "13:00", "label": "スタッフMTG", "cat": "meeting", "block": "afternoon" },
+        { "time": "18:00", "label": "音楽確認", "cat": "meeting", "block": "night" },
+        { "time": "22:00", "label": "自由執筆", "cat": "writing", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    },
+    "SUN": {
+      "label": "日",
+      "tasks": [
+        { "time": "18:00", "label": "週次レビュー", "cat": "dev", "block": "night" },
+        { "time": "21:00", "label": "次週計画", "cat": "dev", "block": "night" },
+        { "time": "02:00", "label": "就寝", "cat": "rest", "block": "night" }
+      ]
+    }
+  }
+}
+
+==================================================
+FILE: ./viewer/共有用/work-os-demo/style.css
+--------------------------------------------------
+/* ============================================================
+   MERITOCRACIA OS — 作業卓 / private-schedule
+   prefix: ps-  (production-schedule)
+   v2: 週間時間割UI対応
+   ============================================================ */
+
+:root {
+  --ps-bg:       #07090f;
+  --ps-bg2:      #0e1320;
+  --ps-bg3:      #141c2e;
+  --ps-amber:    #c8841a;
+  --ps-amber2:   #e8a030;
+  --ps-amber3:   #f5c060;
+  --ps-dim:      #4a3c28;
+  --ps-text:     #d4c5a9;
+  --ps-text2:    #7a6e5e;
+  --ps-text3:    #4a4030;
+  --ps-green:    #2a8a4a;
+  --ps-green2:   #3dbb66;
+  --ps-blue:     #1e3a5f;
+  --ps-blue2:    #2980b9;
+  --ps-purple:   #3e1e5f;
+  --ps-purple2:  #9b59b6;
+  --ps-red:      #8a2020;
+  --ps-border:   rgba(200,132,26,0.18);
+  --ps-shadow:   rgba(0,0,0,0.6);
+  --ps-r:        16px;
+}
+
+/* ────── リセット ────── */
+.ps-wrap * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ────── ベース ────── */
+body {
+  background: var(--ps-bg);
+  color: var(--ps-text);
+  font-family: 'Georgia', 'Noto Serif JP', serif;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,132,26,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,132,26,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(200,132,26,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ────── ラッパー ────── */
+.ps-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ────── ヘッダー ────── */
+.ps-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ps-border);
+}
+
+.ps-site-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--ps-amber);
+  opacity: 0.7;
+}
+
+.ps-clock-block { text-align: right; }
+
+#ps-clock-time {
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: normal;
+  color: var(--ps-amber2);
+  letter-spacing: 4px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+#ps-clock-date {
+  font-size: 11px;
+  color: var(--ps-text2);
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+/* ────── 週間プログレス ────── */
+.ps-weekly-progress {
+  margin-bottom: 14px;
+}
+
+.ps-wp-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--ps-text2);
+  margin-bottom: 6px;
+}
+
+#ps-wp-pct { color: var(--ps-amber); }
+
+.ps-wp-bar {
+  height: 3px;
+  background: var(--ps-bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ps-wp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ps-amber), var(--ps-amber2));
+  border-radius: 2px;
+  transition: width 0.6s ease;
+  width: 0%;
+}
+
+/* ────── 2カラム ────── */
+.ps-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .ps-main-grid { grid-template-columns: 1fr; }
+}
+
+/* ────── カード ────── */
+.ps-card {
+  background: var(--ps-bg2);
+  border: 1px solid var(--ps-border);
+
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/index.html
+--------------------------------------------------
+./night-review-vol1/
+
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/letter-archive.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRIS SWEET LETTER ARCHIVE | MERITOCRACIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d0d0f;
+      --card:#17171b;
+      --border:#3a3025;
+      --gold:#c9a84c;
+      --text:#ece7dd;
+      --muted:#b8aa92;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top, rgba(201,168,76,0.06), transparent 40%),
+        var(--bg);
+      color:var(--text);
+      font-family:'Noto Serif JP', serif;
+      padding:48px 24px;
+    }
+
+    .wrap{
+      max-width:960px;
+      margin:0 auto;
+    }
+
+    h1{
+      font-family:'Cinzel', serif;
+      font-size:2rem;
+      margin-bottom:12px;
+      color:var(--gold);
+      letter-spacing:0.08em;
+    }
+
+    .lead{
+      color:var(--muted);
+      margin-bottom:32px;
+      line-height:1.8;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+
+    .card{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      background:var(--card);
+      border:1px solid var(--border);
+      padding:24px;
+      transition:.25s ease;
+      min-height:170px;
+    }
+
+    .card:hover{
+      transform:translateY(-2px);
+      border-color:var(--gold);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .tag{
+      font-size:.75rem;
+      letter-spacing:.15em;
+      color:var(--gold);
+      margin-bottom:10px;
+      display:block;
+    }
+
+    .title{
+      font-size:1.1rem;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    .desc{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>IRIS SWEET LETTER ARCHIVE</h1>
+    <p class="lead">
+      アイリス・アールグレイによる甘々レビュー便箋アーカイブ。<br>
+      各テーマごとの高級レターUIを比較・閲覧できます。
+    </p>
+
+    <div class="grid">
+
+      <a class="card" href="./iris-sweet-letter-v1/index.html">
+        <span class="tag">CLASSIC</span>
+        <div class="title">クラシック便箋</div>
+        <div class="desc">Geminiベースの上品な初号機。春の夜と紅茶の余韻。</div>
+      </a>
+
+      <a class="card" href="./iris-sweet-letter-v1/luxury.html">
+        <span class="tag">LUXURY</span>
+        <div class="title">高級便箋テーマ</div>
+        <div class="desc">深緑 × 金箔 × 公爵家メイド。最上級のご褒美感。</div>
+      </a>
+
+      <a class="card" href="./iris-sweet-letter-v1/night.html">
+        <span class="tag">NIGHT LOUNGE</span>
+        <div class="title">深夜ラウンジ</div>
+        <div class="desc">黒 × 琥珀 × ランプ光。Reading Blend連動版。</div>
+      </a>
+
+      <a class="card" href="./iris-sweet-letter-v1/spring.html">
+        <span class="tag">SPRING TEA</span>
+        <div class="title">春摘みダージリン</div>
+        <div class="desc">桜色 × 新芽グリーン。春の柔らかな便箋。</div>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/luxury.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter from Iris | Luxury | MERITOCRACIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./iris-luxury.css">
+</head>
+<body>
+    <div class="letter-overlay"></div>
+
+    <main class="letter-container" id="container">
+        <article class="letter-paper">
+
+            <header class="letter-header">
+                <div class="tea-accent" id="tea-accent-icon">☕✨</div>
+                <p class="recipient-line"><span id="recipient"></span> 様</p>
+            </header>
+
+            <section class="letter-intro">
+                <p id="intro-text"></p>
+                <div class="tea-suggestion">
+                    よろしければ、このあとは今の季節にぴったりな<br>
+                    <strong id="tea-name"></strong> でも召し上がって、<br>
+                    ゆっくりお休みくださいませ。
+                </div>
+            </section>
+
+            <hr class="letter-divider">
+
+            <section class="review-meta">
+                <div class="read-status">STATUS: <span id="read-count"></span> READING COMPLETED</div>
+                <div class="review-summary" id="review-summary"></div>
+            </section>
+
+            <section class="letter-body" id="letter-body"></section>
+
+            <footer class="letter-footer">
+                <p class="closing">引き続き応援しております・・・！</p>
+                <div class="signature">
+                    <span class="sign-label">ーーー</span>
+                    <span id="sign-name"></span>
+                    <span class="sign-label">ーーーー</span>
+                </div>
+            </footer>
+
+        </article>
+    </main>
+
+    <script src="./letter.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/night.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter from Iris | Night Lounge | MERITOCRACIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./iris-nightlounge.css">
+</head>
+<body>
+    <div class="letter-overlay"></div>
+
+    <main class="letter-container" id="container">
+        <article class="letter-paper">
+
+            <header class="letter-header">
+                <div class="tea-accent" id="tea-accent-icon">☕✨</div>
+                <p class="recipient-line"><span id="recipient"></span> 様</p>
+            </header>
+
+            <section class="letter-intro">
+                <p id="intro-text"></p>
+                <div class="tea-suggestion">
+                    よろしければ、このあとは今の季節にぴったりな<br>
+                    <strong id="tea-name"></strong> でも召し上がって、<br>
+                    ゆっくりお休みくださいませ。
+                </div>
+            </section>
+
+            <hr class="letter-divider">
+
+            <section class="review-meta">
+                <div class="read-status">STATUS: <span id="read-count"></span> READING COMPLETED</div>
+                <div class="review-summary" id="review-summary"></div>
+            </section>
+
+            <section class="letter-body" id="letter-body"></section>
+
+            <footer class="letter-footer">
+                <p class="closing">引き続き応援しております・・・！</p>
+                <div class="signature">
+                    <span class="sign-label">ーーー</span>
+                    <span id="sign-name"></span>
+                    <span class="sign-label">ーーーー</span>
+                </div>
+            </footer>
+
+        </article>
+    </main>
+
+    <script src="./letter.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/review-ledger.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小説レビューレポート台帳</title>
+<style>
+body{
+  margin:0;
+  background:#0f1115;
+  color:#eee;
+  font-family:system-ui, sans-serif;
+  padding:32px;
+}
+h1{
+  margin-bottom:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#171a21;
+}
+th,td{
+  border:1px solid #333;
+  padding:12px;
+  text-align:left;
+  font-size:14px;
+}
+th{
+  background:#1f2430;
+}
+tr:hover{
+  background:#202633;
+}
+.status-done{color:#8fd18f;}
+.status-wait{color:#d6b86b;}
+.status-hold{color:#c77;}
+</style>
+</head>
+<body>
+
+<h1>📘 小説レビューレポート台帳</h1>
+
+<table>
+<thead>
+<tr>
+  <th>No</th>
+  <th>作者</th>
+  <th>作品タイトル</th>
+  <th>作品分類</th>
+  <th>テーマ</th>
+  <th>感想</th>
+  <th>読了</th>
+  <th>公開ページ</th>
+  <th>作品ページ</th>
+  <th>X返信</th>
+  <th>許諾</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>001</td>
+  <td>Resetter</td>
+  <td>とある社員寮の話 南嘉手納荘四号棟</td>
+  <td>ホラー作品</td>
+  <td>🌙 Night</td>
+  <td>甘々</td>
+  <td>9話</td>
+  <td><a href="./night-review-vol1/">公開ページ</a></td>
+  <td><a href="https://ncode.syosetu.com/n1667lx/" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td class="status-done">済</td>
+  <td class="status-done">OK</td>
+</tr>
+<tr>
+  <td>002</td>
+  <td>緑茶</td>
+  <td>剣と魔法の世界で、英雄譚ができるまで</td>
+  <td>ファンタジー</td>
+  <td>👑 Luxury</td>
+  <td>辛口</td>
+  <td>8話</td>
+  <td><a href="./作者別フォルダ/ryokutya-review/luxury.html">公開ページ</a></td>
+  <td><a href="https://kakuyomu.jp/works/822139843899183154" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td class="status-done">済</td>
+  <td class="status-done">OK</td>
+</tr>
+<tr>
+  <td>003</td>
+  <td>神崎ライ</td>
+  <td>絶望の箱庭～鳥籠の姫君～</td>
+  <td>鏡モチーフ作品</td>
+  <td>🌙 Night</td>
+  <td>甘々</td>
+  <td>9話</td>
+  <td><a href="./作者別フォルダ/神崎ライ/night.html">公開ページ</a></td>
+  <td><a href="https://ncode.syosetu.com/n3370hf/" target="_blank" rel="noopener noreferrer">作品ページ</a></td>
+  <td>未記録</td>
+  <td>未記録</td>
+</tr>
+</tbody>
+<tr>
+  <td>004</td>
+  <td>炎山ヒロト</td>
+  <td>魔法少女戦士マジカルファイターズ</td>
+  <td>ヒーローモノ</td>
+  <td>🌸 Spring</td>
+  <td>アイリス書簡</td>
+  <td>5話</td>
+  <td><a href="./作者別フォルダ/炎山ヒロト/night.html">公開ページ</a></td>
+  <td><a href="https://ncode.syosetu.com/n0390gp/5/" target="_blank" rel="noopener noreferrer">公開リンク</a></td>
+  <td>未記録</td>
+  <td>未記録</td>
+</tr>
+</table>
+
+</body>
+</html>
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/ryokutya.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Letter | 緑茶『剣と魔法の世界で、英雄譚ができるまで』</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./iris-luxury.css">
+    <style>
+        .letter-body h2{
+            font-size:1.08rem;
+            margin:2rem 0 0.8rem;
+            color:#c9a84c;
+            line-height:1.8;
+        }
+        .letter-body p{
+            line-height:2;
+            margin:0 0 1rem;
+            white-space:normal;
+            word-break:break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-overlay"></div>
+
+    <main class="letter-container">
+        <article class="letter-paper">
+
+            <header class="letter-header">
+                <div class="tea-accent">☕✨</div>
+                <p class="recipient-line">作者　緑茶 様</p>
+            </header>
+
+            <hr class="letter-divider">
+
+            <section class="letter-body">
+                <p>レビュー：『剣と魔法の世界で、英雄譚ができるまで』を読んで</p>
+
+                <h2>【ネーミングと世界観の演出について】</h2>
+                <p>「国立剣魔学園」という名称は、王道で分かりやすい反面、ファンタジー作品が溢れる昨今では少し既視感があるかもしれません。</p>
+                <p>例えば、国立剣魔学園（ステイツ・アークマギア）や（ナショナル・グラディウス）のように、中二病心をくすぐる独自の「ルビ」を振るだけで、作品のファンタジー濃度が一気に濃くなり、読者の目を引くフックになります。タイトルの『英雄譚』という言葉に負けない、特別感のある固有名詞を意識するとさらに良くなると思います。</p>
+
+                <h2>【リヒトの「強さ」に対するロジックの補強】</h2>
+                <p>8話まで読み進めて気になったのが、平民であるリヒトが「なぜこれほど強いのか」「なぜ貴族限定の学園に入れたのか」という説明が不足している点です。</p>
+                <p>もしこれが意図的な伏線であれば良いのですが、理由もなく「ただ強い平民」として描かれ続けると、読者は物語のリアリティ（説得力）に疑問を抱いてしまいます。リヒトがその力を手に入れた背景や、新制度に選ばれた具体的な経緯を、早めに小出しにするか回想で補完することで、彼というキャラクターの魅力と説得力が一段と増すはずです。</p>
+
+                <h2>【ライバル・ジオラスの立ち位置と構成】</h2>
+                <p>本作におけるジオラスは、主人公ライにとっての巨大な壁であり、重要なライバルです。</p>
+                <p>それだけに、リヒトに敗北する前の「ジオラスが最強として君臨していた学園の空気」を、冒頭や回想でもう少し厚く描写しても良いかもしれません。彼がどれほど「孤高の天才」であったかを読者に刻み込むことで、それを崩したリヒトの異質さと、そこから再起するライのドラマがより熱く響くようになります。</p>
+
+                <h2>【総評】</h2>
+                <p>文章自体は非常にスムーズで読みやすく、ジャンプ漫画のような「男臭い青春と熱い鼓動」を感じる作品です。</p>
+                <p>ライト層には入りやすい一方で、ファンタジーを読み慣れた層は「設定の粗さ」を敏感に察知し、2話前後で離脱してしまうリスクもあります。競合が多いジャンルだからこそ、独自の設定やキャラの深掘り、そして読者を納得させる「ロジック」を磨くことで、他にはない個性が光る作品に化けるポテンシャルを感じました。</p>
+
+                <p>※あくまで一読者としての主観ですので、制作のヒントになれば幸いです。応援しています。</p>
+            </section>
+
+            <footer class="letter-footer">
+                <div class="signature">
+                    <span class="sign-label">ーーー</span>
+                    <span>Lancer</span>
+                    <span class="sign-label">ーーーー</span>
+                </div>
+            </footer>
+
+        </article>
+    </main>
+</body>
+</html>
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/spring.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter from Iris | Spring Tea | MERITOCRACIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./iris-springtea.css">
+</head>
+<body>
+    <div class="letter-overlay"></div>
+
+    <main class="letter-container" id="container">
+        <article class="letter-paper">
+
+            <header class="letter-header">
+                <div class="tea-accent" id="tea-accent-icon">☕✨</div>
+                <p class="recipient-line"><span id="recipient"></span> 様</p>
+            </header>
+
+            <section class="letter-intro">
+                <p id="intro-text"></p>
+                <div class="tea-suggestion">
+                    よろしければ、このあとは今の季節にぴったりな<br>
+                    <strong id="tea-name"></strong> でも召し上がって、<br>
+                    ゆっくりお休みくださいませ。
+                </div>
+            </section>
+
+            <hr class="letter-divider">
+
+            <section class="review-meta">
+                <div class="read-status">STATUS: <span id="read-count"></span> READING COMPLETED</div>
+                <div class="review-summary" id="review-summary"></div>
+            </section>
+
+            <section class="letter-body" id="letter-body"></section>
+
+            <footer class="letter-footer">
+                <p class="closing">引き続き応援しております・・・！</p>
+                <div class="signature">
+                    <span class="sign-label">ーーー</span>
+                    <span id="sign-name"></span>
+                    <span class="sign-label">ーーーー</span>
+                </div>
+            </footer>
+
+        </article>
+    </main>
+
+    <script src="./letter.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/こ、こんにちは Resetter様！.md
+--------------------------------------------------
+こ、こんにちは　Resetter様！
+私メイドのアイリス・アールグレイが
+LANCERに代わって感想をお伝えしようと思います。
+よろしければ、このあとは今の季節にぴったりな
+春摘みのダージリン（ファーストフラッシュ） でも召し上がって、
+ゆっくりお休みくださいませ☕✨
+以下感想レポート
+
+9話まで拝見させて頂きました。
+暖かな春が訪れているにも関わらず、
+背筋が凍るようなお話でした・・・。
+
+あらすじ
+お、お家賃安すぎます・・・！
+日本の地方都市と言えどもこれは破格です。
+ただ入居条件がこの作品の肝だと感じました。
+ツッコミどころを用意してインパクト与える
+面白い仕掛けだと読んでて思いました。
+
+文章自体は全体的に読みやすくて、苦に感じませんでした！
+
+流石作者様の力量を感じました！
+
+読んでて混乱したのは、おっさんなのに
+語尾というか言葉遣いや地の文が女性っぽいという点。
+でも設定として面白いです・・・！
+
+会話がメインで構成されていて、地の文は少なめ。
+意図的なのかテンポ感意識して敢えて削ってるのか
+読んでて気になりました。
+僭越ながら苦言を呈するなら、地の文を増やした方が分かりやすいかな？イメージしやすい回もあるかな？
+と思う部分はありました。
+
+でも読んでて非常にワクワクしました！
+引き続き応援しております・・・！
+ーーーアイリス・アールグレイーーーー
+==================================================
+FILE: ./viewer/共有用/小説レビューレポート/作者 緑茶 剣と魔法の世界で、英雄譚ができるまで.md
+--------------------------------------------------
+
+
+作者　緑茶
+レビュー：『剣と魔法の世界で、英雄譚ができるまで』を読んで
+
+【ネーミングと世界観の演出について】
+「国立剣魔学園」という名称は、王道で分かりやすい反面、ファンタジー作品が溢れる昨今では少し既視感があるかもしれません。
+例えば、国立剣魔学園（ステイツ・アークマギア）や（ナショナル・グラディウス）のように、中二病心をくすぐる独自の「ルビ」を振るだけで、作品のファンタジー濃度が一気に濃くなり、読者の目を引くフックになります。タイトルの『英雄譚』という言葉に負けない、特別感のある固有名詞を意識するとさらに良くなると思います。
+
+【リヒトの「強さ」に対するロジックの補強】
+8話まで読み進めて気になったのが、平民であるリヒトが「なぜこれほど強いのか」「なぜ貴族限定の学園に入れたのか」という説明が不足している点です。
+もしこれが意図的な伏線であれば良いのですが、理由もなく「ただ強い平民」として描かれ続けると、読者は物語のリアリティ（説得力）に疑問を抱いてしまいます。リヒトがその力を手に入れた背景や、新制度に選ばれた具体的な経緯を、早めに小出しにするか回想で補完することで、彼というキャラクターの魅力と説得力が一段と増すはずです。
+
+【ライバル・ジオラスの立ち位置と構成】
+本作におけるジオラスは、主人公ライにとっての巨大な壁であり、重要なライバルです。
+それだけに、リヒトに敗北する前の「ジオラスが最強として君臨していた学園の空気」を、冒頭や回想でもう少し厚く描写しても良いかもしれません。彼がどれほど「孤高の天才」であったかを読者に刻み込むことで、それを崩したリヒトの異質さと、そこから再起するライのドラマがより熱く響くようになります。
+
+【総評】
+文章自体は非常にスムーズで読みやすく、ジャンプ漫画のような「男臭い青春と熱い鼓動」を感じる作品です。
+ライト層には入りやすい一方で、ファンタジーを読み慣れた層は「設定の粗さ」を敏感に察知し、2話前後で離脱してしまうリスクもあります。競合が多いジャンルだからこそ、独自の設定やキャラの深掘り、そして読者を納得させる「ロジック」を磨くことで、他にはない個性が光る作品に化けるポテンシャルを感じました。
+
+※あくまで一読者としての主観ですので、制作のヒントになれば幸いです。応援しています。

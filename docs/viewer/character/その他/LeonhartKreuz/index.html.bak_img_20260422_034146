@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レオンハルト・クロイツ | CHARACTER VIEW</title>
+  <meta name="description" content="メリトクラシア -Reboot- 登場人物資料：レオンハルト・クロイツ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./leonhart.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="../index.html">← CHARACTER TOP</a>
+
+    <section class="hero">
+      <div class="hero-visual">
+        <img src="./leonhart-kreuz-main.png" alt="レオンハルト・クロイツ イメージビジュアル">
+      </div>
+
+      <div class="hero-copy">
+        <div>
+          <div class="eyebrow">Character Archive / Internal Executive Layer</div>
+          <h1 class="title-ja">レオンハルト・クロイツ</h1>
+          <div class="title-en">Leonhart Kreuz</div>
+
+          <p class="lead">
+            守るために迷いを切り捨て、最短で局面を終わらせる。
+            彼は英雄ではない。だが、炎の後に残る混乱と責任を、
+            誰より早く処理する「制度の執行者」である。
+          </p>
+
+          <blockquote class="quote">
+            <strong>ONE-LINE DEFINITION</strong>
+            守るために迷いを切り捨て、最短で局面を終わらせる現場判断主義の執行者。
+          </blockquote>
+
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Affiliation</div>
+              <div class="meta-value">特別顧問 / 上位実務官ポジション</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Age</div>
+              <div class="meta-value">35〜38歳前後</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Visual Motif</div>
+              <div class="meta-value">黒鉄 / 鈍い琥珀 / 乾いた銅</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Role</div>
+              <div class="meta-value">現場圧縮 / 損耗管理 / 制度運用の実装</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          「希望の象徴」ではなく、「局面を終わらせる責任」として立つ人物。
+        </div>
+      </div>
+    </section>
+
+    <section class="section-grid">
+      <article class="section-card">
+        <h2 class="section-title">EXECUTION PROFILE</h2>
+        <ul class="list">
+          <li>黒髪、琥珀眼、無駄のない実戦体型</li>
+          <li>黒系ロングコートと暗色制服を基調とした実務装備</li>
+          <li>書類・短杖・拳銃・細身剣など「執行官」寄りの武装と相性が良い</li>
+          <li>整った顔立ちだが、近寄りやすさより緊張感が先に立つ</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2 class="section-title">FIELD DOCTRINE</h2>
+        <ul class="list">
+          <li>感情より結果を優先する現場判断主義</li>
+          <li>「何が正しいか」より「何を残せるか」を見る</li>
+          <li>遅い善意は被害を拡大させると知っている</li>
+          <li>強さとは、切る責任を持つことだと定義する</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2 class="section-title">RELATION AXIS</h2>
+        <div class="dual-quote">
+          <div class="mini-quote">
+            <strong>vs ガーネット</strong><br>
+            炎の中へ入る英雄に対し、クロイツは炎の後を切り詰める鉄である。
+          </div>
+          <div class="mini-quote">
+            <strong>to ライナルト</strong><br>
+            理想を言い換えず、現実に落とす側の大人。厳しいが、能力は高く評価する。
+          </div>
+          <div class="mini-quote">
+            <strong>to ジェイド</strong><br>
+            優しくない。だが誤魔化さない。本物だと分かるからこそ、怖い。
+          </div>
+        </div>
+      </article>
+
+      <article class="section-card">
+        <h2 class="section-title">IMPRESSION TAGS</h2>
+        <div class="tags">
+          <span class="tag">黒鉄</span>
+          <span class="tag">秩序圧縮</span>
+          <span class="tag">実務</span>
+          <span class="tag">切断</span>
+          <span class="tag">非公開の強者</span>
+          <span class="tag">静かな威圧</span>
+          <span class="tag">琥珀の視線</span>
+          <span class="tag">迷いの排除</span>
+        </div>
+      </article>
+
+      <article class="section-card">
+        <h2 class="section-title">LINE SAMPLE</h2>
+        <ul class="list">
+          <li>「感傷は後にしろ」</li>
+          <li>「迷うな。遅れる」</li>
+          <li>「守りたいなら、数を見ろ」</li>
+          <li>「正しさは結果で証明しろ」</li>
+          <li>「君はまだ、切る責任を知らない」</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2 class="section-title">POSITION IN STORY</h2>
+        <p>
+          レオンハルト・クロイツは、「制度の冷たさ」を単なる設定ではなく、
+          人間の顔として提示するためのキャラクターである。
+          彼は悪役ではない。だが救いの顔もしていない。
+          国家運用の現実を、最も鋭利な形で少年世代に突きつける。
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

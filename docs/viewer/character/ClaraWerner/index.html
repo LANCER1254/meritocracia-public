@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クララ・ヴェルナー | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #060810;
+  --panel: #0f1320;
+  --panel-2: #12192a;
+  --text: #c8ced8;
+  --muted: #91a0b3;
+  --line: #2c394b;
+  --accent: #6b7fa4;
+  --accent-soft: #a4b1c7;
+  --warm: #bca487;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 32px 24px 80px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+header {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(164,177,199,0.10) 0%, rgba(15,19,32,0.96) 100%);
+  padding: 34px 28px;
+  margin-bottom: 20px;
+}
+
+.header-label {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.header-sub {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.header-definition {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.color-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.color-strip span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.c1 { background: #1c2230; }
+.c2 { background: #4c5975; }
+.c3 { background: #7d8aa3; }
+.c4 { background: #b4bfd1; }
+.c5 { background: #d8d2c7; }
+.c6 { background: #bca487; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  color: #dbe2ec;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 14px;
+  margin: 0;
+}
+
+.status-list dt {
+  color: var(--accent-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--accent-soft);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.note-block {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.full-section {
+  margin-bottom: 20px;
+}
+
+.full-section .card {
+  padding: 24px;
+}
+
+.concept-text {
+  margin: 0;
+}
+
+.bullet-block p {
+  margin: 0 0 12px;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="../index.html" class="back">← CHARACTER LIST</a>
+
+  <header>
+    <div class="header-label">MERITOCRACIA — INTERNAL CHARACTER DOSSIER</div>
+    <h1>クララ・ヴェルナー</h1>
+    <div class="header-sub">CLARA WERNER</div>
+    <div class="header-definition">
+      クララ・ヴェルナーは、何も選ばなかったことで最も大きな代償を払った人間であり、<br>
+      ジェイドにとっての初恋と、ユミナにとって守れなかった日常を同時に体現する存在である。
+    </div>
+  </header>
+
+  <div class="color-strip" aria-hidden="true">
+    <span class="c1"></span>
+    <span class="c2"></span>
+    <span class="c3"></span>
+    <span class="c4"></span>
+    <span class="c5"></span>
+    <span class="c6"></span>
+  </div>
+
+  <main>
+
+    <div class="hero-grid">
+
+      <article class="card">
+        <h2 class="card-title">Basic Profile</h2>
+        <dl class="status-list">
+          <dt>NAME</dt>
+          <dd>クララ・ヴェルナー</dd>
+
+          <dt>AGE</dt>
+          <dd>28歳</dd>
+
+          <dt>SEX</dt>
+          <dd>女性</dd>
+
+          <dt>ORIGIN</dt>
+          <dd>平民出身</dd>
+
+          <dt>RANK</dt>
+          <dd>ウンフェーイグ（最下層平民）</dd>
+
+          <dt>POSITION</dt>
+          <dd>市場の粉屋で働く平民女性</dd>
+
+          <dt>FAMILY</dt>
+          <dd>妹：ユミナ・ヴェルナー</dd>
+
+          <dt>ROLE</dt>
+          <dd>制度の外側にいる一般市民 / 日常を回す側の人間</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Symbol Tags</h2>
+        <div class="tag-row">
+          <span class="tag">COMMONER</span>
+          <span class="tag">FLOUR SHOP</span>
+          <span class="tag">DAILY LIFE</span>
+          <span class="tag">FIRST LOVE</span>
+          <span class="tag">UNPROTECTED KINDNESS</span>
+          <span class="tag">LOSS</span>
+        </div>
+
+        <div class="note-block">
+          <p><strong>表層象徴：</strong>市場 / 粉屋 / 姉 / 優しい大人 / 生活の匂い / 日常</p>
+          <p><strong>深層象徴：</strong>守られていない善意 / 制度の外側 / 無垢な被害者 / 喪失の起点 / 報われない優しさ</p>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Character Definition</h2>
+        <p class="concept-text">
+          クララ・ヴェルナーは、政治や制度の中心とは無縁の場所で生きる平民女性である。<br><br>
+          彼女は英雄でも、選ばれた存在でも、特別な戦士でもない。<br>
+          市場の粉屋で働き、日常を回し、他人に穏やかに接しながら、
+          自分の役割を静かに果たしているだけの人間である。<br><br>
+          だからこそ彼女は、「正しい人が報われるとは限らない」という世界の残酷さを、
+          最も無垢な形で可視化する存在になる。<br><br>
+          何かを選んだから死ぬのではない。<br>
+          ただ、そこにいたから失われる。<br>
+          その理不尽さそのものが、クララという人物の核である。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Appearance</h2>
+        <p class="concept-text">
+          クララは、淡い銀紫色の髪を高めの位置でまとめたポニーテールと、
+          柔らかく親しみやすい表情を持つ成人女性である。<br><br>
+          顔立ちは整っているが、作り込まれた美しさではなく、
+          生活の中で自然に記憶に残る穏やかさが前に出ている。<br><br>
+          目元には小さなほくろがあり、うっすらとしたそばかすが残る。<br>
+          作業着はシャツとエプロンが基本で、袖をまくった実用的な装いをしている。<br><br>
+          髪留めは安価だが丁寧に扱われた小さなもので、
+          装飾ではなく生活の延長にあるささやかな誇りとして機能している。<br><br>
+          遠目にはユミナと似て見えるが、近くで見ると
+          「制度の中で張る者」と「市井で生きる者」の差がはっきり分かる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Personality</h2>
+        <p class="concept-text">
+          クララは面倒見が良く、立場の弱い者にも自然に声をかけられる人物である。<br><br>
+          彼女の善意は、意識して演じる美徳ではない。<br>
+          毎日の生活の中に染み付いた、呼吸のような優しさである。<br><br>
+          自分が平民であることを受け入れて生きており、
+          恨みや野心よりも、目の前の暮らしを回すことを優先している。<br><br>
+          そのため彼女は、強く主張する人間ではないが、
+          生活の現場にいるからこそ失われると痛い“普通の善人”として非常に重い存在になる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Position in the Market</h2>
+        <p class="concept-text">
+          クララは中央市場の粉屋で働いており、
+          商人や職人たちが日々の仕事を回すための基盤を支える側にいる。<br><br>
+          彼女は市場の主役ではない。<br>
+          しかし、いなければ誰かが確実に困る種類の人間である。<br><br>
+          騒がしい市場の中で、クララは派手に目立つわけではない。<br>
+          それでも、声をかけられれば自然に応じ、
+          粉袋を渡し、短いやり取りの中で相手を安心させる。<br><br>
+          その“日常の手触り”こそがクララの存在価値であり、
+          彼女が失われることで市場の温度そのものが一段冷えることになる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Yumina</h2>
+        <p class="concept-text">
+          クララはユミナの実姉である。<br><br>
+          二人は同じ家に生まれ、顔立ちや価値観の根は近い。<br>
+          しかし人生の進み方は大きく分かれた。<br><br>
+          ユミナが制度の中へ入り、実力で上へ進んだのに対し、
+          クララは制度の外側で市井の生活を支える側に留まった。<br><br>
+          それは優劣の差ではなく、生き方と立ち位置の差である。<br>
+          ただし物語上は、この差が「同じ家に生まれても制度は人を分ける」という現実を可視化する。<br><br>
+          クララviewでは、ユミナとの差異は対立ではなく、
+          “分断された姉妹”という静かな構造として扱うのが最も強い。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Relation with Jade</h2>
+        <p class="concept-text">
+          ジェイドにとってクララは、最初から特別な肩書きのある存在ではない。<br><br>
+          彼女は「ただの優しい大人」であり、
+          市場で出会う、柔らかくて安心できる人である。<br><br>
+          貴族や制度や暴力といった重いものと結びつかず、
+          ただ働き、笑い、自然に名前を呼んでくれる。<br><br>
+          だからこそクララは、ジェイドにとって
+          “理不尽とは無縁に見えた側の世界”の象徴になる。<br><br>
+          そしてその象徴が壊れることで、
+          ジェイドの中で「優しいだけでは守れない」という認識が刻まれていく。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">First Love Position</h2>
+        <p class="concept-text">
+          クララは、ジェイドにとって明確な初恋ポジションにある。<br><br>
+          ただしそれは成熟した恋愛ではなく、
+          年上の優しさ、認められることへの憧れ、日常の温かさへの欲求が混じった
+          “少年の心が初めて向ける特別な感情”として整理するのが正しい。<br><br>
+          粉屋で名前を呼ばれること。<br>
+          頑張っていることを見てくれていること。<br>
+          鉛筆を渡して、努力を肯定してくれること。<br><br>
+          それらはすべて、ジェイドにとって
+          「自分を雑に扱わない大人がいる」という救いの記憶であり、
+          初恋と日常への憧れが一体化した感情の核になる。<br><br>
+          だからクララの喪失は、単なる知人の死ではなく、
+          ジェイドの中で最も柔らかい部分が切り取られる出来事になる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Daily Warmth / Flour Shop Scene</h2>
+        <p class="concept-text">
+          粉屋の中には、小麦の匂いと落ち着いた空気がある。<br><br>
+          クララはその空間の一部であり、
+          市場の喧騒の中に置かれた小さな安心として機能している。<br><br>
+          ジェイドが店を訪れた時、彼女は大げさな優しさを見せるのではなく、
+          いつもの調子で迎え、自然に会話を交わし、必要なものを渡す。<br><br>
+          その延長で鉛筆を差し出し、
+          「頑張ってる子にはご褒美」と言えるところに、
+          クララという人物の本質が出ている。<br><br>
+          彼女は大きな言葉で人を救うのではなく、
+          小さな行為で相手の心を温める人間である。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Death in the Terror Incident</h2>
+        <p class="concept-text">
+          クララはテロ事件に巻き込まれて死亡する。<br><br>
+          その死に英雄性はない。<br>
+          何かを選んだ結果でもなく、思想を掲げた結果でもなく、抵抗の末でもない。<br><br>
+          ただ、そこにいた。<br>
+          ただ、日常の側にいた。<br>
+          それだけで失われる。<br><br>
+          ここがクララという人物の最重要点である。<br>
+          彼女は「何も悪くない被害者」という言葉で片付く存在ではなく、
+          制度・国家・思想・暴力が最終的に踏み潰すものが何なのかを、
+          最も無垢な形で見せるための人物である。<br><br>
+          クララの死は、世界の残酷さを説明しないための一撃として機能する。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Meaning for Yumina</h2>
+        <p class="concept-text">
+          クララは、ユミナにとって守れなかった日常そのものである。<br><br>
+          制度の中で上へ進み、正しさと責任によって生きてきたユミナにとって、
+          市井で暮らしていた姉の死は、
+          正しさだけでは届かない領域の存在を突きつける傷になる。<br><br>
+          それは単なる家族喪失ではない。<br>
+          制度の内側にいる者が、制度の外側にいる大切な人を守れなかったという裂け目である。<br><br>
+          この意味でクララは、ユミナの感情回収ラインの最深部を支える人物になる。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Meaning for Jade</h2>
+        <p class="concept-text">
+          ジェイドにとってクララは、守れなかった日常であり、
+          初恋であり、優しさが報われるとは限らないという現実を刻みつけた相手である。<br><br>
+          彼女の存在は、貴族社会の侮辱や市場の暴力とは別系統の温度を持っていた。<br>
+          だからこそ、その喪失は世界全体の冷たさを一気に現実へ変える。<br><br>
+          クララはジェイドにとって、
+          「もっと強ければ守れたのではないか」と思わせる対象であり、
+          同時に「強さだけでは届かないものがある」と気づかせる対象でもある。<br><br>
+          彼女の死によって、ジェイドの中の日常観と世界観は決定的に変質する。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Internal Keywords</h2>
+        <div class="tag-row">
+          <span class="tag">28歳</span>
+          <span class="tag">市場の粉屋</span>
+          <span class="tag">平民女性</span>
+          <span class="tag">ウンフェーイグ</span>
+          <span class="tag">ユミナの姉</span>
+          <span class="tag">初恋</span>
+          <span class="tag">鉛筆</span>
+          <span class="tag">日常</span>
+          <span class="tag">守られていない善意</span>
+          <span class="tag">制度の外側</span>
+          <span class="tag">巻き込まれ死</span>
+          <span class="tag">喪失の起点</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-section">
+      <div class="card">
+        <h2 class="card-title">Fixed Notes</h2>
+        <div class="bullet-block">
+          <p><strong>固定1：</strong>クララ・ヴェルナーは28歳固定。</p>
+          <p><strong>固定2：</strong>市場の粉屋で働く平民女性であり、ウンフェーイグ階級に属する。</p>
+          <p><strong>固定3：</strong>ユミナ・ヴェルナーの実姉である。</p>
+          <p><strong>固定4：</strong>ジェイドにとっての初恋ポジションを担う。</p>
+          <p><strong>固定5：</strong>善意を誇示せず、生活の中で自然に他者へ優しくできる人物である。</p>
+          <p><strong>固定6：</strong>テロ事件では思想や抵抗とは無関係に巻き込まれて死亡する。</p>
+          <p><strong>固定7：</strong>クララは、制度・国家・思想の暴力性を最も無垢な形で可視化する人物として機能する。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>選ばれなかったのではない。ただ、選ばれる世界に立たなかった人間</p>
+    <small>MERITOCRACIA — INTERNAL CHARACTER DOSSIER / CLARA CORE</small>
+  </footer>
+
+</div>
+</body>
+</html>

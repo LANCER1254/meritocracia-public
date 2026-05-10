@@ -1,0 +1,107 @@
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/# Claude依頼プロンプト｜アイリス専用キャラクターページHTML実装.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/アイリス_戦争奴隷設定_詳細.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/クロード依頼夜切り替え.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘  完全設定資料ジェミニドキュメント化.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘 アイリス＝アールグレイ キャラクター完全設定資料（前編）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘 統合議事録｜アイリス家族構成・家庭内差別構造 正式ロック版.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/クララ・ヴエルナー/1️⃣ 基本情報（確定）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/クララ・ヴエルナー/💠 キャラ画像生成プロンプト（封印用・最終版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/ベルフェゴール服装案.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/ベルフェゴール衣装テーブル.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/議事録 メリトクラシア国家関係 堕天使ベルフェゴール潜伏設定.txt
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ユミナ・ヴェルナー/📘 テロ事件編／ユミナ関連設定（確定議事録）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ライナルト/グローリアテスト制度見直し.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ライナルト/ライナルト_性格・思想_最終確定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ルカ/📘 議事録｜ルカ キャラクター設計（確定版.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ヴィオラ・スティルネン/📘 キャラクター設計書：ヴィオラ＝スティルネン（Viola Stilnen）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/ガーネット/garnet.json
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/レオンハルトクロイツ/📘 キャラクター正式資料｜レオンハルト・クロイツ.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/view化前.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルview化案.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルレオンハルト １８禁プロンプト.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルレオンハルト見た目設計.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/メリトクラシアAIキャラ生成議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ガレス　レオンハルト/📘 統合議事録｜ガレス・レオンハルト外見方針確定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ジェイド　レオンハルト/🏛 議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ジェイド　レオンハルト/📘メリトクラシア 設定議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ミレイユレオンハルト/メリトクラシア設定議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/前線騎士団/前線騎士団（Frontorden FO）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/エス＝ミュール/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/エス＝ミュール/📘 キャラクター設計資料｜エス＝ミュール【Reboot正式版】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/カリオン/📘 キャラクター設計資料｜カリオン【Reboot正式版】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/セレナ/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/セレナ/📘 キャラクター設計資料｜セレナ【Reboot正式版】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイジア＝ノクターン/📘 デイジア＝ノクターン 修正版 v2【前半】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイジア＝ノクターン/📘 設定資料：吸血鬼陣営『夜の仮設家族』と血の繋縛.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイリス＝ノクターン/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイリス＝ノクターン/📘 キャラクター設計資料｜デイリス＝ノクターン【Reboot正式版】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/士官学校/キール/📘 議事録｜キール キャラクター設計（未完成管理版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/士官学校/フラン/📘 議事録｜フラン キャラクター設計（未完成管理版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/ジェイド家家族構成議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/女の子の見た目詳細.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/📘 議事録｜士官学校キャラ設計（キール／フラン）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/📌 伏線リスト（統合版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/📑 議事録｜物語裏設定・キャラ因縁整理（暫定）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/🔮 裏設定・未来年表.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/# 📘 統合議事録｜サンギナリア王国 強化アイデア整理（仮採用前メモ）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア王国 統合設定資料.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/課題決定事項.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/三兵団/三兵団_ドイツ語・ラテン語確定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/国家機関一覧表/# 🏛 統合議事録｜国家機関一覧・中央政府組織図 Phase2.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/国家機関一覧表/# 📘 統合議事録｜国家機関一覧・三兵団制度設計（2026-04-01統合版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/階級制度/階級制度_概要.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/ヒューマン中心国家_7か国一覧.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/メリトクラシア国家プロフィール/🏛 メリトクラシア｜国家プロフィール（最小コア）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/階級制度/最下層階級_最終確定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/# 🧱 Minecraft化計画｜Map HUB 共有ロードマップ（保留案件）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/css/style.css
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/loader.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/main.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/renderer.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/state.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/state/archive/state_legacy.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/ui.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/utils.js
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/london_canvas_v3.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/dist/world_layout.json
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/dist/グローリアテスト試験会場.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/🏳️ 仮採用：旧連合国家 定義（FIX-α）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/📑 議事録：三兵団 地理配置確定（MeritMap反映版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/🗺 メリトクラシア国家定義（地図制作・初期一括版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/メリトクラシア年表.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/📕 裏史年表（非公開）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/📘 正史設定2.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/🕰 正史年表【修正版】.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/議事録 メリトクラシア国家関係 堕天使ベルフェゴール潜伏設定.txt
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/神話構造.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/🌌 神界システム（確定版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📘 メリトクラシア豆知識｜保護区画の鎮静茶文化.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📜 Setting Reference: 19th Century Briti.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📜 設定資料：19世紀英国風「喪（Mourning）」の文化と儀法.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第2分冊：プロローグ構成・時系列・因果固定版.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第3分冊_思想・対立構造_最終確定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第4分冊_共通運用ルール・禁止事項.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/統合版設定資料_プロローグ基準.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/Phase1 制度改訂・構造確定 議事録.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテストおよび周辺制度 議事録（確定事項）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテスト制度見直し.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテスト試験会場.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/phase1_settings.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/カリキュラム.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/🎓 SCH-001 具体化｜クレイドル1年 年間イベント表.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/📘 統合議事録｜メリトクラシア士官学校 部活動制度（正式採用）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/import json.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/magic_dashboard.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/タスク台帳.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/タスク台帳２.html
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 Part 1｜七年制学院 overview 設計図（Wiki整合版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 SCH-002｜10月イベント週次化（正式案）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 士官学校 学級制度｜決定事項.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/統合議事録｜使用人階級制度（ドイツ語正式運用版）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/📘 統合議事録｜士官学校編 Phase1 骨格確定（2026-04-12）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/統合議事録/📜 M-GSL規格・グローリアテスト統合議事録 v1.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/統合議事録/📜 本編執筆済みセクション 統合議事録（ep01-ep05）.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/📜 M-GSL 規格外・矛盾詠唱検定.md
+FILE: ./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/📜 M-GSL（Meritocracia General Spell Lang.md

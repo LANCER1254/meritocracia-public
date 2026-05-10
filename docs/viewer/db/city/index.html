@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メリトクラシア国 地域一覧</title>
+  <style>
+    body {
+      background: #0b1220;
+      color: #e5d0a2;
+      font-family: sans-serif;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    .card-grid {
+      display: grid;
+      gap: 16px;
+      max-width: 700px;
+    }
+    .card {
+      border: 1px solid #8a6a2f;
+      padding: 20px;
+      border-radius: 8px;
+      background: #10192b;
+      transition: 0.2s;
+    }
+    .card:hover {
+      background: #162238;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h2 {
+      margin: 0 0 8px;
+    }
+    p {
+      margin: 0;
+      color: #b8a47d;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏙 メリトクラシア国 地域一覧</h1>
+
+  <div class="card-grid">
+    <a href="./grand-central/">
+      <div class="card">
+        <h2>🏛 グランセントラル都市区画図</h2>
+        <p>本番運用版 / Incident DB / Tactical Map</p>
+      </div>
+    </a>
+
+    <a href="./_local_staging_backup/grand-central_interactive_v1/">
+      <div class="card">
+        <h2>🗺 Grand Central Interactive v1</h2>
+        <p>Gemini 1枚地図完全再現 / POI詳細 / Zoom対応</p>
+      </div>
+    </a>
+    
+ <a href="./_local_staging_backup/academy_interactive_v1/">
+  <div class="card">
+    <h2>🎓 Academy Interactive v1</h2>
+    <p>士官学校詳細図 / 校舎POI / 日常導線 / ZERO地下接続</p>
+  </div>
+</a>
+
+    <a href="../world/_prototype_v1_2_zoomtest/">
+      <div class="card">
+        <h2>🌍 世界白地図レイヤー試作 v1.2</h2>
+        <p>Grand Central再現用 / POI配置 / 地図レイヤー検証</p>
+      </div>
+    </a>
+
+
+    <a href="../world/_prototype_gc_overlay_ja_interactive/">
+      <div class="card" style="border-color:#8a6a2f;position:relative;">
+        <span style="position:absolute;top:14px;right:14px;font-size:9px;letter-spacing:2px;background:rgba(201,169,97,.15);border:1px solid rgba(201,169,97,.40);color:#d6b56d;padding:2px 8px;border-radius:3px;font-family:sans-serif;">EDITOR</span>
+        <h2>🗺️ Grand Central 会議用インタラクティブMap</h2>
+        <p>区画配置・事件地点・部隊配置検討 ／ <strong style="color:#d6b56d;">Shift+ドラッグでアイコン移動</strong> ／ JSONコピー対応</p>
+      </div>
+    </a>
+
+  </div>
+</body>
+</html>

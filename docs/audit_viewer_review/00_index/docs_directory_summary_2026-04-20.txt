@@ -1,0 +1,88 @@
+docs directory summary
+
+generated: 2026-04-20 12:12:56
+
+[top-level directories]
+./audit_viewer_review
+./settings
+./viewer
+
+[file counts by top-level directory]
+   782  ./viewer
+   658  ./settings
+     4  ./audit_viewer_review
+
+[viewer subdirectory counts]
+   189  ./viewer/アーカイブ
+   164  ./viewer/production
+   140  ./viewer/アーカイブ/クロード先生
+   136  ./viewer/db
+   111  ./viewer/story
+    92  ./viewer/story/old
+    77  ./viewer/production/settings
+    72  ./viewer/共有用
+    60  ./viewer/共有用/小説レビューレポート
+    57  ./viewer/db/city
+    43  ./viewer/db/world
+    25  ./viewer/character
+    23  ./viewer/memo
+    22  ./viewer/アーカイブ/minecraft-project
+    21  ./viewer/db/nation
+    19  ./viewer/production/plot
+    19  ./viewer/production/meeting
+    14  ./viewer/memo/free
+    14  ./viewer/map
+    12  ./viewer/production/private-schedule
+    11  ./viewer/production/private-schedule-v2
+    10  ./viewer/アーカイブ/ジェミニテスト
+    10  ./viewer/tools
+    10  ./viewer/production/draft
+     9  ./viewer/db/terror
+     8  ./viewer/official-site
+     7  ./viewer/map/js
+     6  ./viewer/story/academy
+     5  ./viewer/共有用/reading-blend
+     5  ./viewer/memo/plot
+     5  ./viewer/map/minecraft
+     5  ./viewer/db/academy
+     5  ./viewer/character/garnet.
+     4  ./viewer/共有用/work-os-demo
+     4  ./viewer/アーカイブ/private-schedule_old_20260411
+     4  ./viewer/track
+     4  ./viewer/tools/script-manual
+     4  ./viewer/production/sticky-notes
+     4  ./viewer/production/lancer-dashboard
+     4  ./viewer/production/files(15)
+     4  ./viewer/official-site/_backup
+     4  ./viewer/modules
+     4  ./viewer/data
+     4  ./viewer/character/kernel
+     4  ./viewer/character/daisia
+     3  ./viewer/共有用/public-character
+     3  ./viewer/tools/script-guide
+     3  ./viewer/system
+     3  ./viewer/story/files(8)
+     3  ./viewer/knowledge
+     2  ./viewer/tools/work-os
+     2  ./viewer/story/reboot
+     2  ./viewer/production/lore
+     2  ./viewer/official-site/assets
+     2  ./viewer/dist
+     1  ./viewer/投資用ツール
+     1  ./viewer/アーカイブ/短編小説
+     1  ./viewer/tools/docs-index
+     1  ./viewer/story/アーカイブ
+     1  ./viewer/story/route
+     1  ./viewer/story/assets
+     1  ./viewer/memo/meeting
+     1  ./viewer/memo/data
+     1  ./viewer/memo/character
+     1  ./viewer/map/css
+     1  ./viewer/db/mythology
+     1  ./viewer/data/reference
+     1  ./viewer/data/grids
+     0  ./viewer/アーカイブ/オフィサルサイト
+     0  ./viewer/production/scene
+     0  ./viewer/production/rewrite
+     0  ./viewer/assets/characters
+     0  ./viewer/assets

@@ -1,0 +1,643 @@
+./settings/Meritocracia_Data_Hub/00_トップページ/📌 配信レビュー #日付.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/wiki-view.sh
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/# Claude依頼プロンプト｜アイリス専用キャラクターページHTML実装.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/アイリス_戦争奴隷設定_詳細.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/クロード依頼夜切り替え.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘  完全設定資料ジェミニドキュメント化.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘 アイリス＝アールグレイ キャラクター完全設定資料（前編）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/アイリス/📘 統合議事録｜アイリス家族構成・家庭内差別構造 正式ロック版.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/クララ・ヴエルナー/1️⃣ 基本情報（確定）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/クララ・ヴエルナー/💠 キャラ画像生成プロンプト（封印用・最終版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/ベルフェゴール服装案.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/ベルフェゴール衣装テーブル.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ベルフェール/議事録 メリトクラシア国家関係 堕天使ベルフェゴール潜伏設定.txt
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ユミナ・ヴェルナー/📘 テロ事件編／ユミナ関連設定（確定議事録）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ライナルト/グローリアテスト制度見直し.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ライナルト/ライナルト_性格・思想_最終確定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ルカ/📘 議事録｜ルカ キャラクター設計（確定版.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/ヴィオラ・スティルネン/📘 キャラクター設計書：ヴィオラ＝スティルネン（Viola Stilnen）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/ガーネット/garnet.json
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/レオンハルトクロイツ/ChatGPT Image 2026年4月18日 21_13_07.png
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/三兵団/レオンハルトクロイツ/📘 キャラクター正式資料｜レオンハルト・クロイツ.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/view化前.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルview化案.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルレオンハルト １８禁プロンプト.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/カーネルレオンハルト見た目設計.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/メリトクラシアAIキャラ生成議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ガレス　レオンハルト/ChatGPT Image 2026年4月18日 20_57_15.png
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ガレス　レオンハルト/📘 統合議事録｜ガレス・レオンハルト外見方針確定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ジェイド　レオンハルト/🏛 議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ジェイド　レオンハルト/📘メリトクラシア 設定議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ミレイユレオンハルト/ジェイド母.png
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/ミレイユレオンハルト/メリトクラシア設定議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/前線騎士団/前線騎士団（Frontorden FO）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/エス＝ミュール/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/エス＝ミュール/📘 キャラクター設計資料｜エス＝ミュール【Reboot正式版】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/カリオン/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.imd
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/カリオン/📘 キャラクター設計資料｜カリオン【Reboot正式版】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/セレナ/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/セレナ/📘 キャラクター設計資料｜セレナ【Reboot正式版】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイジア＝ノクターン/📘 デイジア＝ノクターン 修正版 v2【前半】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイジア＝ノクターン/📘 設定資料：吸血鬼陣営『夜の仮設家族』と血の繋縛.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイリス＝ノクターン/# 📘 『メリトクラシア -Reboot-』キャラページ制作依頼.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/デイリス＝ノクターン/📘 キャラクター設計資料｜デイリス＝ノクターン【Reboot正式版】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/吸血鬼陣営/📘 統合議事録｜吸血鬼陣営《夜の仮設家族》正式設定統合版.imd
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/士官学校/キール/📘 議事録｜キール キャラクター設計（未完成管理版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/士官学校/フラン/📘 議事録｜フラン キャラクター設計（未完成管理版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/ガレス・レオンハルト 外見設計md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/ジェイド家家族構成議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/女の子の見た目詳細.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター設定/📘 議事録｜士官学校キャラ設計（キール／フラン）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/📌 伏線リスト（統合版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/📑 議事録｜物語裏設定・キャラ因縁整理（暫定）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/伏線リスト/🔮 裏設定・未来年表.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/# 📘 統合議事録｜サンギナリア王国 強化アイデア整理（仮採用前メモ）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/サンギナリア/サンギナリア王国 統合設定資料.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/周辺国家/課題決定事項.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/三兵団/三兵団_ドイツ語・ラテン語確定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/国家機関一覧表/# 🏛 統合議事録｜国家機関一覧・中央政府組織図 Phase2.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/国家機関一覧表/# 📘 統合議事録｜国家機関一覧・三兵団制度設計（2026-04-01統合版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度/階級制度/階級制度_概要.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/ヒューマン中心国家_7か国一覧.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/メリトクラシア国家プロフィール/🏛 メリトクラシア｜国家プロフィール（最小コア）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/国家制度・政治/階級制度/最下層階級_最終確定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/# 🧱 Minecraft化計画｜Map HUB 共有ロードマップ（保留案件）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/css/style.css
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/loader.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/main.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/renderer.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/state.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/state/archive/state_legacy.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/ui.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/js/utils.js
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/canvas_v3/london_canvas_v3.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/data/grids/london_grid.csv
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/data/reference/real_cities.csv
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/dist/world_layout.json
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/dist/グローリアテスト試験会場.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/drawing.svg
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/🏳️ 仮採用：旧連合国家 定義（FIX-α）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/📑 議事録：三兵団 地理配置確定（MeritMap反映版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/地図制作/🗺 メリトクラシア国家定義（地図制作・初期一括版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/メリトクラシア年表.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/📕 裏史年表（非公開）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/📘 正史設定2.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/メリトクラシア年表/🕰 正史年表【修正版】.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/戦争・歴史/議事録 メリトクラシア国家関係 堕天使ベルフェゴール潜伏設定.txt
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/神話構造.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/🌌 神界システム（確定版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📘 メリトクラシア豆知識｜保護区画の鎮静茶文化.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📜 Setting Reference: 19th Century Briti.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/種族・文化/📜 設定資料：19世紀英国風「喪（Mourning）」の文化と儀法.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/テコ入れ版『メリトクラシア』
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第2分冊：プロローグ構成・時系列・因果固定版.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第3分冊_思想・対立構造_最終確定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/第4分冊_共通運用ルール・禁止事項.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/統合版設定資料/統合版設定資料_プロローグ基準.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/Phase1 制度改訂・構造確定 議事録.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテストおよび周辺制度 議事録（確定事項）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテスト制度見直し.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/グローリアテスト試験会場.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/phase1_settings.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/カリキュラム.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/🎓 SCH-001 具体化｜クレイドル1年 年間イベント表.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/エクセル対応議事録/📘 統合議事録｜メリトクラシア士官学校 部活動制度（正式採用）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/import json.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/magic_dashboard.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/タスク台帳.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/タスク台帳２.html
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 Part 1｜七年制学院 overview 設計図（Wiki整合版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 SCH-002｜10月イベント週次化（正式案）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/士官学校概要/📘 士官学校 学級制度｜決定事項.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/統合議事録｜使用人階級制度（ドイツ語正式運用版）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/士官学校/📘 統合議事録｜士官学校編 Phase1 骨格確定（2026-04-12）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/統合議事録/📜 M-GSL規格・グローリアテスト統合議事録 v1.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/統合議事録/📜 本編執筆済みセクション 統合議事録（ep01-ep05）.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/📜 M-GSL 規格外・矛盾詠唱検定.md
+./settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/試験・制度/📜 M-GSL（Meritocracia General Spell Lang.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/CLI実装用/erit Core System｜実装ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/Claude/クロードプロットレビュー.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/Claude/査読用プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/GeminiAI/ジェミニプロットレビュー.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/GeminiAI/査読用プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/# レビュー投稿ワークフロー手順書 v1.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/command CREATE SPACE NAME.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/なろう投稿用最終チェックルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/キャラ画像設計ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/ゲームシナリオ用｜演出最適化プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/ワークフローv2.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/ワークフローv2.md.bak_20260419_141747
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/依頼プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/地図作成指示議事録.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/地図制作ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/時系列専用ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/査読専用ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/共通/画像生成相談.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/AI_Prompts/📘 CLI画像生成マニュアル.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/json設計書/md_viewer_json_v2_design.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/審問庁編001/section1【審問庁記録：観察報告書】.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/審問庁編001/section2.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/審問庁編001/section3.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/審問庁編001/section4.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/査読用プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/査読結果 ゲーム媒体としての評価 評価基準.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/８話.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ClaudeAI/📋 査読報告書プロローグ.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/007/第7話.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/EP4テロ事件最終作.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/あちゃー、失礼しました！Pythonのコードをそのままターミナルに貼り付けてしま.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/ジェミニのアイデア.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/テロ事件EP２，３合同査読結果.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/テロ事件前編監査報告.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/テロ事件編ジェミニリライト.md]
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/テロ事件４部.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/査読用プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/GeminiAI/監査報告書 テロ事件勃発１.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ゲーム企画書/【募集職種】プランナー.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ゲーム企画書/ゲームクリエイターズきゃんぷ募集メモ.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ゲーム企画書/ゲーム企画書 募集向け.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ゲーム企画書/ゲーム企画書（暫定詳細版）.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ディレクター業務統合議事録/統合議事録.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ディレクター業務統合議事録/設計書.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ディレクター業務統合議事録/📘 統合議事録（続編①）.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ディレクター業務統合議事録/📘 統合議事録（続編②）.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/ディレクター業務統合議事録/🧠 Phase8 完全版.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/他者作品.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/# MeritCore プロジェクト 今後の予定表（ロードマップ）.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/フローチャート.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/国家設計/議事録_国家設計_群像劇構造.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/弟18回会議議事録（事実記録）.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/連載再開に向けた準備について 2025年12月21日.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/配信レビュー議事録.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📄 メリトクラシア設定会議資料.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📘 メリトクラシア設定会議.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📘 メリトクラシア設定会議2.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📘 メリトクラシア設定会議３.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📘メリトクラシア冒頭変更案.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/会議議事録/📜 MeritCore AI環境構築計画.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/# 📘 デバッグ依頼｜private-schedule Firefox SVG.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/# 📘 統合議事録：メリトクラシア開発・創作ワークフロー最終設計.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/【重要】連載再開日の変更と、今後の制作体制・公式サイト準備についてのお知らせ.ini
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/なろう投稿用最終工程コマンド.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットテンプレート 日付 タイトル.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/2026-02-24_転生貴族　鑑定スキルで成り上がる_ep14 交渉.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/Scene2 3 遮断.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_01.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_02.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_03.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_04.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_05.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_06.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_07.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_08.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_09.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_10.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_11.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_12.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_13.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_14.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_15.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_16.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_17.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_18.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_19.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_20.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_21.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_22.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_23.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/ヴィランドサガ/episode_24.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_01.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_02.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_03.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_04.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_05.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_06.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_07.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_08.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_09.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_10.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/残響のテロル/episode_11.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族 (コピー).txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-23_転生貴族　鑑定スキルで成り上がる_ep07 継承.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-23_転生貴族鑑定スキルで成り上がり_ep06.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-23_転生貴族鑑定スキルで成り上がる_ep08　新世代.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-24_転生貴族　成り上がる_ep09　探り合い.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-24_転生貴族　成り上がる_ep１０　クランサレマキア.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-24_転生貴族　鑑定スキルで成り上がる_ep12.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/2026-02-24_転鑑定スキルで成り上がる_ep11 ミレーユ　グランジオン.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/プロローグ研究録 議事録 対象 転生貴族 鑑定スキルで成り上がる.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/転生貴族インプットまとめ.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/転生貴族４話.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族　鑑定スキルで成り上がる/転生貴族５話.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/2026-02-24_転生貴族　鑑定スキルで成り上がる_ep13 約束.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/2026-02-24_転生貴族　鑑定スキルで成り上がる_ep16.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/2026-02-24_転生貴族鑑定スキルで成り上がる_ep15.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_17.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_18.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_19.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_20.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_21.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_22.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_23.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/episode_24.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/転生貴族で　成り上がる　２期/🟢 転生貴族鑑定スキルで成り上がる議事録化.ｍｄ
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/🎬 アニメインプット統合議事録2.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/🎬 アニメインプット統合議事録part1.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/アニメインプットメモ/🎬 アニメインプット統合議事録３.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/エイリアス反映コマンド.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/サイトデザイン/<!DOCTYPE 3html>.html
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/サイトデザイン/<!DOCTYPE html4>.html
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/サイトデザイン/<!DOCTYPE html>.html
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/サイトデザイン/<!DOCTYPE pink html>.ini
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/サイトデザイン/<!DOCTYPE２ html>.html
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/ツール制作予定案md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/プロローグサブタイトルアイデア.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/メリトクラシア -Reboot-』本編執筆・リライト汎用ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/便利技/ローカルでの確認の仕方 http localhost.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/執筆汎用コマンド/command CREATE SPACE NAME.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/執筆汎用コマンド/時系列専用ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/執筆汎用コマンド/査読専用ルーム.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/明日クロードにたのむこと/📘 統合議事録｜ZERO都市マップOS 拡張・モジュール化設計方針（Claud.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/視点ブレ防止ルール.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/議事録 執筆支援ツール案 MeritDB.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/２話読み込み用プロンプト.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/📘メリトクラシア制作スケジュール.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/作業メモ・草案/🖱 デスクトップ右クリックメニュー翻訳.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/2026-04-05_w.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/グローリアテスト構成.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/ジェイド姉設定について.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/テロリスト構造.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/プロローグ再設計.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/メリトクラシア統合議事録新設定.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/国旗デザイン.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/🏛 テロリスト構造.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/🏛 潜入天使・正式設計.ini
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/📋 会議議題｜均衡解放戦線 設定確定会議.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/📘 統合議事録｜ZERO編 中央市場テロ事件 完全統合DB.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述/📘 統合議事録｜ZERO編 前日常アーカイブ統合.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/# 📘 ZERO編｜中央市場テロ事件 生死・逃亡ステータス一覧（Viewer可.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/ep02 テロ事件勃発２ 統合リライト案 ①.txt
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/メリトクラシア国家成立・制度設計 統合記録.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/世界観設計・勢力構造_中間合意ログ.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/国家設計・群像劇構造_議事録.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/序盤テコ入れ_ジェイド・心音システム_最終確定.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/20260113/日報_20260113.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/20260115/日報_20260115.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/20260115/📺 UI確認完了.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/20260119/日報_20260119.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/AI一覧表/日報_20260121.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/AI一覧表/監査役AI表.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/作業日報 制作進捗ログ 最終版.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/議事録 障害対応記録 Linux GUI入力不具合.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/📋 議事録：体験版構成決定会議.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/日報/🧭 Merit-Writer CLI ロードマップ.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/第1部：罵倒表現・キャラクター演出編】からまとめます.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/📑 MeritMap 議事録.md
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/📝 議事録
+./settings/Meritocracia_Data_Hub/02_制作・運営/自由記述　アイデアまとめ/🗺 仮称ネーミング整理（作者用・内部確定）.ini
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep03.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep04.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep05.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep06.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep07.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep08.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep09.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep10.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/ep審問庁編.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/第8話 セクション1 Aルート 本編採用.txt
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-dif/選択肢 デート.txt
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ 第7話《家路と再会：後編》.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/.vscode/EP7本採用.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/.vscode/settings.json
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/.vscode/⭐ **【第8話】セクション1（Aルート・本編採用）.ini
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/.vscode/⭐ **【第8話】セクション1（Aルート・本編採用）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/.vscode/第８話　アイリス視点込分岐案
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep.2 【第2話】★塔と街の影（リライト版）★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep.4 【第4話】★塔の影、街のひかり★（大幅加筆修正）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep05.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep06.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep07.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep08.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep09.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep10.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/ep審問庁編.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/★はじまりの階段★（リライト）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/第3話《★約束という灯★》.md
+./settings/Meritocracia_Data_Hub/03_作品管理/ep-riwrite01-10/７話後半作者書き下ろし荒削り.md
+./settings/Meritocracia_Data_Hub/03_作品管理/プロローグ/分冊/第2分冊_プロローグ構成・時系列・因果固定版.md
+./settings/Meritocracia_Data_Hub/03_作品管理/プロローグ/構成案/プロローグ構成案.md
+./settings/Meritocracia_Data_Hub/03_作品管理/旧設定・廃案/アーカイブ原稿/5炎の審判.md
+./settings/Meritocracia_Data_Hub/03_作品管理/旧設定・廃案/階級制度_旧7階級案.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.10 【第9話】★影のなかの視線★「完全版／添削不要」.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.3 【第3話】★選ばれざる者たち（リライト版）★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.4 【第4話】★塔の影、街のひかり★（完全版／添削不要）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.5 【第5話】★火種の行方★（黙示型：後書き意図的未挿入）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.6 【特別章】★審問庁記録ファイル：No.134 - J・レオンハルト★（黙示回）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.7 【第7話】★目覚めの階段★（完全版／添削不要）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.8 【番外編1】★背中合わせの月夜に★（モノローグ追加｜宣言）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/ep.9 【【第8話】★選別の門を越えて★（完全版／添削不要）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/p.2 【第2話】★夢という異端（リライト版）★‘.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep01-10/【第1話】★はじまりの階段（リライト版）★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.11 【第10話】★約束の灯火★（完全版／添削不要）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.12 【第11話】★沈黙の教室と、呼ばれぬ名《完全版／添削不要回》★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.13 　【第12話】★それでも、隣にいたいから《刻印編・後》★（完全版／添削不要）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.14 【番外編②】★いらない子なんかじゃない★「完全版／添削不要回」.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.15 【第13話】★入学、それは試練の始まり★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.16 【第14話】★孤独な教室、交差する視線★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.17 【第15話】★視線の先にいるのは誰？★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.18 【第16話】★冷笑と覚悟★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.19 【第17話】★裁きの檻で★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep11-20/ep.20 【第18話】★導火線、それは模擬戦の名を借りて★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.21 【第19話】 ★誓いの剣、導かれし場へ★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.22 【番外編③】★夜明けのまなざし★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.23 第0回アイリス相談室　──はじまりの階段、そのもう一段下で──.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.24 【第20話】★静かなる導火線★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.25 第21話】★封じられた刃、試される意志★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.26 【第22話】★沈黙の檻、解かれし咆哮★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.27 【第1回】アイリス相談室──「あなたの声が、わたしの力になるから」.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.28 ★【第23話】約束の刃、交わる影★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.29 ★【特別章】審問庁記録ファイル：No.134 - J・レオンハルト★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep21-30/ep.30 ★【番外編④】いっしょに暮らすって、こういうことですか？★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.31 【第2回 アイリス相談室】“番外編④構.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.32 第1.5回 アイリス相談室──リライト版：もう一度、あの階段から 　または.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.33 【第24話】★静謐なる余燼（しずけきよすが）★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.34 【第19.5話】 ★静寂の先に★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.35 『アイリス相談室RADIO 第3回 “役割”以上の気持ちって、間違いですか『.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.36 【ep.4.5】★檻の外で、ふたたび★ 副題：「救い」としての再会／本編第4～5話間・補完視点回.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.37 ★いらない子なんかじゃない★番外編②（アニメ化想定リライトVer.）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.38 番外編⑤《影たちの証言》.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.39 アイリス相談室バラエティ回《心を鍛えろ！ラジオ武者修行》.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep31-40/ep.40 ★檻の外で、ふたたび①.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.41 ★檻の外で、ふたたび②★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.42 ★檻の外で、ふたたび③ ──夜明けの屋敷で★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.43 【第25話】★ノウス近衛の影★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.44 【第26話】★アイリス仮契約★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.45 【第27話】★士官学校への階段★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.46 番外編⑥-1 お嫁さんになる覚悟.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.47 番外編⑥-2 ジェイドの誓い.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.48 番外編⑥-3 娘みたいに、可愛い人.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.49 【第28-1話】★選ばれし机★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep41-50/ep.50 ★【第28ー2話】選ばれし机、拒まれし席★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.51 ★【第23話】約束の刃、交わる影（心音システムリライトVer）★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.52 ★【第29話】静寂と揺らぎの階段★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.53 【相談室RADIO 第4回：素直になれない私】.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.54 【番外編⑦】君の膝のぬくもりは、夢より甘く.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.55 【相談室RADIO 第5回】★変化と素直な甘え★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.56 【第30話】★初めての休日、閉ざされた塔★.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.57 【第31話】★囁かれる階級の影★（本編）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.58 第6回 相談室RADIO 信じることと迷う心.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.59 【第32話】★派閥の牙、友情の灯★（本編）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep51-60/ep.60 【第33話】★黒い眼、記録官ヴィオラ★（本編）.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/.gitkeep
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep61.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep62.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep63.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep64.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep65.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep66.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep67.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep68.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep69.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep61-70/ep70.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/.gitkeep
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep71.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep72.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep73.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep74.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep75.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep76.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep77.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep78.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep79.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep71-80/ep80.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/.gitkeep
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep81.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep82.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep83.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep84.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep85.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep86.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep87.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep88.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep89.md
+./settings/Meritocracia_Data_Hub/03_作品管理/本編/episodes_backup/ep81-90/ep90.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/viewer-04.sh
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/viewer-main.sh
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep01_テロ事件勃発_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep01_始まりの階段_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep01_始まりの階段_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep02_テロ事件勃発２_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep03_テロ事件後処理編_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep04_テロ事件三部作最終_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep04_第四部_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep05_第四部_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep22_443_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep22_443_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep_大丈夫さ_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/ep_大丈夫さ_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/eptest33_アイリス大好き_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/eptest33_アイリス大好き_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/テロ事件完成版_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/テロ事件完成版_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/プロローグ導入編パート１〜３_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/プロローグ／テロ事件編【前編】_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep06_第四部_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep06_第四部_narou_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep1.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep1_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep1_body.md.bak_20260209_185455
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep2.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep2_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep3.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep3_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep4.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep4_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep5.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep5_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep6.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep6_body.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/ep7クララ死亡.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/meta.tsv
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/exports/小説家になろう投稿用原稿/大幅書き換え枠/ep05_第四部_narou.txt
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/dd.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/プロローグ未来進行表.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/メタトロン転生構造.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/ライナルト戦・構造設計.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/ルシファーの野望.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/教会バイト編　ルカ視点.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/本編時系列/フラン未来進行表.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/本編時系列/今後の未来進行表.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/本編時系列/実技試験回収構造／未来進行表.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/本編時系列/📜 未来進行表.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/葬式シーンまでの進行.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/00_未来進行表/２年生編/📘 統合議事録｜士官学校2年生編〜3年生編 テーマ設計.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep1堕天使との邂逅.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep4名前の重さ.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep5★炎の審判.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/epテロ事件中編_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/epテロ事件勃発_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/epテロ事件導入プロット_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/epテロ事件後編_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep修正版第一話_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep教会バイト編_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep本番_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep２幸せな日常_.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/ep４名前の重さ.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/アーカー分/ep5-★炎の審判★_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/テロ事件中編ジェミニ変換.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/修正版【第1話】プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/序盤天使VSベルフェゴール.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/ep4話　本編時系列_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/ep本編時系列第２話シーン１３〜_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/ep本編時系列３話_初稿プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/terror/final.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/terror/intro.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/terror/middle.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/01_初稿プロット/本編時系列プロット/本編 第1話 再構築版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/epep3試験本番_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/epメリトクラシアゼロ　堕天使邂逅−１_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/ep体験版専用プロット_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/ep幸せな日常２話ver2_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/ep２話幸せな日常_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epEP3試験本番_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epEP4_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epEP5_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epep6_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epep6４部_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/ep【プロローグ現行構造プロット（テロ前編）】_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/ep【プロローグ現行構造プロット（テロ後編）】_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epクララ死亡_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epジェイド淡い恋心_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/プロローグプロット/epプロローグ導入編_完成版プロット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/02_完成版プロット/第一部「生き残り」.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/Scene3「からかい」登場キャラクター構成.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/① すでに揃っている設定（執筆可能レベル）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/アイリス大好き.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/カーネルキャラ設計.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/カーネル設定整理.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/グローリアテスト 試験スケジュール.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/グローリアテスト.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/グローリアテスト実力テスト.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件時系列.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/.i📘メリトクラシア ZERO編新設定.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/テロ事件組織図.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/テロ事件編 新設定統合議事録（追補資料 Vol.3）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/パン屋名称設定.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/中央市場テロ実行犯メンバー.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議2.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議パート４.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議パート５.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議パート６.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議パート７.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 メリトクラシア設定会議３.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/統括議事録/📘 議事録｜炎翼セル 暫定識別リスト（執筆補助用）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/テロ事件編補助資料/📘メリトクラシア ZERO編２冊目.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/デイジアかわいい.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/フローチャート.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/プロット相談フォーマット.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/件名：第2日 午前「M-GSL構文整合試験」試験問題作成（Claude検証用）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/教会バイト編追加キャラルカ.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/炎翼セル.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/神世界の法律/神世界の法律.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/統合議事録（Part14）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/90_補助資料/📜 MeritCore AI環境構築計画.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/ep01_プロット構成.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/rr.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/プロットAIレビュー/プロットレビュー｜教会バイト編（ルカ視点）.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/プロットモード.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/メリトクラシア：粉屋の姉（クララ）死亡回収タイミング設計会議.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/番外編ジェイドの淡い恋心.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/第一部「生き残り」.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/第一部「生き残り」シーン設計.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/第三部「加害者と制度」.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/第二部「処理される世界」.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/📑 議事録｜クララ死亡認知シーン構成案.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロット/📘 プロローグ三部作補助資料.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/ep02_テロ事件勃発２.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/ep04_テロ事件三部作最終.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/ep04_第四部.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/ep05_第四部.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/ep01_テロ事件勃発.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/ep02_テロ事件勃発２.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/ep03_テロ事件後処理編.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/テロ事件処理編.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/プロローグ導入編パート１〜３.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/プロローグ／テロ事件編【前編】.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/プロローグ／テロ事件編【後編】.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/分冊/第2分冊_プロローグ構成・時系列・因果固定版.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/プロローグ/構成案/プロローグ構成案.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/01/ep02_ライナルト登場.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/01/ep03_試験本番.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/01/ep04_★七日間の静圧★.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/01/ep05_★掲示板の向こう側★.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/01/epep01_はじまりの階段.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/ep02_ライナルト登場.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/ep2話_始まりの階段後編.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/epep01r_ジェイドの淡い恋心.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/epep05_クララ死亡.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/メリトクラシアエピソードゼロ　堕天使邂逅−１.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/体験版専用シナリオ.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/2話幸せな日常.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/4 名前の重さ.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/テロ事件導入.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/修正版第一話.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/教会バイト編.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/教会バイト編　ルカ視点.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/修正版プロローグ/教会バイト編ルカ視点ver2.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/堕天使との邂逅（ver2).md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/堕天使の少年との邂逅−１.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/初稿原稿/炎の審判テロ事件勃発.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/完成原稿/ep01_はじまりの階段.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/完成原稿/ep02_ライナルト.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/完成原稿/ep3 試験本番.md
+./settings/Meritocracia_Data_Hub/04_メリトクラシア・リブート/本編/弟一章/ep01_はじまりの階段.md
+./settings/Meritocracia_Data_Hub/writing_core_index.json
+./settings/Meritocracia_Data_Hub/writing_inventory_2026-04-12.txt
+./settings/Meritocracia_Data_Hub/テコ入れ本文/Ⅳ 各シーン詳細構成 Scene ① 堕天使の少年との邂逅.txt
+./settings/Meritocracia_Data_Hub/テコ入れ本文/【プロローグ／第二パート・Scene② 草稿】.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/【リライト：パート４（導入部）】
+./settings/Meritocracia_Data_Hub/テコ入れ本文/テロ事件事後処理編.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/テロ事件完成版.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/テロ事件本文.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/テロ組織案（7名編成）.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/パート１プロローグ用.ｍｄ
+./settings/Meritocracia_Data_Hub/テコ入れ本文/パート１原文.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/パート１小説変換用.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/パート２.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/パート４テロ事件編.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/プロローグ 導入編 リライト パート1 〜３.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/プロローグ・パート3（案）.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/プロローグ導入編パート１〜３.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/崩壊（テロ発生・Z寄り強化版・Frontorden介入修正）.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/崩壊（テロ発生・Z寄り強化版）.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/市場のざわめきは、いつしか別の音に変わっていた。md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/感情の爆発.txt
+./settings/Meritocracia_Data_Hub/テコ入れ本文/議事録 ジェイド レオンハルト 主人公路線確定会議.md
+./settings/Meritocracia_Data_Hub/テコ入れ本文/貴族にバカにされたシーンについて.txt
+./settings/Meritocracia_Data_Hub/テコ入れ本文/🧱 プロローグ・テロ事件編.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/01_Core_Policy.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/02_World_System.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/03_Character_Jade.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/04_Character_Iris.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/05_System_HeartSound.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/06_Event_Prologue.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/07_Antagonist_System.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/08_Theme_and_Salvation.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/99_External_Comparison_Claude.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/Master_Database.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割②— 他国家一覧／非ヒューマン国家／混成国家.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割③— 階級制度（全9階級＋例外）／士官学校設定 .md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割④— 主要登場人物①（ジェイド詳細／アイリス前半.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割⑤主要登場人物②（アイリス後半／ライナルト／周辺人物.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割⑦天使・堕天使勢力／思想・対立構造マップ.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割⑧運用ルール／禁止事項／執筆技法／最終方針.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割❶作品基本情報／世界観・国家設定／主要組織 —.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/クロードAIのデータベースを分割出力/分割６心音システム／プロローグ構成／テロ事件背景.md
+./settings/Meritocracia_Data_Hub/メリトクラシアデータベース化/メリトクラシアゼロ.md
+./settings/Meritocracia_Data_Hub/📚 形式：豪邸×クリエイター短編集.md
+プロローグ追加設定案（最終確定分）.md
+国家設計・組織構造・主要人物設定（確定）.ｍｄ

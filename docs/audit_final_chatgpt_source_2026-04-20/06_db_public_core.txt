@@ -1,0 +1,1230 @@
+bundle: db source final
+generated: 2026-04-20 12:29:46
+
+==================================================
+FILE: ./viewer/db/city/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メリトクラシア国 地域一覧</title>
+  <style>
+    body {
+      background: #0b1220;
+      color: #e5d0a2;
+      font-family: sans-serif;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    .card-grid {
+      display: grid;
+      gap: 16px;
+      max-width: 700px;
+    }
+    .card {
+      border: 1px solid #8a6a2f;
+      padding: 20px;
+      border-radius: 8px;
+      background: #10192b;
+      transition: 0.2s;
+    }
+    .card:hover {
+      background: #162238;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h2 {
+      margin: 0 0 8px;
+    }
+    p {
+      margin: 0;
+      color: #b8a47d;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏙 メリトクラシア国 地域一覧</h1>
+
+  <div class="card-grid">
+    <a href="./grand-central/">
+      <div class="card">
+        <h2>🏛 グランセントラル都市区画図</h2>
+        <p>本番運用版 / Incident DB / Tactical Map</p>
+      </div>
+    </a>
+
+    <a href="./_local_staging_backup/grand-central_interactive_v1/">
+      <div class="card">
+        <h2>🗺 Grand Central Interactive v1</h2>
+        <p>Gemini 1枚地図完全再現 / POI詳細 / Zoom対応</p>
+      </div>
+    </a>
+    
+ <a href="./_local_staging_backup/academy_interactive_v1/">
+  <div class="card">
+    <h2>🎓 Academy Interactive v1</h2>
+    <p>士官学校詳細図 / 校舎POI / 日常導線 / ZERO地下接続</p>
+  </div>
+</a>
+
+  </div>
+</body>
+</html>
+==================================================
+FILE: ./viewer/db/city/grand-central/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グランセントラル都市区画図 | GRAND CENTRAL CITY DISTRICT MAP</title>
+  <meta name="description" content="ZERO編〜本編の都市生活圏ベースマップ。中央市場テロ事件・ジェイド生活圏・士官学校導線に対応。">
+  <link rel="stylesheet" href="./city.css">
+</head>
+<body>
+
+<div class="city-shell">
+
+  <!-- ============================================================
+       BACK LINK
+       ============================================================ -->
+  <section id="sec-nav">
+    <a class="back-link" href="../index.html">← INCIDENT RECORD</a>
+  </section>
+
+  <!-- ============================================================
+       ① HEADER
+       ============================================================ -->
+  <section id="sec-header">
+    <header class="city-header">
+      <div class="city-archive-tag">City District Archive</div>
+      <h1 class="city-title-ja">グランセントラル都市区画図</h1>
+      <div class="city-title-en">Grand Central City District Map</div>
+      <div class="city-meta-row">
+        <span class="city-meta-chip">ZERO編 → 本編</span>
+        <span class="city-meta-chip">World: Meritocracia</span>
+        <span class="city-meta-chip">Base Map v1.0</span>
+      </div>
+    </header>
+  </section>
+
+  <!-- ============================================================
+       ② MAP VIEWER
+       ============================================================ -->
+  <section id="sec-map" class="section-block">
+    <div class="section-eyebrow">District Overview</div>
+    <h2 class="section-title">都市全景図</h2>
+
+    <div class="map-frame">
+      <div class="map-frame-inner">
+
+        <!-- ★ 画像本体 — ファイルを差し替えるだけで運用可 -->
+        <img
+          class="map-image"
+          src="./grand-central-map.png"
+          alt="グランセントラル都市区画図 — 中央市場区・行政中枢区・東住宅区・港湾物流区・教会旧市街・士官予備区"
+          loading="eager"
+        >
+
+        <!-- POI追加用レイヤー（将来の拡張用 — 現時点は空） -->
+        <div class="map-poi-layer" id="poi-layer" aria-hidden="true">
+          <!--
+            【POI追加手順】
+            <button class="poi-pin" style="left:XX%; top:YY%;" title="スポット名">
+              <span class="poi-label">スポット名</span>
+            </button>
+          -->
+        </div>
+
+      </div><!-- /.map-frame-inner -->
+    </div><!-- /.map-frame -->
+  </section>
+
+  <!-- ============================================================
+       ③ DISTRICT LEGEND
+       ============================================================ -->
+  <section id="sec-districts" class="section-block">
+    <div class="section-eyebrow">District Index</div>
+    <h2 class="section-title">区画一覧</h2>
+
+    <div class="district-grid">
+
+      <!-- 中央市場区 -->
+      <article class="district-card" style="--d-color: #b8860b;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">中央市場区</div>
+          <div class="district-name-en">Central Market District</div>
+          <p class="district-notes">
+            都市の流通・商業の中核。中央市場・祝祭広場を擁し、
+            平時は賑わいの象徴。ZERO編「中央市場炎槍事件」の主舞台。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">MARKET</span>
+            <span class="district-tag">INCIDENT ZONE</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 東住宅区 -->
+      <article class="district-card" style="--d-color: #3a6e5a;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">東住宅区</div>
+          <div class="district-name-en">East Residential District</div>
+          <p class="district-notes">
+            市民の住宅地帯。ジェイド居住圏・パン屋通りを含む。
+            本編では日常生活と士官学校通学の生活導線として機能。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">RESIDENTIAL</span>
+            <span class="district-tag">ジェイド生活圏</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 行政中枢区 -->
+      <article class="district-card" style="--d-color: #2a4a7a;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">行政中枢区</div>
+          <div class="district-name-en">Administrative Core District</div>
+          <p class="district-notes">
+            中央庁舎・三兵団本部・審問庁を擁する権力の中枢。
+            ZERO編後半の「公開尋問」導線と国家的幕引きの舞台。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">GOVERNMENT</span>
+            <span class="district-tag">FO本部</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 港湾物流区 -->
+      <article class="district-card" style="--d-color: #4a4a6a;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">港湾物流区</div>
+          <div class="district-name-en">Harbor & Logistics District</div>
+          <p class="district-notes">
+            交易港・倉庫街・魔石流通センターを抱える物流拠点。
+            炎翼セルの資材調達・潜伏ルートとの関連が示唆される。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">HARBOR</span>
+            <span class="district-tag">LOGISTICS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 教会旧市街 -->
+      <article class="district-card" style="--d-color: #7a3a6a;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">教会旧市街</div>
+          <div class="district-name-en">Old Church Quarter</div>
+          <p class="district-notes">
+            星導教会・地下礼拝路入口・鐘楼坂を含む旧市街地。
+            炎翼セル上位組織の接続拠点・エリオス黒幕候補の活動圏。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">CHURCH</span>
+            <span class="district-tag">SHADOW OPS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 士官予備区 -->
+      <article class="district-card" style="--d-color: #7a2a2a;">
+        <div class="district-swatch"></div>
+        <div class="district-body">
+          <div class="district-name-ja">士官予備区</div>
+          <div class="district-name-en">Officer Training District</div>
+          <p class="district-notes">
+            士官学校関連施設・訓練校を擁する軍事教育地区。
+            ジェイドの士官学校導線・本編メインキャラ登場の舞台となる。
+          </p>
+          <div class="district-tags">
+            <span class="district-tag">MILITARY</span>
+            <span class="district-tag">士官学校導線</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /.district-grid -->
+  </section>
+
+  <!-- ============================================================
+       ④ FOOTER ANNOTATION
+       ============================================================ -->
+  <section id="sec-footer">
+    <footer class="city-footer">
+      <div class="footer-label">Map Annotation</div>
+      <p class="footer-note">
+        本マップは <em>ZERO編〜本編</em> の都市生活圏ベースマップです。<br>
+        <em>中央市場テロ事件</em>、<em>ジェイド生活圏</em>、<em>士官学校導線</em> に対応した
+        グランセントラル全体の区画構成を記録します。<br>
+        画像ファイル（grand-central-map.png）の差し替えのみで更新可能です。
+        POI追加は <code style="font-size:10px;color:var(--gold-dim);">#poi-layer</code> 内に
+        ピン要素を追加してください。
+      </p>
+      <hr class="footer-divider">
+      <div class="footer-copyright">MERITOCRACIA WORLD ARCHIVE — CITY DISTRICT RECORD</div>
+    </footer>
+  </section>
+
+==================================================
+FILE: ./viewer/db/world/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界国家・地域アーカイブ｜Meritocracia Viewer</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #0d1422;
+      --panel-2: #0a1120;
+      --line: rgba(212, 175, 55, 0.22);
+      --line-strong: rgba(212, 175, 55, 0.42);
+      --text: #e8dcc0;
+      --muted: #a8966c;
+      --accent: #d4af37;
+      --hover: rgba(212, 175, 55, 0.08);
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 28%),
+        linear-gradient(180deg, #08101d 0%, #050911 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 56px 28px 80px;
+    }
+
+    .hero {
+      border: 1px solid var(--line-strong);
+      background: linear-gradient(180deg, rgba(14,20,34,0.94), rgba(8,13,24,0.94));
+      border-radius: 24px;
+      padding: 32px 32px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      letter-spacing: 0.24em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 920px;
+      color: #cdbb93;
+      line-height: 1.9;
+      font-size: 0.98rem;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(180deg, rgba(13,20,34,0.96), rgba(8,14,26,0.96));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px 22px 22px;
+      min-height: 220px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      background: linear-gradient(180deg, rgba(18,27,45,0.98), rgba(11,18,31,0.98));
+    }
+
+    .card-tag {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0;
+      color: #c7b792;
+      line-height: 1.85;
+      font-size: 0.95rem;
+    }
+
+    .subgrid {
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(10,17,32,0.96), rgba(7,12,21,0.96));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: #cdbb93;
+      line-height: 1.95;
+    }
+
+    .small {
+      color: #a8966c;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(212,175,55,0.04);
+      transition: background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .back:hover {
+      background: rgba(212,175,55,0.1);
+      border-color: var(--line-strong);
+    }
+
+    @media (max-width: 900px) {
+      .subgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .shell {
+        padding: 28px 18px 56px;
+      }
+
+      .hero {
+        padding: 24px 20px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">World Archive Hub</div>
+      <h1>世界国家・地域アーカイブ</h1>
+
+==================================================
+FILE: ./viewer/db/mythology/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Mythology | Meritocracia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f1115;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #60a5fa;
+    }
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-left: 3px solid #60a5fa;
+      background: #1a1d24;
+    }
+    .node {
+      margin-left: 20px;
+    }
+    .arrow {
+      color: #9ca3af;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🌌 Mythology Tree</h1>
+<p>メリトクラシア 神話構造（v1.0）</p>
+
+<div class="section">
+  <h2>■ 原初層</h2>
+  <div class="node">カオス：絶対的選別存在</div>
+</div>
+
+<div class="section">
+  <h2>■ 天界層</h2>
+  <div class="node">メタトロン：選別・最適化</div>
+  <div class="node">ルシファー：反逆・強者選別</div>
+</div>
+
+<div class="section">
+  <h2>■ 分岐点</h2>
+  <div class="node">メタトロン崩壊</div>
+  <div class="node">原因：正しさが人を救わない</div>
+</div>
+
+<div class="section">
+  <h2>■ 分裂構造</h2>
+  <div class="node">① 本体：封印</div>
+  <div class="node">② 機能：心音システム</div>
+  <div class="node">③ 意志：ジェイドへ転生</div>
+</div>
+
+<div class="section">
+  <h2>■ 堕天使層</h2>
+  <div class="node">ベルフェゴール：観測者</div>
+</div>
+
+<div class="section">
+  <h2>■ 人間世界</h2>
+  <div class="node">メリトクラシア：能力選別国家</div>
+  <div class="node">グローリアテスト：地上の選別装置</div>
+</div>
+
+<div class="section">
+  <h2>■ 主人公</h2>
+  <div class="node">ジェイド：選別を拒否する存在</div>
+</div>
+
+<div class="section">
+  <h2>■ 最終構造</h2>
+  <div class="node">カオス：信仰選別</div>
+  <div class="node">ルシファー：強者選別</div>
+  <div class="node">国家：能力選別</div>
+  <div class="arrow">↓</div>
+  <div class="node">ジェイド：選別の拒否</div>
+</div>
+
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/db/nation/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meritocracia Nation Archive</title>
+  <link rel="stylesheet" href="nation.css">
+</head>
+<body>
+  <main class="nation-shell">
+    <header class="nation-header">
+      <p class="sub">MERITOCRACIA CENTRAL ARCHIVE</p>
+      <h1>国家制度アーカイブ</h1>
+      <p class="lead">
+        国家基礎・統治制度・軍事・階級制度を管理する正史閲覧ポータル
+      </p>
+    </header>
+
+    <!-- 国家基礎 -->
+    <section class="nation-category">
+      <h2>🏛 国家基礎</h2>
+      <div class="nation-grid">
+        <a href="./overview/" class="nation-card">
+          <span class="badge">OVERVIEW</span>
+          <h2>国家概要</h2>
+          <p>国名・人口・首都・政体・建国年の基本プロフィール</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 統治制度 -->
+    <section class="nation-category">
+      <h2>⚖ 統治制度</h2>
+      <div class="nation-grid">
+        <a href="./government/central_government_phase2.html" class="nation-card">
+          <span class="badge">GOVERNMENT</span>
+          <h2>中央政府組織図</h2>
+          <p>中央政府 + 三兵団人物4層の統合運用DB</p>
+        </a>
+
+        <a href="./citizen-petition-system/" class="nation-card">
+          <span class="badge">POLITICAL</span>
+          <h2>貴族陳情制度</h2>
+          <p>平民の声を担当貴族経由で中央へ届ける正式制度</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 軍事・治安 -->
+    <section class="nation-category">
+      <h2>⚔ 軍事・治安</h2>
+      <div class="nation-grid">
+        <a href="./三兵団/" class="nation-card">
+          <span class="badge">MILITARY</span>
+          <h2>三兵団</h2>
+          <p>ZG / FO / VA の統治思想と兵団構造</p>
+        </a>
+
+        <a href="./government/military_system_design_20260401.html" class="nation-card">
+          <span class="badge">MILITARY DOC</span>
+          <h2>三兵団制度設計</h2>
+          <p>ZG / FO / VA の統治思想と政治劇テンプレ</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 身分・教育 -->
+    <section class="nation-category">
+      <h2>🎓 身分・教育</h2>
+      <div class="nation-grid">
+        <a href="./階級制度/" class="nation-card">
+          <span class="badge">RANK SYSTEM</span>
+          <h2>階級制度</h2>
+          <p>爵位・士官学校・昇格ルートの閲覧</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 外交・周辺国家 -->
+<section class="nation-category">
+  <h2>🌍 旧宗主国・周辺国家</h2>
+  <div class="nation-grid">
+    <a href="../world/old-union/" class="nation-card">
+      <span class="badge">OLD UNION</span>
+      <h2>旧サンギス＝レグナ連合王国</h2>
+      <p>旧宗主国4構成国家と独立の火種を閲覧</p>
+    </a>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>
+==================================================
+FILE: ./viewer/db/nation/overview/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国家プロフィール｜メリトクラシア連邦公爵領</title>
+    <style>
+        :root {
+            --royal-blue: #1a2a44;
+            --gold: #c4a77d;
+            --paper: #fdfdfb;
+            --ink: #2d3436;
+        }
+
+        body {
+            background-color: #e2e2e2;
+            color: var(--ink);
+            font-family: 'Times New Roman', serif, 'Hiragino Mincho ProN', 'MS Mincho';
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+
+        .document {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--paper);
+            padding: 60px 80px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border: 1px solid #d1d1d1;
+            position: relative;
+        }
+
+        /* 装飾的な枠線 */
+        .document::before {
+            content: "";
+            position: absolute;
+            top: 20px; bottom: 20px; left: 20px; right: 20px;
+            border: 1px solid #e0d8c3;
+            pointer-events: none;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+        }
+
+        .embassy-seal {
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: var(--royal-blue);
+            margin: 0;
+            letter-spacing: 0.1em;
+        }
+
+        .motto {
+            font-style: italic;
+            font-size: 18px;
+            color: var(--royal-blue);
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--royal-blue);
+            border-left: 4px solid var(--gold);
+            padding-left: 15px;
+            margin-top: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .label {
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .content-box {
+            background: rgba(196, 167, 125, 0.05);
+            padding: 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: right;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 80px;
+            color: rgba(196, 167, 125, 0.03);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="document">
+    <div class="watermark">MERITOCRACIA</div>
+
+    <header>
+        <div class="embassy-seal">National Archive of Meritocracia</div>
+        <h1>国家プロフィール：メリトクラシア</h1>
+        <div class="motto">"Meritum Omnia Vincit"<br>(功績はすべてに勝る)</div>
+    </header>
+
+    <section>
+        <h2>I. 基本統計</h2>
+        <div class="info-grid">
+            <div class="label">国家名称</div>
+            <div>メリトクラシア（Meritocracia）</div>
+
+            <div class="label">建国</div>
+            <div>建国 8年目（ZERO編時点。独立から間もない新興国家）</div>
+
+            <div class="label">首都</div>
+            <div>グランセントラル（Grand Central）</div>
+
+            <div class="label">推定人口</div>
+            <div>約820万人（前産業革命英国ベースの規模）</div>
+
+            <div class="label">国土面積</div>
+            <div>約26万 km²（英国本島相当の島国・準島国規模）</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>II. 政体および時代区分</h2>
+        <div class="content-box">
+            <strong>政体：立憲公爵制 ＋ 商業議会国家</strong>
+            <p>
+                国家元首は公爵（Duke）が務めるが、独裁ではなく商人・地主・三兵団代表を含む議会が存在する。<br>
+                建国8年目という若さゆえに、政治体制は未だ安定しておらず、政治不安の火種を抱える。
+            </p>
+        </div>
+        <div class="content-box">
+            <strong>時代区分：前産業革命期 / 商業革命時代</strong>
+            <p>史実における英国（1707〜1750年頃）に相当。以下の要素が国家の中心を担う。</p>
+            <ul>
+                <li>港湾商業 / 市場経済</li>
+                <li>羊毛 / 小麦</li>
+                <li>教会 / 貴族</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>III. 建国理念</h2>
+        <div class="content-box" style="border: 1px solid var(--gold);">
+            <p>
+                「功績はすべてに勝る」という標語は、この国の根幹である。
+            </p>
+            <ul>
+                <li><strong>血統支配からの脱却：</strong> 生まれではなく成した事績を尊ぶ。</li>
+                <li><strong>階級突破：</strong> 功績による昇格を認め、社会の流動性を生む。</li>
+                <li><strong>物語の核：</strong> ジェイドの歩む道、および国家の存在意義そのものに直結する。</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        メリトクラシア公爵領 中央記録局 承認<br>
+        Approved by the Central Registry
+    </footer>
+</div>
+
+==================================================
+FILE: ./viewer/db/nation/三兵団/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三兵団 | Nation Archive</title>
+  <link rel="stylesheet" href="../nation.css">
+</head>
+<body>
+  <main class="nation-shell">
+    <header class="nation-header">
+      <p class="sub">MILITARY ARCHIVE</p>
+      <h1>三兵団</h1>
+      <p class="lead">ZG / FO / VA の統治思想と兵団構造資料</p>
+    </header>
+
+    <section class="nation-grid">
+      <a href="./三兵団_ドイツ語・ラテン語確定.md" class="nation-card">
+        <span class="badge">DOCUMENT</span>
+        <h2>ドイツ語・ラテン語確定</h2>
+        <p>兵団名称・語源・正式命名資料</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/db/nation/階級制度/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>階級制度 | Nation Archive</title>
+  <link rel="stylesheet" href="../nation.css">
+</head>
+<body>
+  <main class="nation-shell">
+    <header class="nation-header">
+      <p class="sub">RANK SYSTEM ARCHIVE</p>
+      <h1>階級制度</h1>
+      <p class="lead">
+        爵位・士官学校・昇格制度・特例ルートの制度資料
+      </p>
+    </header>
+
+    <section class="nation-grid">
+      <a href="./階級制度_概要.md" class="nation-card">
+        <span class="badge">RANK</span>
+        <h2>階級制度 概要</h2>
+        <p>国家階級・昇格・推薦・功績制度の基礎資料</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/db/terror/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中央市場炎槍事件 | Meritocracia Terror DB</title>
+<link rel="stylesheet" href="./terror.css">
+</head>
+<body>
+
+<div class="terror-shell">
+
+  <!-- ナビ -->
+  <a class="back-link" href="../../index.html">← NATION ARCHIVE</a>
+  <a class="back-link" href="./map.html" style="margin-left:24px; color:var(--gold-dim);">🗺 TACTICAL MAP →</a>
+
+  <!-- ======================================================
+       ① INCIDENT HEADER
+       ====================================================== -->
+  <section class="incident-header">
+    <div class="incident-tag">ZERO編 ／ MERITOCRACIA INCIDENT RECORD</div>
+    <h1 class="incident-title" id="incident-title">読み込み中...</h1>
+    <p class="incident-sub" id="incident-sub"></p>
+
+    <div class="incident-stats">
+      <div class="stat-chip red">
+        <span class="stat-label">死者</span>
+        <span class="stat-val" id="stat-dead">—</span>
+      </div>
+      <div class="stat-chip purple">
+        <span class="stat-label">逃亡・行方不明</span>
+        <span class="stat-val" id="stat-escape">—</span>
+      </div>
+      <div class="stat-chip amber">
+        <span class="stat-label">公式犯人（影武者）</span>
+        <span class="stat-val" id="stat-captured">—</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-label">Scene</span>
+        <span class="stat-val">08 – 30</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- エラー表示 -->
+  <div id="error-msg" style="display:none; color:#e05050; font-size:13px; margin-bottom:32px; padding:16px; border:1px solid rgba(139,26,26,0.3); background:rgba(139,26,26,0.08);"></div>
+
+  <!-- ======================================================
+       ② STORY TIMELINE VIEW
+       ====================================================== -->
+  <section class="section-block">
+    <div class="section-eyebrow">02 — STORY TIMELINE</div>
+    <h2 class="section-title">ストーリータイムライン</h2>
+    <div class="timeline" id="timeline-wrap">
+      <!-- JS が生成 -->
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ③ CELL STATUS DB
+       ====================================================== -->
+  <section class="section-block">
+    <div class="section-eyebrow">03 — CELL STATUS DATABASE</div>
+    <h2 class="section-title">炎翼セル メンバーステータス</h2>
+
+    <!-- 凡例 -->
+    <div class="legend" id="status-legend"></div>
+
+    <div class="status-grid" id="status-grid">
+      <!-- JS が生成 -->
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ④ LONG FORESHADOW PANEL
+       ====================================================== -->
+  <section class="section-block">
+    <div class="section-eyebrow">04 — LONG FORESHADOW</div>
+    <h2 class="section-title">長期伏線 考察DB</h2>
+
+    <div class="foreshadow-grid" id="foreshadow-grid">
+      <!-- JS が生成 -->
+    </div>
+  </section>
+
+</div><!-- /.terror-shell -->
+
+<script src="./terror.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/db/academy/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>士官学校制度 | Meritocracia DB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="sub">ACADEMY PORTAL</p>
+    <h1>🎓 士官学校制度</h1>
+    <p class="lead">
+      士官学校関連制度の概要ハブ。
+      詳細Wikiと、士官学校に併設される使用人養成学校への導線をまとめる。
+    </p>
+
+    <section class="grid">
+      <a class="card" href="./overview.html">
+        <span class="badge">OVERVIEW</span>
+        <h2>🎓 士官学校概要</h2>
+        <p>理念、学年、入学条件、パンフレット的な学校案内ページ。</p>
+      </a>
+
+      <a class="card" href="../../story/academy/">
+        <span class="badge">WIKI</span>
+        <h2>📘 士官学校詳細Wiki</h2>
+        <p>学年構造、教官、制度、事件導線などの詳細設定資料。</p>
+      </a>
+
+      <a class="card" href="./servant-academy.html">
+        <span class="badge">SUB SCHOOL</span>
+        <h2>🫖 使用人養成学校</h2>
+        <p>Diskens〜Primas の使用人階級と育成制度を扱うページ。</p>
+      </a>
+    </section>
+  </main>
+</body>
+==================================================
+FILE: ./viewer/db/academy/overview.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Dashboard | Meritocracia</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a30;
+      --line: #263252;
+      --text: #e8eefc;
+      --muted: #9db0d8;
+      --accent: #7aa2ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      background: linear-gradient(180deg, #0b1020, #111831);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+    .hero {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(18, 26, 48, 0.9);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      min-height: 180px;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .memo {
+      margin-top: 28px;
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px dashed var(--line);
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    code {
+      color: #c8d8ff;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>📘 MAGIC / INCANTATION LINK HUB</h1>
+      <p>
+        詠唱・ルーン・魔法体系・儀式語を集約するダッシュボード。<br>
+        M-GSL、士官学校魔導科、禁制術式DBの素材収集用ハブとして利用。
+      </p>
+    </section>
+
+    <section class="grid">
+      <a class="card" href="https://en.wikipedia.org/wiki/Incantation" target="_blank">
+        <span class="badge">INCANTATION</span>
+        <h2>📜 詠唱辞典</h2>
+        <p>詠唱・呪文・言霊・韻律の基礎。M-GSLの構文演出に最適。</p>
+      </a>
+
+      <a class="card" href="https://en.wikipedia.org/wiki/Grimoire" target="_blank">
+        <span class="badge">GRIMOIRE</span>
+        <h2>📘 魔導書辞典</h2>
+        <p>儀式、召喚、素材、禁制書。魔導書DBと禁書庫設定向け。</p>
+      </a>
+
+      <a class="card" href="https://finalfantasy.fandom.com/wiki/Magic_(term)" target="_blank">
+        <span class="badge">RPG SPELLS</span>
+        <h2>🔥 属性魔法辞典</h2>
+        <p>Fire / Blizzard / Holy など属性設計のインスピレーション用。</p>
+      </a>
+
+      <a class="card" href="https://en.wikipedia.org/wiki/Magic_in_Dungeons_%26_Dragons" target="_blank">
+        <span class="badge">SYSTEM</span>
+        <h2>🜏 D&D Spell System</h2>
+        <p>詠唱時間、触媒、射程、範囲、持続時間。授業カリキュラム化しやすい。</p>
+      </a>
+
+      <a class="card" href="https://en.wikipedia.org/wiki/Rune" target="_blank">
+        <span class="badge">RUNES</span>
+        <h2>🔷 ルーン文字</h2>
+        <p>魔法陣・封印術・刻印武装・士官学校の記号魔術科向け。</p>
+      </a>
+
+      <a class="card" href="https://en.wikipedia.org/wiki/List_of_Latin_phrases" target="_blank">
+        <span class="badge">CHANT SOURCE</span>
+        <h2>🕯 ラテン語句辞典</h2>
+        <p>詠唱文の高位呪文、教会系祝詞、禁制魔法の語感強化に。</p>
+      </a>
+    </section>
+
+    <section class="memo">
+      <strong>おすすめ次段階:</strong><br>
+      このページを <code>docs/viewer/db/magic/index.html</code> に配置。<br>
+      次に <code>magic-data.json</code> を作り、<br>
+      「属性 / 儀式 / ルーン / 禁制 / M-GSL」ごとに分離すると運用しやすいです。
+    </section>
+  </main>
+</body>
+</html>
+

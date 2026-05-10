@@ -1,0 +1,4 @@
+./viewer/official-site/assets/public.css
+./viewer/official-site/assets/public.js
+./viewer/official-site/data_public.json
+./viewer/official-site/index.html

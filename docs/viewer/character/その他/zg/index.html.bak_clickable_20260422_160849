@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中央警備隊｜Meritocracia Character Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/zg.css">
+</head>
+<body>
+
+<a class="back-link" href="../index.html">← Category Hub</a>
+
+<div class="page-shell">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <div class="hero-label">Force Archive / Zentral Garde</div>
+        <h1 class="hero-title">中央警備隊</h1>
+        <p class="hero-sub">
+          メリトクラシア中枢に直属し、治安維持・制度運用・要所警備を担う中央組織。<br>
+          現場の武力だけでなく、国家秩序そのものを実装する執行部門として機能する。
+        </p>
+      </div>
+
+      <div class="hero-badge">
+        <div class="jp">中央直属部門</div>
+        <div class="en">ZENTRAL GARDE</div>
+      </div>
+    </div>
+
+    <div class="meta-row">
+      <span class="meta-chip"><strong>ROLE</strong> 治安維持 / 中枢警備 / 制度執行</span>
+      <span class="meta-chip"><strong>TONE</strong> 秩序 / 統制 / 中央直属</span>
+      <span class="meta-chip"><strong>STATUS</strong> Character Hub / Phase 1</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">Force Structure</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="overview-grid">
+      <article class="overview-card">
+        <div class="overview-label">Function</div>
+        <h3>役割</h3>
+        <p>
+          国家中枢の警備、都市治安の維持、制度運用時の執行補佐を担う。
+          武力だけでなく、秩序そのものを成立させるための実務組織。
+        </p>
+      </article>
+
+      <article class="overview-card">
+        <div class="overview-label">Image</div>
+        <h3>組織イメージ</h3>
+        <p>
+          威圧ではなく統制、感情ではなく規律。
+          前線騎士団よりも「中央」「規則」「執行」の色が強い。
+        </p>
+      </article>
+
+      <article class="overview-card">
+        <div class="overview-label">Narrative</div>
+        <h3>物語上の位置</h3>
+        <p>
+          本編では制度側の顔として登場しやすく、
+          士官学校・審問・国家運用との接続点として機能する勢力。
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">Registered Personnel</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="entry-grid">
+
+      <article class="stub-card">
+        <div class="card-topline">
+          <span class="card-label">ZG / MAIN / RESERVED</span>
+          <span class="card-rank">主要枠</span>
+        </div>
+        <h3>中央警備隊代表キャラ</h3>
+        <div class="stub-meta">中枢直属 / 治安執行 / 制度側の象徴</div>
+        <div class="stub-desc">
+          今後追加予定。中央警備隊を象徴する主力キャラを接続する枠。
+        </div>
+        <span class="stub-status">STANDBY</span>
+      </article>
+
+      <article class="stub-card">
+        <div class="card-topline">
+          <span class="card-label">ZG / VICE / ACTIVE</span>
+          <span class="card-rank">副官枠</span>
+        </div>
+        <h3>セレス・オブシディアン</h3>
+        <div class="stub-meta">首席監察補佐 / 制度執行 / 不正摘発</div>
+        <div class="stub-desc">
+          ZG副官として制度運用の実働を担う人物。ルチアーノの判断を実務へ落とし込み、
+          試験不正・士官学校監査・腐敗調査を担当する「制度の刃」。
+        </div>
+        <a class="footer-link" href="./CeresObsidian/">個別viewへ →</a>
+      </article>
+
+      <article class="stub-card">
+        <div class="card-topline">
+          <span class="card-label">ZG / ACADEMY / WIP</span>
+          <span class="card-rank">接続枠</span>
+        </div>
+        <h3>士官学校・制度導線キャラ</h3>
+        <div class="stub-meta">試験 / 校内秩序 / 国家制度導線</div>
+        <div class="stub-desc">
+          士官学校・審問・国家運用と接続する人物を整理するための予備枠。
+        </div>
+        <span class="stub-status">RESERVED SLOT</span>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">Operational Notes</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="notes-box">
+      <p>
+        このページは「中央警備隊」に属する人物の中間ハブとして運用する。<br>
+        三兵団の中でも制度・秩序・中央直属の色が強い人物をここに集約し、
+        今後の人物追加に応じて継続的に増築する。
+      </p>
+    </div>
+  </section>
+
+  <div class="footer-nav">
+    <a class="footer-link" href="../index.html">← Category Hub に戻る</a>
+  </div>
+
+</div>
+
+</body>
+</html>

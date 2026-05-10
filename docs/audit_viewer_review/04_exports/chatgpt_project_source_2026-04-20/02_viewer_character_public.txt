@@ -1,0 +1,3590 @@
+bundle: character
+generated: 2026-04-20 12:26:22
+
+==================================================
+FILE: ./viewer/character/<!DOCTYPE html>.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Earlgray | Nightfall Mode</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@300;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VARIABLE SETTINGS
+   ============================================================ */
+:root {
+  /* Day Mode: Tea & Amber */
+  --bg-main:      #2a1a0e;
+  --label-bg:     linear-gradient(180deg, rgba(139,69,19,0.3) 0%, rgba(42,26,14,0.5) 100%);
+  --accent-color: #C5A35A; /* Gold */
+  --text-main:    #FFF8E7;
+  --steam-color:  rgba(255,248,231,0.5);
+  --border-line:  rgba(197,163,90,0.4);
+}
+
+body.night-mode {
+  /* Night Mode: Moon & Abyss */
+  --bg-main:      #0B1020;
+  --label-bg:     linear-gradient(180deg, rgba(40,20,80,0.5) 0%, rgba(11,16,32,0.7) 100%);
+  --accent-color: #C0C0C0; /* Silver / Nightfall */
+  --text-main:    #d8e0f0;
+  --steam-color:  rgba(140,95,191,0.4); /* Purple Particles */
+  --border-line:  rgba(140,95,191,0.5);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Noto Serif JP', serif;
+  transition: background 0.8s ease, color 0.5s ease;
+  min-height: 100vh;
+  margin: 0; padding: 20px;
+}
+
+.container { max-width: 800px; margin: 0 auto; }
+
+/* ============================================================
+   TEA LABEL HEADER (Day/Night Common)
+   ============================================================ */
+.tea-header {
+  border: 1px solid var(--border-line);
+  padding: 40px;
+  text-align: center;
+  background: var(--label-bg);
+  position: relative;
+  transition: all 0.8s ease;
+}
+
+.char-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.1em;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   ANIMATION: STEAM TO PARTICLES
+   ============================================================ */
+.effect-container {
+  display: flex; justify-content: center; gap: 15px; height: 50px; margin: 20px 0;
+}
+.effect-bar {
+  width: 2px;
+  background: linear-gradient(to top, transparent, var(--steam-color), transparent);
+  animation: rise 3s infinite ease-in-out;
+}
+@keyframes rise {
+  0%   { transform: translateY(0); opacity: 0; }
+  50%  { opacity: 0.6; }
+  100% { transform: translateY(-40px); opacity: 0; }
+}
+
+/* Night Mode 特有の粒子挙動（歪み） */
+body.night-mode .effect-bar {
+  animation: distort-rise 2.5s infinite ease-in-out;
+  background: radial-gradient(circle, var(--steam-color) 0%, transparent 80%);
+  width: 4px; border-radius: 50%;
+}
+@keyframes distort-rise {
+  0%   { transform: translateY(0) scale(1); opacity: 0; }
+  50%  { transform: translateY(-25px) scale(1.5) rotate(10deg); opacity: 0.8; }
+  100% { transform: translateY(-50px) scale(0.5); opacity: 0; }
+}
+
+/* ============================================================
+   UI COMPONENTS
+   ============================================================ */
+.card {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-line);
+  padding: 20px; margin-top: 20px;
+  transition: all 0.5s;
+}
+.card:hover { border-color: var(--accent-color); box-shadow: 0 0 15px var(--border-line); }
+
+.toggle-btn {
+  background: transparent; border: 1px solid var(--accent-color);
+  color: var(--accent-color); padding: 8px 16px; cursor: pointer;
+  font-family: 'Cormorant Garamond', serif; letter-spacing: 2px;
+}
+
+.hidden-content { display: none; margin-top: 20px; padding-left: 15px; border-left: 2px solid var(--accent-color); }
+.hidden-content.active { display: block; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div style="text-align: right; margin-bottom: 10px;">
+    <button class="toggle-btn" id="modeToggle">☀ DAY / 🌙 NIGHT</button>
+  </div>
+
+  <header class="tea-header">
+    <div style="font-size: 10px; letter-spacing: 4px; color: var(--accent-color);">MERITOCRACIA SPECIAL BLEND</div>
+    <h1 class="char-name" id="display-name">Iris Earlgray</h1>
+    
+    <div class="effect-container">
+      <div class="effect-bar" style="animation-delay: 0s;"></div>
+      <div class="effect-bar" style="animation-delay: 0.4s;"></div>
+      <div class="effect-bar" style="animation-delay: 0.8s;"></div>
+    </div>
+
+    <p style="font-style: italic; font-family: 'IM Fell English';">
+       <span id="flavor-text">"壊れる直前で淹れられた、最も芳醇な一杯"</span>
+    </p>
+  </header>
+
+  <div class="card">
+    <h2 style="font-size: 14px; color: var(--accent-color); border-bottom: 1px solid var(--border-line);">Character Analysis</h2>
+    <p id="analysis-text" style="font-size: 13px; line-height: 1.8; margin-top: 10px;">
+      主人のために完璧なアールグレイを淹れる、レオンハルト家の有能なメイド。その献身は、救われたことへの純粋な感謝に基づいている。
+    </p>
+    
+    <button class="toggle-btn" style="margin-top: 15px; font-size: 10px;" id="revealBtn">深層記録を開示</button>
+    
+    <div class="hidden-content" id="secretNote">
+      <div id="note-day">
+        <strong>【生存罪悪感】</strong><br>
+        「再販価値」があったために自分だけが生かされたという事実は、彼女の献身を「義務」ではなく「贖罪」へと変えている。
+      </div>
+      <div id="note-night" style="display:none;">
+        <strong>【夜化因子の揺らぎ】</strong><br>
+        「忌み子」として家族に疎まれ、名前すら奪われていた時間は、彼女の魂を夜の深淵へと固定した。ジェイドの光が届かなければ、彼女は今も暗闇の澱の中に沈んでいた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+==================================================
+FILE: ./viewer/character/daisia/daisia.css
+--------------------------------------------------
+/* ============================================================
+   DAISIA NOCTURNE — CHARACTER CSS
+   Template: night-blood (reusable for vampire lineage chars)
+   Default mode: night  |  Toggle: dawn
+   ============================================================ */
+
+/* ── NIGHT BASE（デフォルト CSS変数） ── */
+:root {
+  --n-bg:          #0a0608;
+  --n-bg2:         #120a0d;
+  --n-crimson:     #8b1a2a;
+  --n-crimson2:    #a82035;
+  --n-crimson-dim: #5a1020;
+  --n-gold:        #c9a040;
+  --n-gold2:       #e8c060;
+  --n-bone:        #e8ddd0;
+  --n-bone2:       #d0c4b4;
+  --n-smoke:       #9a8878;
+  --n-ash:         #5a4840;
+
+  --border-cr:     rgba(139,26,42,0.5);
+  --border-cr2:    rgba(139,26,42,0.9);
+  --border-gold:   rgba(201,160,64,0.4);
+
+  --text-warm:     #e8ddd0;
+  --text-muted:    #c09080;
+  --text-dim:      #6a4840;
+
+  --particle-col:  rgba(139,26,42,0.7);
+}
+
+/* ── DAWN MODE 変数上書き ── */
+body.dawn-mode {
+  --n-bg:          #1a1008;
+  --n-bg2:         #281808;
+  --n-crimson:     #8b6020;
+  --n-crimson2:    #c89040;
+  --n-crimson-dim: #6a4810;
+  --n-gold:        #e8b840;
+  --n-gold2:       #f8d870;
+  --n-bone:        #fff8e8;
+  --n-bone2:       #f8ecd8;
+  --n-smoke:       #b8a080;
+  --n-ash:         #806848;
+
+  --border-cr:     rgba(232,184,64,0.5);
+  --border-cr2:    rgba(248,216,112,0.9);
+  --border-gold:   rgba(232,184,64,0.5);
+
+  --text-warm:     #fff8e8;
+  --text-muted:    #d4b880;
+  --text-dim:      #987848;
+
+  --particle-col:  rgba(248,200,80,0.6);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--n-bg);
+  color: var(--text-warm);
+  font-family: 'Noto Serif JP', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.8s ease, color 0.5s ease;
+}
+
+/* 背景テクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%,  rgba(100,10,20,0.45) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 15% 85%, rgba(80,8,16,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 85% 70%, rgba(60,40,10,0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 70px,
+      rgba(139,26,42,0.018) 70px, rgba(139,26,42,0.018) 71px
+    );
+  pointer-events: none; z-index: 0;
+  transition: background 0.8s ease;
+}
+
+body.dawn-mode::before {
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%,  rgba(200,140,20,0.3) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(180,100,10,0.15) 0%, transparent 55%),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 70px,
+      rgba(232,184,64,0.018) 70px, rgba(232,184,64,0.018) 71px
+    );
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.char-page {
+  position: relative; z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* ============================================================
+   MODE TOGGLE BUTTON
+   ============================================================ */
+.mode-toggle-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.mode-toggle-btn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 7px 18px;
+  background: transparent;
+  border: 1px solid var(--border-cr);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.mode-toggle-btn:hover {
+  border-color: var(--n-gold);
+  color: var(--text-warm);
+  background: rgba(139,26,42,0.1);
+}
+
+body.dawn-mode .mode-toggle-btn:hover {
+  border-color: var(--n-gold2);
+  background: rgba(232,184,64,0.08);
+}
+
+/* ============================================================
+   BACK LINK
+   ============================================================ */
+.char-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.char-back-link:hover { color: var(--n-gold); }
+
+/* ============================================================
+   HEADER: 夜会血統ラベル
+   ============================================================ */
+
+==================================================
+FILE: ./viewer/character/daisia/daisia.js
+--------------------------------------------------
+'use strict';
+
+/* ============================================================
+   DAISIA NOCTURNE — CHARACTER JS
+   JSON fetch → DOM render → Night/Dawn toggle
+   将来的に character.js として共通化可能な構造
+   ============================================================ */
+
+/* ── util ── */
+const el = (tag, cls) => {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  return e;
+};
+
+/* ============================================================
+   RENDER: HEADER
+   ============================================================ */
+function renderHeader(data) {
+  const h = data.header;
+  const f = data.flavor;
+
+  /* ブランドロゴ */
+  document.getElementById('char-brand-logo').textContent = h.brand_logo;
+
+  /* キャラ名 */
+  document.getElementById('char-name-en').textContent = h.char_name_en;
+  document.getElementById('char-name-ja').textContent = h.char_name_ja;
+
+  /* 区切り線 symbol */
+  document.querySelectorAll('.char-divider span')
+    .forEach(s => s.textContent = h.divider_symbol);
+
+  /* 四隅 symbol */
+  document.querySelectorAll('.char-corner-tl, .char-corner-br')
+    .forEach(s => s.textContent = h.corner_symbol);
+
+  /* blood-label-header の ::before / ::after 用 */
+  const headerEl = document.querySelector('.blood-label-header');
+  headerEl.setAttribute('data-corner', h.corner_symbol);
+
+  /* パーティクル生成 */
+  const wrap = document.getElementById('char-particle-wrap');
+  for (let i = 0; i < h.particle_count; i++) {
+    const p = el('div', 'char-particle');
+    wrap.appendChild(p);
+  }
+  /* Dawn ray 生成 */
+  for (let i = 0; i < h.dawn_ray_count; i++) {
+    const r = el('div', 'char-dawn-ray');
+    wrap.appendChild(r);
+  }
+
+  /* フレーバーテキスト（Night デフォルト） */
+  renderFlavor(f.night);
+}
+
+/* ============================================================
+   RENDER: FLAVOR TEXT
+   ============================================================ */
+function renderFlavor(flavor) {
+  document.getElementById('char-flavor-text').innerHTML =
+    `"${flavor.text}"<br><small style="font-size:10px;letter-spacing:3px;opacity:0.55;">${flavor.sub}</small>`;
+}
+
+/* ============================================================
+   RENDER: COLOR STRIP
+   ============================================================ */
+function renderColorStrip(data) {
+  const { night, dawn } = data.color_strip;
+
+  const nightStrip = document.getElementById('char-strip-night');
+  const dawnStrip  = document.getElementById('char-strip-dawn');
+
+  night.forEach(c => {
+    const s = el('span'); s.style.background = c;
+    nightStrip.appendChild(s);
+  });
+  dawn.forEach(c => {
+    const s = el('span'); s.style.background = c;
+    dawnStrip.appendChild(s);
+  });
+}
+
+/* ============================================================
+   RENDER: PROFILE CARD
+   ============================================================ */
+function renderProfile(profile) {
+  /* タイトル */
+  document.getElementById('char-profile-title').textContent = profile.card_title;
+
+  /* フィールド */
+  const dl = document.getElementById('char-status-list');
+  profile.fields.forEach(f => {
+    const dt = el('dt'); dt.textContent = f.label;
+    const dd = el('dd'); dd.textContent = f.value;
+    dl.appendChild(dt);
+    dl.appendChild(dd);
+  });
+
+  /* タグ */
+  const tagRow = document.getElementById('char-tag-row');
+  profile.tags.forEach(t => {
+    const span = el('span', 'char-tag');
+    span.textContent = t;
+    tagRow.appendChild(span);
+  });
+}
+
+/* ============================================================
+   RENDER: CAPABILITY BARS
+   ============================================================ */
+function renderCapability(cap) {
+  document.getElementById('char-cap-title').textContent = cap.card_title;
+
+  const wrap = document.getElementById('char-cap-wrap');
+  cap.bars.forEach(b => {
+    const row = el('div', 'char-cap-row');
+
+    const label = el('div', 'char-cap-label');
+    const lSpan = el('span'); lSpan.textContent = b.label;
+    const vSpan = el('span'); vSpan.textContent = b.value;
+    label.appendChild(lSpan);
+    label.appendChild(vSpan);
+
+    const bar  = el('div', 'char-cap-bar');
+    const fill = el('div', 'char-cap-fill');
+    fill.style.width = b.value + '%';
+    if (b.bar_style) fill.setAttribute('style', `width:${b.value}%;${b.bar_style}`);
+    bar.appendChild(fill);
+
+    row.appendChild(label);
+    row.appendChild(bar);
+    wrap.appendChild(row);
+  });
+}
+
+/* ============================================================
+   RENDER: CONCEPT
+   ============================================================ */
+function renderConcept(concept) {
+  document.getElementById('char-concept-title').textContent = concept.card_title;
+  document.getElementById('char-concept-text').innerHTML    = concept.text;
+}
+
+/* ============================================================
+   RENDER: NOTES（Night / Dawn 共通関数）
+   ============================================================ */
+function renderNotes(notesData, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const inner = el('div', 'char-notes-inner');
+
+  /* warning label */
+  const wl = el('div', 'char-warning-label');
+  wl.textContent = notesData.warning_label;
+  inner.appendChild(wl);
+
+  /* entries */
+
+==================================================
+FILE: ./viewer/character/daisia/daisia.json
+--------------------------------------------------
+{
+  "meta": {
+    "id": "daisia",
+    "theme": "night-blood",
+    "default_mode": "night",
+    "template_version": "1.0"
+  },
+
+  "header": {
+    "brand_logo": "Meritocracia — Sang Royal Réserve Nuit No.13",
+    "char_name_en": "Daisia Nocturne",
+    "char_name_ja": "デイジア＝ノクターン",
+    "divider_symbol": "✦",
+    "corner_symbol": "❋",
+    "particle_count": 7,
+    "dawn_ray_count": 4
+  },
+
+  "flavor": {
+    "night": {
+      "text": "血でしか繋がれないと信じていた夜が、<br>　　　　　朝と出会う前の最後の一杯",
+      "sub": "— Bottled in Darkness, Aged by Memory —"
+    },
+    "dawn": {
+      "text": "夜を越えた少女は、朝日を杯に注いで<br>　　　　　初めて乾杯の意味を知る",
+      "sub": "— Distilled by Dawn, Released from Night —"
+    }
+  },
+
+  "color_strip": {
+    "night": ["#0a0608", "#8b1a2a", "#c9a040", "#1a0f12", "#5a1020", "#e8ddd0"],
+    "dawn":  ["#1a1008", "#e8b840", "#f8d870", "#281808", "#c89040", "#fff8e8"]
+  },
+
+  "profile": {
+    "card_title": "Blood Profile",
+    "fields": [
+      { "label": "Name",           "value": "デイジア＝ノクターン" },
+      { "label": "Race",           "value": "吸血エルフ（古代エルフ血統分岐）" },
+      { "label": "Age",            "value": "14歳" },
+      { "label": "Current Status", "value": "グローリアテスト受験者 / 身元秘匿" },
+      { "label": "Family",         "value": "妹：デイリス（捜索中）" },
+      { "label": "Specialty",      "value": "血統記憶 / 魔力吸収 / 悪夢干渉" }
+    ],
+    "tags": ["Vampire Elf", "Blood Memory", "Night Lineage", "True End Arc"]
+  },
+
+  "capability": {
+    "card_title": "Capability",
+    "bars": [
+      { "label": "血統魔力・吸収",   "value": 97 },
+      { "label": "記憶・感情の読解", "value": 91 },
+      { "label": "本能的戦闘力",     "value": 84 },
+      { "label": "昼間の社会適応",   "value": 22,
+        "bar_style": "" },
+      { "label": "人間への信頼",     "value": 9,
+        "bar_style": "background:linear-gradient(to right,#5a1020,#8b1a2a);" }
+    ]
+  },
+
+  "concept": {
+    "card_title": "Concept",
+    "text": "夜だけに生きることを宿命とされた少女が、<em>血</em>ではなく<em>朝</em>を選ぶまでの物語。<br><br>士官学校の試験会場でジェイドと出会い、その心音の響きに引き寄せられる——それは恋か、本能か、記憶の共鳴か。<br><br>アイリスが「日常・食卓・家」でジェイドを繋ぎとめるなら、デイジアは「<em>血・本能・真相・夜</em>」で繋がろうとする。しかし彼女の本当の行動原理は一つ——妹デイリスを取り戻すこと、それだけだ。"
+  },
+
+  "night_notes": {
+    "warning_label": "Classified — Night Blood Lineage Record",
+    "entries": [
+      {
+        "title": "赤布の卓と四脚燭台",
+        "body": "デイジアが夢に見る「家族の食卓」は、赤い布と四本の燭台で構成される仮設の場所。一脚は常に空席——妹デイリスのために空けてある。彼女にとってこれが「帰る場所」のすべてであり、その空席が埋まらない限り、夜は終わらない。"
+      },
+      {
+        "title": "血統記憶の本質",
+        "body": "吸血エルフは血を通じて「記憶・魔力・感情」を共有する。デイジアがジェイドの血に触れた瞬間、彼の悲しみと怒りと誓いが流れ込む——それは繋がりの証明であると同時に、他者に依存することへの恐怖の引き金でもある。"
+      },
+      {
+        "title": "黒星の悪夢",
+        "body": "眠れば黒い星が降る。デイリスが消えた夜から繰り返される悪夢。黒星は罪悪感の結晶——「わたしが守れなかった」という事実が、毎晩彼女の意識を押しつぶす。この悪夢が消えるのはTRUE END後だけである。"
+      },
+      {
+        "title": "アイリスへの嫉妬の正体",
+        "body": "アイリスへの嫉妬は「日常への羨望」だ。血でしか誰かと繋がれないと信じている少女にとって、食卓と「おかえり」で人と繋がれるアイリスは、自分には永遠に届かないものを持っている存在に映る。この非対称な嫉妬がヒロイン関係の核心を形作る。"
+      },
+      {
+        "title": "妹デイリスと行動原理",
+        "body": "士官学校受験も、グローリアテストも、ジェイドへの接近もすべてデイリス救出のための手段だ。彼女が「選んだ夜」を「選ばれた朝」に変える契機は、誰かに「守られる」ことではなく誰かと共に「妹を取り戻す」という共闘の経験から生まれる。"
+      },
+      {
+        "title": "夜の仮設家族（吸血鬼陣営）",
+        "body": "カリオン（豪快な兄）、セレナ（冷静な姉）、エス（包容する母性ポジ）——彼らは単なる組織ではなく、戦争で帰るべき場所を失った者たちが築いた擬似家族だ。デイジアはその末妹として愛されているが、陣営が「人類管理・テロ容認」へ踏み込んだとき、彼女は家族と価値観が決定的にズレたことを知る。"
+      },
+      {
+        "title": "国家に観測された異物",
+        "body": "士官学校責任者・学院上層・ロータス側上層は正体を把握している。デイジアは「国家が意図的に泳がせている異物」——吸血鬼側の動向監視と、ジェイドとの共鳴確認のための生体観測装置として機能している。監視対象であり、監視装置でもある。"
+      }
+    ],
+    "dossier": {
+      "icon": "🩸",
+      "label": "夜の血統記録 / Night Blood Dossier →",
+      "href": "daisia_internal_record.html"
+    }
+  },
+
+  "dawn_notes": {
+    "warning_label": "Dawn Record — After True End",
+    "entries": [
+      {
+        "title": "朝を選んだ瞬間",
+        "body": "デイリス救出後、夜が明ける直前にデイジアは選択する。血で繋がれた「仮設の家族」のまま夜に戻るか、朝日を共有できる誰かの隣に立つか——アイリスと共闘した記憶が、そのどちらを選ぶかを決めた。"
+      },
+      {
+        "title": "黒星の悪夢が消える",
+        "body": "TRUE END後、初めて悪夢を見ない夜が訪れる。黒い星は散り、朝焼けの金色が残像として残るだけ。デイジアはそれを「終わり」ではなく「始まり」として受け取る。"
+      },
+      {
+        "title": "アイリスとの関係の着地",
+        "body": "恋のライバルという構図は、共闘を経て変容する。アイリスが「日常でジェイドを守る」なら、デイジアは「真相でジェイドを守る」——二人は対立から補完へ、夜と朝が並ぶ関係へ。"
+      },
+      {
+        "title": "号泣シーンの核心",
+        "body": "「やだ……やめてよ……また同じ夜になる……！」——カリオン死亡、セレナ切り捨て、エス離反、ノワール負傷。14歳の少女が初めて自分の意志で家族を失う瞬間。血統記憶の悪夢と現実が同期し、夢と今の区別がつかなくなる。ジェイドが受け止めることで転換点となる。"
+      }
+    ],
+    "dossier": {
+      "icon": "☀",
+      "label": "Dawn Chronicle / Night Blood Dossier →",
+      "href": "daisia_internal_record.html"
+    }
+  },
+
+  "footer": {
+    "quote": "血でしか繋がれないと思っていた少女は、朝日を共有することで初めて救われる",
+    "label": "Meritocracia — Sang Royal No.13 / Nocturne Reserve"
+  },
+
+  "relationship_axis": {
+    "vs_jade": "血 / 本能 / 選定 → 共闘 → 転向",
+    "vs_iris": "嫉妬（日常への羨望）→ 補完（夜と朝）",
+    "vs_family": "末妹 → 思想分裂 → 自意志での離脱"
+  },
+
+  "motif": {
+    "symbols": ["赤い指輪", "黒猫ノワール", "空席", "黒星", "四脚燭台", "赤布の卓"],
+    "theme_night": "夜の仮設家族 / 血の繋縛",
+    "theme_dawn": "夜を越えて朝を選ぶ"
+  }
+}
+
+==================================================
+FILE: ./viewer/character/daisia/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daisia Nocturne | MERITOCRACIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./daisia.css">
+</head>
+<body>
+
+<div class="char-page">
+
+  <div id="char-error-msg"
+       style="display:none; color:#e05050; font-size:12px; padding:12px;
+              border:1px solid rgba(139,26,26,0.3); margin-bottom:16px;"></div>
+
+  <div class="mode-toggle-wrap">
+    <button id="char-toggle-btn" class="mode-toggle-btn">
+      <span>🌙 Night / ☀ Dawn</span>
+    </button>
+  </div>
+
+  <a class="char-back-link" href="../index.html">← CHARACTER LIST</a>
+
+  <header class="blood-label-header char-fade-in" data-corner="❋">
+    <span class="char-corner-tl"></span>
+    <span class="char-corner-br"></span>
+    <div id="char-brand-logo" class="char-brand-logo"></div>
+    <div class="char-divider"><span></span></div>
+    <h1 id="char-name-en" class="char-name-en"></h1>
+    <p  id="char-name-ja" class="char-name-ja"></p>
+    <div class="char-divider"><span></span></div>
+    <div id="char-particle-wrap" class="char-particle-wrap" aria-hidden="true"></div>
+    <p id="char-flavor-text" class="char-flavor-text"></p>
+  </header>
+
+  <div id="char-strip-night" class="char-color-strip char-strip-night" aria-hidden="true"></div>
+  <div id="char-strip-dawn"  class="char-color-strip char-strip-dawn"  aria-hidden="true"></div>
+
+  <main>
+
+    <div class="char-profile-grid">
+
+      <div class="char-card char-fade-in">
+        <div class="char-card-title">
+          <span class="char-ring-accent"></span>
+          <span id="char-profile-title"></span>
+        </div>
+        <dl id="char-status-list" class="char-status-list"></dl>
+        <div id="char-tag-row" class="char-tag-row"></div>
+      </div>
+
+      <div class="char-card char-fade-in">
+        <div class="char-card-title">
+          <span class="char-ring-accent"></span>
+          <span id="char-cap-title"></span>
+        </div>
+        <div id="char-cap-wrap"></div>
+      </div>
+
+    </div>
+
+    <div class="char-full-section char-card char-fade-in">
+      <div class="char-card-title">
+        <span class="char-ring-accent"></span>
+        <span id="char-concept-title"></span>
+      </div>
+      <p id="char-concept-text" class="char-concept-text"></p>
+      <div id="char-notes-night" style="margin-top:20px;"></div>
+      <div id="char-notes-dawn"  style="display:none; margin-top:20px;"></div>
+    </div>
+
+  </main>
+
+  <footer class="char-footer">
+    <p id="char-footer-quote"></p>
+    <small id="char-footer-label"></small>
+  </footer>
+
+</div>
+
+<script src="./daisia.js"></script>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/character/fine.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHARACTER PROFILE | FINE</title>
+
+<!-- フォント統一 -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary-color: #2d5a27;
+    --accent-color: #c0392b;
+    --sub-color: #2980b9;
+    --bg-dark: #0f1410;
+    --text-gray: #a0a8a0;
+    --border-color: #2c3e2d;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e8eee8;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    background: linear-gradient(145deg, #162017, #0f1410);
+}
+
+/* 見出し */
+h1, h2 {
+    font-family: 'Cinzel', serif;
+}
+
+header {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.char-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.15em;
+}
+
+.catchphrase {
+    font-style: italic;
+    color: var(--text-gray);
+    border-left: 3px solid var(--sub-color);
+    padding-left: 15px;
+}
+
+/* グリッド */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+}
+
+/* セクション */
+.section-box {
+    background: rgba(255,255,255,0.02);
+    padding: 20px;
+    border: 1px solid rgba(45,90,39,0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+/* テーブル */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-table th {
+    color: var(--text-gray);
+    width: 35%;
+}
+
+/* タグ */
+.tag {
+    display: inline-block;
+    border: 1px solid var(--primary-color);
+    padding: 4px 10px;
+    margin: 5px;
+    font-size: 0.75rem;
+}
+
+/* リスト */
+.logic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.logic-list li {
+    margin-bottom: 6px;
+}
+
+/* メモ */
+.memo {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* フッター */
+.footer-note {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 30px;
+    color: #3e4a3e;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<p class="char-name">CHARACTER 06 / THE LOGICIAN</p>
+<h1>FINE</h1>
+<p class="catchphrase">「最適解は既に出ている。感情による再考は時間の無駄だ」</p>
+</header>
+
+<div class="grid">
+
+<!-- 左 -->
+<div>
+
+<section>
+<h2>Basic Profile</h2>
+<table class="profile-table">
+
+==================================================
+FILE: ./viewer/character/fran.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHARACTER PROFILE | FRAN</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-base: #f4c6d0;
+    --bg-shell: rgba(255, 255, 255, 0.18);
+    --section-bg: rgba(255, 255, 255, 0.46);
+    --border-primary: rgba(255, 255, 255, 0.58);
+    --border-soft: rgba(255, 255, 255, 0.32);
+    --border-accent: #ffffff;
+
+    --text-main: #3a2e2e;
+    --text-sub: #6b4b4b;
+    --text-dim: rgba(58, 46, 46, 0.62);
+
+    --header-bg: #8e8e8e;
+    --header-text: #ffffff;
+    --header-sub: rgba(255,255,255,0.78);
+
+    --shadow: rgba(0, 0, 0, 0.08);
+    --accent-line: rgba(255,255,255,0.72);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at top center, rgba(255,255,255,0.24) 0%, transparent 38%),
+        linear-gradient(180deg, #f6ccd5 0%, #efc0cb 100%);
+    color: var(--text-main);
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.9;
+}
+
+/* レイアウト */
+.layout { display: flex; }
+.main { margin-left: 240px; width: 100%; }
+
+/* 左ナビ */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 28px 20px;
+    background: rgba(12, 12, 13, 0.95);
+    backdrop-filter: blur(8px);
+    border-right: 1px solid #2e2a27;
+    color: #e8e3da;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.side-nav__top {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #2e2a27;
+}
+
+.side-nav__name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+}
+
+.side-nav__links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.side-nav__link {
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #b8b0a4;
+    text-decoration: none;
+}
+
+.side-nav__link:hover {
+    color: #fff;
+}
+
+/* 元デザイン */
+.container {
+    max-width: 980px;
+    margin: 40px auto;
+    background: var(--bg-shell);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px var(--shadow);
+    backdrop-filter: blur(4px);
+}
+
+header {
+    background: var(--header-bg);
+    padding: 32px 40px 28px;
+}
+
+.char-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.38em;
+    color: var(--header-sub);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+.catchphrase {
+    color: #fbeaf0;
+}
+
+.content { padding: 32px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- 左ナビ -->
+<nav class="side-nav">
+  <div class="side-nav__top">
+    <p>CHARACTER 07</p>
+    <h1 class="side-nav__name">FRAN</h1>
+    <p>THE CONSUMED</p>
+  </div>
+
+  <div class="side-nav__links">
+    <a class="side-nav__link">PROFILE</a>
+    <a class="side-nav__link">CONCEPT</a>
+    <a class="side-nav__link">PSYCHOLOGY</a>
+    <a class="side-nav__link">RELATION</a>
+    <a class="side-nav__link">DEVELOPMENT</a>
+    <a class="side-nav__link">SUMMARY</a>
+  </div>
+</nav>
+
+<!-- 本文 -->
+<main class="main">
+<div class="container">
+
+
+==================================================
+FILE: ./viewer/character/garnet./garnet.css
+--------------------------------------------------
+/* ============================================================
+   DAISIA NOCTURNE — CHARACTER CSS
+   Template: night-blood (reusable for vampire lineage chars)
+   Default mode: night  |  Toggle: dawn
+   ============================================================ */
+
+/* ── NIGHT BASE（デフォルト CSS変数） ── */
+:root {
+  --n-bg:          #0a0608;
+  --n-bg2:         #120a0d;
+  --n-crimson:     #8b1a2a;
+  --n-crimson2:    #a82035;
+  --n-crimson-dim: #5a1020;
+  --n-gold:        #c9a040;
+  --n-gold2:       #e8c060;
+  --n-bone:        #e8ddd0;
+  --n-bone2:       #d0c4b4;
+  --n-smoke:       #9a8878;
+  --n-ash:         #5a4840;
+
+  --border-cr:     rgba(139,26,42,0.5);
+  --border-cr2:    rgba(139,26,42,0.9);
+  --border-gold:   rgba(201,160,64,0.4);
+
+  --text-warm:     #e8ddd0;
+  --text-muted:    #c09080;
+  --text-dim:      #6a4840;
+
+  --particle-col:  rgba(139,26,42,0.7);
+}
+
+/* ── DAWN MODE 変数上書き ── */
+body.dawn-mode {
+  --n-bg:          #1a1008;
+  --n-bg2:         #281808;
+  --n-crimson:     #8b6020;
+  --n-crimson2:    #c89040;
+  --n-crimson-dim: #6a4810;
+  --n-gold:        #e8b840;
+  --n-gold2:       #f8d870;
+  --n-bone:        #fff8e8;
+  --n-bone2:       #f8ecd8;
+  --n-smoke:       #b8a080;
+  --n-ash:         #806848;
+
+  --border-cr:     rgba(232,184,64,0.5);
+  --border-cr2:    rgba(248,216,112,0.9);
+  --border-gold:   rgba(232,184,64,0.5);
+
+  --text-warm:     #fff8e8;
+  --text-muted:    #d4b880;
+  --text-dim:      #987848;
+
+  --particle-col:  rgba(248,200,80,0.6);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--n-bg);
+  color: var(--text-warm);
+  font-family: 'Noto Serif JP', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.8s ease, color 0.5s ease;
+}
+
+/* 背景テクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%,  rgba(100,10,20,0.45) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 15% 85%, rgba(80,8,16,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 85% 70%, rgba(60,40,10,0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 70px,
+      rgba(139,26,42,0.018) 70px, rgba(139,26,42,0.018) 71px
+    );
+  pointer-events: none; z-index: 0;
+  transition: background 0.8s ease;
+}
+
+body.dawn-mode::before {
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%,  rgba(200,140,20,0.3) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(180,100,10,0.15) 0%, transparent 55%),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 70px,
+      rgba(232,184,64,0.018) 70px, rgba(232,184,64,0.018) 71px
+    );
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.char-page {
+  position: relative; z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* ============================================================
+   MODE TOGGLE BUTTON
+   ============================================================ */
+.mode-toggle-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.mode-toggle-btn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 7px 18px;
+  background: transparent;
+  border: 1px solid var(--border-cr);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.mode-toggle-btn:hover {
+  border-color: var(--n-gold);
+  color: var(--text-warm);
+  background: rgba(139,26,42,0.1);
+}
+
+body.dawn-mode .mode-toggle-btn:hover {
+  border-color: var(--n-gold2);
+  background: rgba(232,184,64,0.08);
+}
+
+/* ============================================================
+   BACK LINK
+   ============================================================ */
+.char-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.char-back-link:hover { color: var(--n-gold); }
+
+/* ============================================================
+   HEADER: 夜会血統ラベル
+   ============================================================ */
+
+==================================================
+FILE: ./viewer/character/garnet./garnet.js
+--------------------------------------------------
+'use strict';
+
+/* ============================================================
+   DAISIA NOCTURNE — CHARACTER JS
+   JSON fetch → DOM render → Night/Dawn toggle
+   将来的に character.js として共通化可能な構造
+   ============================================================ */
+
+/* ── util ── */
+const el = (tag, cls) => {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  return e;
+};
+
+/* ============================================================
+   RENDER: HEADER
+   ============================================================ */
+function renderHeader(data) {
+  const h = data.header;
+  const f = data.flavor;
+
+  /* ブランドロゴ */
+  document.getElementById('char-brand-logo').textContent = h.brand_logo;
+
+  /* キャラ名 */
+  document.getElementById('char-name-en').textContent = h.char_name_en;
+  document.getElementById('char-name-ja').textContent = h.char_name_ja;
+
+  /* 区切り線 symbol */
+  document.querySelectorAll('.char-divider span')
+    .forEach(s => s.textContent = h.divider_symbol);
+
+  /* 四隅 symbol */
+  document.querySelectorAll('.char-corner-tl, .char-corner-br')
+    .forEach(s => s.textContent = h.corner_symbol);
+
+  /* blood-label-header の ::before / ::after 用 */
+  const headerEl = document.querySelector('.blood-label-header');
+  headerEl.setAttribute('data-corner', h.corner_symbol);
+
+  /* パーティクル生成 */
+  const wrap = document.getElementById('char-particle-wrap');
+  for (let i = 0; i < h.particle_count; i++) {
+    const p = el('div', 'char-particle');
+    wrap.appendChild(p);
+  }
+  /* Dawn ray 生成 */
+  for (let i = 0; i < h.dawn_ray_count; i++) {
+    const r = el('div', 'char-dawn-ray');
+    wrap.appendChild(r);
+  }
+
+  /* フレーバーテキスト（Night デフォルト） */
+  renderFlavor(f.night);
+}
+
+/* ============================================================
+   RENDER: FLAVOR TEXT
+   ============================================================ */
+function renderFlavor(flavor) {
+  document.getElementById('char-flavor-text').innerHTML =
+    `"${flavor.text}"<br><small style="font-size:10px;letter-spacing:3px;opacity:0.55;">${flavor.sub}</small>`;
+}
+
+/* ============================================================
+   RENDER: COLOR STRIP
+   ============================================================ */
+function renderColorStrip(data) {
+  const { night, dawn } = data.color_strip;
+
+  const nightStrip = document.getElementById('char-strip-night');
+  const dawnStrip  = document.getElementById('char-strip-dawn');
+
+  night.forEach(c => {
+    const s = el('span'); s.style.background = c;
+    nightStrip.appendChild(s);
+  });
+  dawn.forEach(c => {
+    const s = el('span'); s.style.background = c;
+    dawnStrip.appendChild(s);
+  });
+}
+
+/* ============================================================
+   RENDER: PROFILE CARD
+   ============================================================ */
+function renderProfile(profile) {
+  /* タイトル */
+  document.getElementById('char-profile-title').textContent = profile.card_title;
+
+  /* フィールド */
+  const dl = document.getElementById('char-status-list');
+  profile.fields.forEach(f => {
+    const dt = el('dt'); dt.textContent = f.label;
+    const dd = el('dd'); dd.textContent = f.value;
+    dl.appendChild(dt);
+    dl.appendChild(dd);
+  });
+
+  /* タグ */
+  const tagRow = document.getElementById('char-tag-row');
+  profile.tags.forEach(t => {
+    const span = el('span', 'char-tag');
+    span.textContent = t;
+    tagRow.appendChild(span);
+  });
+}
+
+/* ============================================================
+   RENDER: CAPABILITY BARS
+   ============================================================ */
+function renderCapability(cap) {
+  document.getElementById('char-cap-title').textContent = cap.card_title;
+
+  const wrap = document.getElementById('char-cap-wrap');
+  cap.bars.forEach(b => {
+    const row = el('div', 'char-cap-row');
+
+    const label = el('div', 'char-cap-label');
+    const lSpan = el('span'); lSpan.textContent = b.label;
+    const vSpan = el('span'); vSpan.textContent = b.value;
+    label.appendChild(lSpan);
+    label.appendChild(vSpan);
+
+    const bar  = el('div', 'char-cap-bar');
+    const fill = el('div', 'char-cap-fill');
+    fill.style.width = b.value + '%';
+    if (b.bar_style) fill.setAttribute('style', `width:${b.value}%;${b.bar_style}`);
+    bar.appendChild(fill);
+
+    row.appendChild(label);
+    row.appendChild(bar);
+    wrap.appendChild(row);
+  });
+}
+
+/* ============================================================
+   RENDER: CONCEPT
+   ============================================================ */
+function renderConcept(concept) {
+  document.getElementById('char-concept-title').textContent = concept.card_title;
+  document.getElementById('char-concept-text').innerHTML    = concept.text;
+}
+
+/* ============================================================
+   RENDER: NOTES（Night / Dawn 共通関数）
+   ============================================================ */
+function renderNotes(notesData, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const inner = el('div', 'char-notes-inner');
+
+  /* warning label */
+  const wl = el('div', 'char-warning-label');
+  wl.textContent = notesData.warning_label;
+  inner.appendChild(wl);
+
+  /* entries */
+
+==================================================
+FILE: ./viewer/character/garnet./garnet.json
+--------------------------------------------------
+{
+  "meta": {
+    "id": "garnet",
+    "theme": "ember-knight",
+    "default_mode": "night",
+    "template_version": "1.0"
+  },
+
+  "header": {
+    "brand_logo": "Meritocracia — Frontorden Ember Archive No.01",
+    "char_name_en": "Garnet Valgray",
+    "char_name_ja": "ガーネット・ヴァルグレイ",
+    "divider_symbol": "✦",
+    "corner_symbol": "✦",
+    "particle_count": 7,
+    "dawn_ray_count": 4
+  },
+
+  "flavor": {
+    "night": {
+      "text": "炎上する都市の中でも、<br>　　　　　最後まで剣を下ろさなかった男",
+      "sub": "— The Sword That Entered the Fire After the Sirens —"
+    },
+    "dawn": {
+      "text": "守れなかった命を背負いながらも、<br>　　　　　それでも次の市民を守るため前へ出る",
+      "sub": "— Not Salvation, But Duty Carried Into Morning —"
+    }
+  },
+
+  "color_strip": {
+    "night": ["#0a0608", "#7f0f19", "#b51f2e", "#d4a64a", "#4a0d12", "#f2e3c6"],
+    "dawn":  ["#1a1008", "#a24d1c", "#d97a2b", "#f0c86a", "#5b2e14", "#fff2d9"]
+  },
+
+  "profile": {
+    "card_title": "Front Profile",
+    "fields": [
+      { "label": "Name", "value": "ガーネット・ヴァルグレイ" },
+      { "label": "Affiliation", "value": "Frontorden（前線騎士団）" },
+      { "label": "Age", "value": "35歳" },
+      { "label": "Role", "value": "FOリーダー / 対テロ鎮圧指揮官" },
+      { "label": "Disposition", "value": "歴戦騎士 / 現実主義 / 市民防衛優先" },
+      { "label": "Weapon", "value": "聖剣" }
+    ],
+    "tags": [
+      "FO Leader",
+      "Frontorden",
+      "Veteran Knight",
+      "Holy Sword",
+      "Zero Arc Hero"
+    ]
+  },
+
+  "capability": {
+    "card_title": "Capability",
+    "bars": [
+      { "label": "前線指揮", "value": 96 },
+      { "label": "対テロ制圧", "value": 94 },
+      { "label": "市街地戦対応", "value": 92 },
+      { "label": "護衛・防衛判断", "value": 95 },
+      { "label": "政治的柔軟性", "value": 58 }
+    ]
+  },
+
+  "concept": {
+    "card_title": "Concept",
+    "text": "中央市場炎槍事件において、<em>事件後にFOを率いて現場へ突入した</em>歴戦の指揮官。<br><br>彼は英雄譚の主人公のように人々を励ます男ではない。むしろ、炎上する都市と叫ぶ市民の中で、まず最初に<strong>制圧・封鎖・救助動線</strong>を組み立てる現場の人間である。<br><br>ジェイドにとってのガーネットは、優しい救済ではなく、<em>『この国にも本物の強者はいる』</em> と焼き付けた背中そのものだった。"
+  },
+
+  "night_notes": {
+    "warning_label": "Classified — Frontorden Emergency Combat Record",
+    "entries": [
+      {
+        "title": "外見の核",
+        "body": "深い紅玉色の髪と整えられた髭を持つ中年の男。白銀の重装甲に深紅のマント、胸部や肩部にはガーネット色の意匠が組み込まれている。第一印象は豪胆ではなく、静かな威圧。"
+      },
+      {
+        "title": "目と表情",
+        "body": "瞳は赤銅寄りの暗い赤。常に燃えているわけではない。炎が消えずに奥で残っているような視線をしている。笑顔は少なく、口元がわずかに緩む程度。"
+      },
+      {
+        "title": "体格と姿勢",
+        "body": "巨漢ではないが、厚みのある実戦体型。肩幅が広く、重心が低い。儀礼向けの立ち方ではなく、いつでも抜刀・指示・突入に移れる前線指揮官の立ち方をしている。"
+      },
+      {
+        "title": "古傷",
+        "body": "顔には古い傷跡が一本だけ残る。派手ではないが、視線を受けた時に『この男は生き残ってきた』と伝わる程度の傷。勲章ではなく履歴。"
+      },
+      {
+        "title": "現実主義の意味",
+        "body": "彼の現実主義は冷笑ではない。救えない命があることを知った上で、それでも救える人数を最大化するために決断を下す思考。市民防衛優先という原則は、その冷たさの奥にある。"
+      },
+      {
+        "title": "中央市場炎槍事件での位置",
+        "body": "事件当日、FOはT+12分に出動し、ガーネットが指揮官を務めた。到着時点で市場は炎上・召喚獣暴走・市民逃走の最中であり、彼はそこで制圧戦闘と救助開始までを担う。"
+      },
+      {
+        "title": "ジェイドから見た意味",
+        "body": "幼いジェイドにとって、ガーネットは『助けてくれた誰か』ではなく『炎の中に入っていった本物の大人』である。言葉より背中が記憶に残るタイプの英雄。"
+      }
+    ],
+    "dossier": {
+      "icon": "🔥",
+      "label": "Frontorden Emergency Record →",
+      "href": "garnet_internal_record.html"
+    }
+  },
+
+  "dawn_notes": {
+    "warning_label": "Dawn Record — Public Character View",
+    "entries": [
+      {
+        "title": "英雄ではなく責任者",
+        "body": "ガーネットは民衆の前で理想を語るタイプではない。彼が守るのは秩序であり、その秩序の先にいる市民だ。だからこそ、感傷より先に配置を決め、剣を抜く。"
+      },
+      {
+        "title": "髪色の意味",
+        "body": "宝石の名を持つ彼の髪は、鮮烈な赤ではなく深く沈んだ紅玉色。燃える情熱そのものではなく、何度も焼けたあとでも残り続ける意志を象徴している。"
+      },
+      {
+        "title": "聖剣との相性",
+        "body": "聖剣使いでありながら、神話的な神聖さより『実戦で使い倒された秩序の刃』という印象が強い。祈りのための剣ではなく、都市を守るための剣。"
+      },
+      {
+        "title": "今後の運用",
+        "body": "ZERO編ではジェイドの英雄像として機能し、後の章ではFrontorden側の価値観と現場判断主義を体現する人物として機能する。レオンハルト・クロイツを追加する場合も、ガーネットは上位の象徴で残せる。"
+      }
+    ],
+    "dossier": {
+      "icon": "✨",
+      "label": "Public Character Record →",
+      "href": "garnet_internal_record.html"
+    }
+  },
+
+  "footer": {
+    "quote": "炎の中へ入るのは勇気ではない。そこに入らなければ、もっと多くが死ぬと知っているだけだ",
+    "label": "Meritocracia — Frontorden Archive / Garnet Valgray"
+  },
+
+  "relationship_axis": {
+    "vs_jade": "英雄の背中 / 強者の原像",
+    "vs_frontorden": "秩序 / 制圧 / 防衛の象徴",
+    "vs_incident": "中央市場炎槍事件の現場指揮官"
+  },
+
+  "motif": {
+    "symbols": ["聖剣", "深紅のマント", "古傷", "紅玉色の髪", "炎上都市", "白銀重装"],
+    "theme_night": "炎の中の秩序 / 現場指揮",
+    "theme_dawn": "救済ではなく責任"
+  }
+}
+==================================================
+FILE: ./viewer/character/garnet./index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garnet Valgray | MERITOCRACIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./garnet.css">
+</head>
+<body>
+
+<div class="char-page">
+
+  <div id="char-error-msg"
+       style="display:none; color:#e05050; font-size:12px; padding:12px;
+              border:1px solid rgba(139,26,26,0.3); margin-bottom:16px;"></div>
+
+  <div class="mode-toggle-wrap">
+    <button id="char-toggle-btn" class="mode-toggle-btn">
+      <span>🔥 Ember / ✨ Dawn</span>
+    </button>
+  </div>
+
+  <a class="char-back-link" href="../index.html">← CHARACTER LIST</a>
+
+  <header class="blood-label-header char-fade-in" data-corner="✦">
+    <span class="char-corner-tl"></span>
+    <span class="char-corner-br"></span>
+    <div id="char-brand-logo" class="char-brand-logo"></div>
+    <div class="char-divider"><span></span></div>
+    <h1 id="char-name-en" class="char-name-en"></h1>
+    <p id="char-name-ja" class="char-name-ja"></p>
+    <div class="char-divider"><span></span></div>
+    <div id="char-particle-wrap" class="char-particle-wrap" aria-hidden="true"></div>
+    <p id="char-flavor-text" class="char-flavor-text"></p>
+  </header>
+
+  <div id="char-strip-night" class="char-color-strip char-strip-night" aria-hidden="true"></div>
+  <div id="char-strip-dawn" class="char-color-strip char-strip-dawn" aria-hidden="true"></div>
+
+  <main>
+    <div class="char-profile-grid">
+      <div class="char-card char-fade-in">
+        <div class="char-card-title">
+          <span class="char-ring-accent"></span>
+          <span id="char-profile-title"></span>
+        </div>
+        <dl id="char-status-list" class="char-status-list"></dl>
+        <div id="char-tag-row" class="char-tag-row"></div>
+      </div>
+
+      <div class="char-card char-fade-in">
+        <div class="char-card-title">
+          <span class="char-ring-accent"></span>
+          <span id="char-cap-title"></span>
+        </div>
+        <div id="char-cap-wrap"></div>
+      </div>
+    </div>
+
+    <div class="char-full-section char-card char-fade-in">
+      <div class="char-card-title">
+        <span class="char-ring-accent"></span>
+        <span id="char-concept-title"></span>
+      </div>
+      <p id="char-concept-text" class="char-concept-text"></p>
+      <div id="char-notes-night" style="margin-top:20px;"></div>
+      <div id="char-notes-dawn" style="display:none; margin-top:20px;"></div>
+    </div>
+  </main>
+
+  <footer class="char-footer">
+    <p id="char-footer-quote"></p>
+    <small id="char-footer-label"></small>
+  </footer>
+
+</div>
+
+<script src="./garnet.js"></script>
+</body>
+</html>
+==================================================
+FILE: ./viewer/character/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キャラクター｜メリトクラシア</title>
+
+<style>
+body {
+  background:#0d0d0d;
+  color:#fff;
+  font-family: 'Noto Serif JP', serif;
+  margin:0;
+}
+
+/* タイトル */
+h1 {
+  margin-top:40px;
+  text-align:center;
+}
+
+/* 🔥 グリッド化 */
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+/* カード */
+.card {
+  position: relative;
+  background:#1a1a1a;
+  padding:30px 20px;
+  border-radius:12px;
+  transition:0.25s;
+  text-align:center;
+  border:1px solid #222;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  border-color:#8b0000;
+  background:#222;
+}
+
+/* 🌙 デイジア専用タグ */
+.tag {
+  position:absolute;
+  top:12px;
+  right:12px;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:#8b0000;
+  color:#fff;
+  letter-spacing:0.08em;
+}
+.vampire-card:hover {
+  border-color:#b22222;
+  box-shadow:0 0 12px rgba(139,0,0,0.35);
+}
+
+.card-kernel {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2;
+}
+
+.badge-sister {
+  background: linear-gradient(135deg, #e38bb0, #f4b5cc);
+  color: #fffafc;
+  border: 1px solid rgba(244, 181, 204, 0.55);
+  box-shadow: 0 0 10px rgba(227, 139, 176, 0.28);
+}
+
+/* リンク */
+a {
+  text-decoration:none;
+  color:#fff;
+}
+</style>
+
+<body>
+
+<h1>キャラクター</h1>
+
+<div class="card-grid">
+
+  <a href="jade.html">
+    <div class="card">
+      <h2>ジェイド</h2>
+      <p>答えを持たない観測者</p>
+    </div>
+  </a>
+
+  <a href="reinhardt.html">
+    <div class="card">
+      <h2>ライナルト</h2>
+      <p>制度の正義</p>
+    </div>
+  </a>
+
+  <a href="yumina.html">
+    <div class="card">
+      <h2>ユミナ</h2>
+      <p>正義の象徴</p>
+    </div>
+  </a>
+
+  <!-- パス修正 -->
+  <a href="iris.html">
+    <div class="card">
+      <h2>アイリス</h2>
+      <p>感情の象徴</p>
+    </div>
+  </a>
+
+  <!-- 🌙 デイジア追加 -->
+  <a href="daisia/">
+    <div class="card vampire-card">
+      <span class="tag">VAMPIRE</span>
+      <h2>デイジア</h2>
+      <p>夜を越えて朝を選ぶ少女</p>
+    </div>
+  </a>
+
+  <!-- aタグ修正済み -->
+  <a href="viola.html">
+    <div class="card">
+      <h2>ヴィオラ</h2>
+      <p>理性の揺らぎ</p>
+    </div>
+  </a>
+
+  <!-- 🔥 キール追加 -->
+  <a href="kiel.html">
+    <div class="card">
+      <h2>キール</h2>
+      <p>現実の体現者</p>
+    </div>
+  </a>
+
+  <!-- 🔥 フラン（今後） -->
+  <a href="fran.html">
+    <div class="card">
+
+==================================================
+FILE: ./viewer/character/iris.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Earlgray | MERITOCRACIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   IRIS EARLGRAY — CHARACTER PAGE
+   コンセプト: 高級紅茶ブランドのラベル × メイド服の黒白緑金
+   カラー方針: 琥珀背景にPDF公式カラーを乗せる折衷設計
+   ============================================================ */
+
+:root {
+  /* 背景・紅茶系 */
+  --tea-bg:       #2a1a0e;
+  --tea-bg2:      #3d2410;
+  --tea-amber:    #8B4513;
+  --tea-amber2:   #a0521a;
+  --tea-light:    #c4803a;
+  --parchment:    #FFF8E7;
+  --parchment2:   #f5e8c8;
+
+  /* アイリス公式カラー（PDF準拠） */
+  --iris-black:   #1C1B1B;
+  --iris-white:   #F2EDE6;
+  --iris-green:   #2E6135;
+  --iris-gold:    #C5A35A;
+  --iris-skin:    #6A4E3D;
+  --iris-hair:    #E8E8E8;
+  --iris-eye:     #8C5FBF;
+
+  /* テキスト */
+  --text-warm:    #FFF8E7;
+  --text-muted:   #c8a87a;
+  --text-dim:     #7a5a3a;
+
+  /* ボーダー */
+  --border-gold:  rgba(197,163,90,0.4);
+  --border-gold2: rgba(197,163,90,0.8);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--tea-bg);
+  color: var(--text-warm);
+  font-family: 'Noto Serif JP', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 背景テクスチャ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,69,19,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(46,97,53,0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 60px,
+      rgba(197,163,90,0.02) 60px,
+      rgba(197,163,90,0.02) 61px
+    );
+  pointer-events: none; z-index: 0;
+}
+
+/* ============================================================
+   ラベルコンテナ
+   ============================================================ */
+.label-page {
+  position: relative; z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* 戻るリンク */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--iris-gold); }
+
+/* ============================================================
+   ヘッダー：紅茶ラベル
+   ============================================================ */
+.tea-label-header {
+  border: 1px solid var(--border-gold);
+  outline: 3px solid var(--border-gold);
+  outline-offset: 6px;
+  padding: 36px 40px 28px;
+  text-align: center;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(139,69,19,0.3) 0%, rgba(42,26,14,0.5) 100%);
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* 四隅の装飾 */
+.tea-label-header::before,
+.tea-label-header::after {
+  content: '✦';
+  position: absolute;
+  font-size: 18px;
+  color: var(--iris-gold);
+  opacity: 0.6;
+}
+.tea-label-header::before { top: 12px; left: 16px; }
+.tea-label-header::after  { bottom: 12px; right: 16px; }
+
+.corner-tl, .corner-br {
+  position: absolute;
+  font-size: 18px;
+  color: var(--iris-gold);
+  opacity: 0.6;
+}
+.corner-tl { top: 12px; right: 16px; }
+.corner-br { bottom: 12px; left: 16px; }
+
+/* ブランドロゴ */
+.brand-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--iris-gold);
+  opacity: 0.8;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+/* 区切り線 */
+.label-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+.label-divider::before,
+.label-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--iris-gold), transparent);
+}
+.label-divider span {
+
+==================================================
+FILE: ./viewer/character/jade.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主人公設計 & 作品理念 | MERITOCRACIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #06090f;
+  --bg2:     #0b1018;
+  --bg3:     #10161f;
+  --bg4:     #151c28;
+  --gold:    #c8a45a;
+  --gold2:   #e8c97e;
+  --gold3:   #f5dfa0;
+  --red:     #8b2020;
+  --text:    #d4cab8;
+  --text2:   #8a7e6e;
+  --text3:   #5a5040;
+  --border:  rgba(200,164,90,0.12);
+  --border2: rgba(200,164,90,0.25);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* 背景 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(200,164,90,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 100% 100%, rgba(139,32,32,0.05) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(200,164,90,0.008) 120px, rgba(200,164,90,0.008) 121px),
+    repeating-linear-gradient(0deg, transparent, transparent 120px, rgba(200,164,90,0.008) 120px, rgba(200,164,90,0.008) 121px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ページ全体ラッパー */
+.page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* ===== サイドナビ ===== */
+.sidenav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid var(--border);
+  padding: 40px 0;
+  overflow-y: auto;
+  background: rgba(6,9,15,0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-logo {
+  padding: 0 20px 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.sidenav-logo .en {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sidenav-logo .ja {
+  font-size: 10px;
+  color: var(--text2);
+  letter-spacing: 1px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: var(--text);
+  background: rgba(200,164,90,0.04);
+  border-left-color: var(--text3);
+}
+.nav-item.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(200,164,90,0.06);
+}
+
+.nav-part {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--text3);
+  padding: 16px 20px 6px;
+}
+
+.nav-spacer { flex: 1; }
+
+.sidenav-meta {
+  padding: 16px 20px 0;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+/* ===== メインコンテンツ ===== */
+.main {
+  padding: 0;
+  max-width: 820px;
+}
+
+/* ヒーローヘッダー */
+.hero {
+  padding: 72px 64px 56px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: 'MERITOCRACIA';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cinzel', serif;
+  font-size: 100px;
+
+==================================================
+FILE: ./viewer/character/kernel/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>カーネル・レオンハルト | MERITOCRACIA INTERNAL VIEW</title>
+  <link rel="stylesheet" href="./kernel.css" />
+</head>
+<body>
+  <div class="char-page">
+
+    <a class="char-back-link" href="../index.html">← CHARACTER LIST</a>
+
+    <header class="angel-label-header">
+      <p class="char-brand-logo">MERITOCRACIA — INTERNAL CHARACTER DOSSIER</p>
+      <div class="char-divider"><span>✦</span></div>
+      <h1 class="char-name-ja">カーネル・レオンハルト</h1>
+      <p class="char-name-en">KERNEL LEONHART</p>
+      <div class="char-divider"><span>✦</span></div>
+      <p class="char-flavor-text">
+        ジェイド・レオンハルトの姉。<br>
+        ZERO編における「家族の日常」「庶民生活」「守られたかった平穏」の象徴であり、<br>
+        同時に「魂回収」「神性適合」「聖骸騎士化」に接続する中核人物。
+      </p>
+    </header>
+
+    <div class="char-color-strip" aria-hidden="true">
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <span class="c3"></span>
+      <span class="c4"></span>
+      <span class="c5"></span>
+      <span class="c6"></span>
+    </div>
+
+    <main>
+      <div class="char-hero-grid">
+        <div class="char-visual-card">
+          <div class="char-visual-wrap">
+            <img src="../../assets/characters/kernel/kernel_main.png" alt="カーネル・レオンハルト 正式ビジュアル">
+          </div>
+          <div class="char-visual-note">
+            <p class="visual-label">FORMAL VISUAL</p>
+            <p>
+              ハニーゴールド〜赤橙寄りのポニーテールと、アンバーの瞳を持つ活発な少女。
+              明るさと責任感、そして「前へ出ることで誰かを守ろうとする強さ」が滲む。
+            </p>
+          </div>
+        </div>
+
+        <div class="char-profile-grid">
+          <article class="char-card">
+            <h2 class="char-card-title">Basic Profile</h2>
+            <dl class="char-status-list">
+              <dt>NAME</dt>
+              <dd>カーネル・レオンハルト</dd>
+
+              <dt>AGE</dt>
+              <dd>16歳</dd>
+
+              <dt>POSITION</dt>
+              <dd>メリトクラシア一般教育校の学生</dd>
+
+              <dt>FAMILY</dt>
+              <dd>ジェイド・レオンハルトの姉</dd>
+
+              <dt>ORIGIN</dt>
+              <dd>メリトクラシア都市圏の平民家庭</dd>
+
+              <dt>ROLE / SURFACE</dt>
+              <dd>ジェイドの日常・安心・家族的ぬくもりの象徴</dd>
+
+              <dt>ROLE / DEEP</dt>
+              <dd>選別死・魂回収・聖骸騎士化に接続する悲劇の核</dd>
+            </dl>
+          </article>
+
+          <article class="char-card">
+            <h2 class="char-card-title">Symbol Tags</h2>
+            <div class="char-tag-row">
+              <span class="char-tag">ZERO</span>
+              <span class="char-tag">FAMILY</span>
+              <span class="char-tag">SUNLIGHT</span>
+              <span class="char-tag">PROTECTIVE</span>
+              <span class="char-tag">SOUL CORE</span>
+              <span class="char-tag">LOSS</span>
+            </div>
+
+            <div class="char-notes-inner">
+              <p><strong>表層象徴：</strong>太陽 / 行動 / 現実 / 生活の熱 / 家族の日常 / 姉</p>
+              <p><strong>深層象徴：</strong>守護 / 神性残滓 / 選別された死 / 回収された魂 / 喪失の兵器化 / 再会する悲劇</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Character Definition</h2>
+        <p class="char-concept-text">
+          カーネル・レオンハルトは、ジェイド・レオンハルトの姉であり、
+          ZERO編における「家族の日常」「庶民生活」「守られたかった平穏」の象徴である。<br><br>
+          しかし内部設定上の本質はそれだけではない。<br><br>
+          彼女は同時に、日常の象徴、神性適合個体、魂回収対象、
+          ジェイドの倫理観の原点、喪失そのもの、後に再会する悲劇装置を一身に担う、
+          多層的な中核キャラクターである。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Appearance</h2>
+        <p class="char-concept-text">
+          カーネルは、ハニーゴールド〜赤橙寄りの髪を高い位置で結んだポニーテールと、
+          アンバーの瞳を持つ活発な少女である。<br><br>
+          健康的で引き締まった体格をしており、生命感の強い表情と、
+          前へ出る意志のある視線を持つ。<br><br>
+          第一印象は明るく快活だが、軽さではなく、
+          「自分が前に立つことで誰かを守ろうとする強さ」が滲む外見である。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Personality</h2>
+        <p class="char-concept-text">
+          カーネルは元気で現実的な性格をしている。
+          少し勝ち気で、思い立ったらすぐに行動するタイプであり、
+          状況判断より先に身体が動くことも多い。<br><br>
+          ただし、その行動力は自己中心性ではなく、
+          <strong>他人を助ける方向へ自然に向く</strong> ことに最大の特徴がある。<br><br>
+          面倒見が良く、他者保護傾向が強く、自分が損してでも人を助ける。
+          子供や弱者に自然と手を差し伸べ、市場でも教会でも頼られやすい。
+          誰かを守ることに理由を必要としない人物である。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Relation with Jade</h2>
+        <p class="char-concept-text">
+          ジェイドにとってカーネルは、単なる姉ではない。<br><br>
+          彼女は、家族、日常、安心、笑い、外の世界へ出る勇気、
+          そして人を守る強さの原型、そのすべてを兼ねる存在である。<br><br>
+          ジェイドが「強さとは何か」を考えるとき、
+          その最も原初的な答えはカーネルに由来している。<br><br>
+          そのため彼女の死は、単なる喪失ではなく、
+          ジェイドにとって <strong>託された期待の断絶</strong> でもある。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Human Warmth / Daily Presence</h2>
+        <p class="char-concept-text">
+          後の聖骸騎士化や再会構造を成立させるため、
+          カーネルは生前から十分に魅力的で、人間的なキャラクターでなければならない。<br><br>
+          教会では雑務や子供の世話を自然に引き受け、
+          市場では店番や荷運びを頼まれても嫌な顔をしない。<br><br>
+          家ではジェイドをからかいながらも生活面では無意識に支え、
+          理屈ではなく身体感覚として「そばにいると安心する」存在である。<br><br>
+          だからこそ、後に彼女自身が「守るために作られた兵器」へ変質する構図は、
+          強い悲劇性を持つ。
+        </p>
+      </section>
+
+==================================================
+FILE: ./viewer/character/kernel/kernel.css
+--------------------------------------------------
+:root {
+  --bg: #140f18;
+  --bg2: #1d1522;
+  --panel: rgba(28, 20, 34, 0.82);
+  --panel-strong: rgba(38, 27, 46, 0.92);
+
+  --pink: #d88aa8;
+  --pink-2: #f2a9c3;
+  --pink-dim: #9a5f77;
+
+  --gold: #e7c768;
+  --gold-2: #fff0a8;
+
+  --ivory: #fff7f3;
+  --ivory-2: #f6e7df;
+  --muted: #ccb7bb;
+  --ash: #8c7477;
+
+  --line: rgba(242, 169, 195, 0.22);
+  --line-strong: rgba(242, 169, 195, 0.38);
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  --radius: 22px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ivory);
+  font-family: "Noto Serif JP", serif;
+  background:
+    radial-gradient(circle at top, rgba(231, 199, 104, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(216, 138, 168, 0.16), transparent 25%),
+    linear-gradient(180deg, var(--bg) 0%, #0f0b13 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 72px,
+      rgba(255,255,255,0.015) 72px,
+      rgba(255,255,255,0.015) 73px
+    );
+  opacity: 0.7;
+}
+
+.char-page {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 72px;
+}
+
+.char-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.char-back-link:hover {
+  color: var(--gold);
+}
+
+.angel-label-header {
+  padding: 36px 36px 30px;
+  margin-bottom: 28px;
+  text-align: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+    linear-gradient(180deg, rgba(216,138,168,0.08), rgba(231,199,104,0.05));
+  box-shadow: var(--shadow);
+}
+
+.char-brand-logo {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.char-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.char-divider::before,
+.char-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--pink-2), transparent);
+}
+
+.char-divider span {
+  color: var(--gold-2);
+  font-size: 14px;
+}
+
+.char-name-ja {
+  margin: 8px 0 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  color: var(--ivory);
+}
+
+.char-name-en {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  letter-spacing: 0.28em;
+  color: var(--pink-2);
+  font-weight: 400;
+}
+
+.char-flavor-text {
+  margin: 14px auto 0;
+  max-width: 760px;
+  color: var(--ivory-2);
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.char-color-strip {
+  display: flex;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  margin: 0 0 30px;
+  box-shadow: var(--shadow);
+}
+
+.char-color-strip span {
+  flex: 1;
+}
+
+==================================================
+FILE: ./viewer/character/kernel/kernel.json
+--------------------------------------------------
+{
+  "meta": {
+    "id": "カーネル-レオンハルト-view化前提資料内部設定版-ネタバレあり",
+    "slug": "カーネル-レオンハルト-view化前提資料内部設定版-ネタバレあり",
+    "source_format": "markdown",
+    "source_path": "/home/lancer/DOCS/meritocracia-team-share/docs/settings/Meritocracia_Data_Hub/01_世界観・設定_Wiki/キャラクター/主人公一家/カーネル　レオンハルト/view化前.md",
+    "access_level": "internal",
+    "theme": "afterglow-memory"
+  },
+  "header": {
+    "title": "📘 カーネル・レオンハルト view化前提資料（内部設定版 / ネタバレあり）",
+    "summary": "カーネル・レオンハルトは、ジェイド・レオンハルトの姉であり、 ZERO編における「家族の日常」「庶民生活」「守られたかった平穏」の象徴である。 しかし内部設定上の本質はそれだけではない。 彼女は同時に、 - 日常の象徴 - 神性適合個体 - 魂回収対象 - ジェイドの倫理観の原点"
+  },
+  "keywords": [
+    "元下級天使",
+    "神性適合率",
+    "神性残滓",
+    "高価値魂",
+    "選別殺害",
+    "炎槍選別",
+    "魂回収",
+    "サンギナリア黒幕",
+    "聖骸騎士",
+    "守護向きの魂",
+    "対英雄兵器への反転",
+    "ジェイドの良心の原型",
+    "深層残響",
+    "再会する喪失"
+  ],
+  "sections": [
+    {
+      "id": "1-キャラクター定義",
+      "title": "1. キャラクター定義",
+      "type": "text",
+      "content": "カーネル・レオンハルトは、ジェイド・レオンハルトの姉であり、\nZERO編における「家族の日常」「庶民生活」「守られたかった平穏」の象徴である。\n\nしかし内部設定上の本質はそれだけではない。\n\n彼女は同時に、\n\n- 日常の象徴\n- 神性適合個体\n- 魂回収対象\n- ジェイドの倫理観の原点\n- 喪失そのもの\n- 後に再会する悲劇装置\n\nを一身に担う、多層的な中核キャラクターである。"
+    },
+    {
+      "id": "2-基本情報",
+      "title": "2. 基本情報",
+      "type": "list",
+      "content": [
+        "名前：カーネル・レオンハルト",
+        "年齢：16歳",
+        "立場：メリトクラシア一般教育校の学生",
+        "出身：メリトクラシア都市圏の平民家庭",
+        "家族：ジェイド・レオンハルトの姉",
+        "物語上の初期役割：ジェイドの日常・安心・家族的ぬくもりの象徴",
+        "物語上の深層役割：選別死・魂回収・聖骸騎士化に接続する悲劇の核"
+      ]
+    },
+    {
+      "id": "3-外見",
+      "title": "3. 外見",
+      "type": "text",
+      "content": "カーネルは、ハニーゴールド〜赤橙寄りの髪を高い位置で結んだポニーテールと、\nアンバーの瞳を持つ活発な少女である。\n\n健康的で引き締まった体格をしており、\n生命感の強い表情と、前へ出る意志のある視線を持つ。\n\n第一印象は明るく快活だが、軽さではなく、\n「自分が前に立つことで誰かを守ろうとする強さ」が滲む外見である。"
+    },
+    {
+      "id": "4-性格",
+      "title": "4. 性格",
+      "type": "text",
+      "content": "カーネルは元気で現実的な性格をしている。\n少し勝ち気で、思い立ったらすぐに行動するタイプであり、\n状況判断より先に身体が動くことも多い。\n\nただし、その行動力は自己中心性ではなく、\n**他人を助ける方向へ自然に向く** ことに最大の特徴がある。\n\n### 性格の中核\n- 面倒見が良い\n- 他者保護傾向が強い\n- 自分が損してでも人を助ける\n- 子供や弱者に自然と手を差し伸べる\n- 市場でも教会でも頼られやすい\n- 誰かを守ることに理由を必要としない\n\nこの性質により、彼女は単なる「優しい姉」ではなく、\n**守護性を本質に持った人物** として成立する。"
+    },
+    {
+      "id": "5-ジェイドとの関係",
+      "title": "5. ジェイドとの関係",
+      "type": "text",
+      "content": "ジェイドにとってカーネルは、単なる姉ではない。\n\n彼女は、\n\n- 家族\n- 日常\n- 安心\n- 笑い\n- 外の世界へ出る勇気\n- 人を守る強さの原型\n\nそのすべてを兼ねる存在である。\n\nジェイドが「強さとは何か」を考えるとき、\nその最も原初的な答えはカーネルに由来している。\n\nカーネルはジェイドを過保護に囲い込む姉ではなく、\n「この子はきっと強くなる」と信じている側の存在である。\n\nそのため彼女の死は、単なる喪失ではなく、\nジェイドにとって **託された期待の断絶** でもある。"
+    },
+    {
+      "id": "6-人間的魅力の定義",
+      "title": "6. 人間的魅力の定義",
+      "type": "text",
+      "content": "後の聖骸騎士化や再会構造を成立させるため、\nカーネルは生前から十分に魅力的で、人間的なキャラクターでなければならない。\n\n### 補強定義\n- 教会では雑務や子供の世話を自然に引き受ける\n- 市場では店番や荷運びを頼まれても嫌な顔をしない\n- 家ではジェイドをからかいながらも、生活面では無意識に支える\n- 理屈ではなく身体感覚として「そばにいると安心する」存在である\n\n### 定義文\nカーネルは、誰かを守ることに理由を必要としない。\nだからこそ、後に彼女自身が「守るために作られた兵器」へ変質する構図は、\n強い悲劇性を持つ。"
+    },
+    {
+      "id": "7-魂設定",
+      "title": "7. 魂設定",
+      "type": "text",
+      "content": "カーネルは、本人に自覚はないが、\n前世において下級天使であった魂を持つ転生体である。\n\nこのため彼女の魂には、通常の人間とは異なる\n**神性残滓** が宿っている。\n\n### この設定により成立する現象\n- 教会のステンドグラスや祈祷空間に対する微弱反応\n- 魔法石ペンダントなど神性媒介物との共鳴\n- 神父エリオスが「ただの庶民とは違う」と感じる違和感\n- 神性儀式痕跡への高い適応性\n- テロ事件における魂回収対象としての優先性\n\nこの時点では本人も周囲も、その本質を理解していない。"
+    },
+    {
+      "id": "8-神性適合率",
+      "title": "8. 神性適合率",
+      "type": "text",
+      "content": "カーネルは中央市場テロ事件の犠牲者の中でも、\n極めて高い神性適合率を持つ個体である。\n\nただし、その適合率は単なる先天素質だけではない。\n\n### 正式設定\nカーネルの神性適合率は、前世由来の素質だけでなく、\n今世における献身性・責任感・他者保護傾向によってさらに高められていた。\n\nつまり彼女は\n「元々適性があった」のではなく、\n**生き方そのものが魂価値を高めてしまった存在** である。\n\n### 内部解釈\nそのため彼女の魂は、単なる高適合個体ではなく、\n**完成されつつある器** として認識される可能性が高い。"
+    },
+    {
+      "id": "9-教会編との接続",
+      "title": "9. 教会編との接続",
+      "type": "text",
+      "content": "教会バイト編で描かれるいくつかの現象は、\n後の内部設定と接続する伏線である。\n\n### 1. 天使ステンドグラスの光\n礼拝堂でカーネルだけが導かれるように光を受ける描写は、\n単なる演出ではなく神性残滓への反応である可能性が高い。\n\n### 2. 神父エリオスの違和感\nエリオスはカーネルを「普通の庶民の少女」として見きれていない。\n彼の認識は曖昧でも、魂に残る神性に対して違和感を抱いている。\n\n### 3. 魔法石ペンダントの反応\nペンダントが微かに反応したのは、\nカーネルの魂が神性媒介物に適合したためである。\n\n### 4. 候補認識の可能性\nこの段階で既に、外部勢力または神性観測側から\n「高価値魂」として認識されていた可能性がある。"
+    },
+    {
+      "id": "10-中央市場テロ事件での死",
+      "title": "10. 中央市場テロ事件での死",
+      "type": "text",
+      "content": "カーネルは中央市場テロ事件で死亡するが、\nその死は単なる巻き込まれではない。\n\n### 正式設定候補\n中央市場テロにおいてカーネルが炎槍によって死亡したのは偶然ではなく、\n魂損傷を抑えた状態で回収するための選別殺害である可能性が高い。\n\n### 要点\n- 大量破壊の中で、彼女だけが炎槍によって死亡する\n- 炎槍は高火力攻撃ではなく、魂分離・選別・回収に適した神性攻撃である可能性がある\n- 教会での反応を通じて、既に候補認識されていた可能性がある\n- 中央市場テロは破壊だけでなく、選別と回収の場でもあった\n\n### 結論\nカーネルの死は偶然の悲劇ではなく、\n**回収を前提とした選別悲劇** として設計されるべきである。"
+    },
+    {
+      "id": "11-死の瞬間",
+      "title": "11. 死の瞬間",
+      "type": "text",
+      "content": "カーネルの最期には、\nジェイドへ向けた呼びかけが残る可能性が高い。\n\n### 想定\n- 「ジェイド……」\n- 「逃げて……」\n- 「大丈夫だから……」\n- 「強くなって……」\n\nこの最後の言葉や意志は、\n死後の人格加工を経ても完全には消えず、\n深層魂の残響として残る核になる。"
+    },
+    {
+      "id": "12-魂回収",
+      "title": "12. 魂回収",
+      "type": "text",
+      "content": "カーネルの魂は通常の死者と同じようには処理されない。\n\n### 回収工程\n1. 炎槍による致命傷\n2. 魂の分離\n3. 神性媒介による保全\n4. 外部機関または黒幕国家による回収\n5. 記憶封鎖・人格加工工程へ移行\n\n### 解釈\n肉体は死ぬが、魂は終わらない。\n彼女は「死者」ではなく、\n**利用可能な神性資源** として回収される。"
+    },
+    {
+      "id": "13-サンギナリアとの接続",
+      "title": "13. サンギナリアとの接続",
+      "type": "text",
+      "content": "カーネルの魂回収は、\nサンギナリア王国の黒幕構造と強く結びつく。\n\nサンギナリアは表向きには高貴で伝統的な王国であるが、\n内部では神性技術・魂加工・人格上書き制度を保持している。\n\nそのためカーネルのような高適合魂は、\n犠牲者ではなく、再利用可能な **国家資源** として扱われる。\n\n### これにより成立する三層構造\n- 宗教テロ\n- 国家工作\n- 魂資源回収作戦\n\n中央市場テロ事件は、この三層が重なった事件として再定義される。"
+    },
+    {
+      "id": "14-聖骸騎士化",
+      "title": "14. 聖骸騎士化",
+      "type": "text",
+      "content": "カーネルは死後、\n神性技術によって聖骸騎士へ再構成される候補となる。\n\n### 推奨分類\n- 聖骸騎士（兵科名）\n- 殉天兵（俗称）\n- 昇華体（技術分類）\n\n### 性質\n- 魂は保持される\n- 肉体は再構成、または神性媒介体に置換\n- 記憶は消去ではなく暗号化・封鎖\n- 命令系統は神性儀式・王国中枢へ直結\n- 感情は抑制される\n- 戦闘用に再調整される\n\n### 悲劇性の核\nカーネルの魂の本質は、破壊ではなく保護に適している。\nだからこそ、その魂を対英雄兵器に変えることは、\n彼女の本質そのものを踏みにじる行為である。"
+    },
+    {
+      "id": "15-完全消去されない人格核",
+      "title": "15. 完全消去されない人格核",
+      "type": "text",
+      "content": "聖骸騎士化後も、\nカーネルの人格が完全に消えたわけではない。\n\n### 正式設定候補\n聖骸騎士化後も、カーネルの人格は完全には消えず、\n“ジェイド”にのみ反応する深層の残響として残留する可能性がある。\n\n### 表れ方\n- ジェイドの名前にだけ反応する\n- 一瞬の躊躇\n- 涙\n- 呼吸や鼓動の乱れ\n- 攻撃の鈍り\n- 無意識の庇い動作\n- 命令系統の微細な乱れ\n\nこの残響があることで、\n再会は単なる敵味方の衝突ではなく、\n**消されきらなかった家族愛との対面** になる。"
+    },
+    {
+      "id": "16-戦闘スタイルへの残留",
+      "title": "16. 戦闘スタイルへの残留",
+      "type": "text",
+      "content": "聖骸騎士となった後も、\n戦闘動作の一部には生前の身体感覚が残っている可能性がある。\n\n### 残留候補\n- 左手の使い方\n- 重心移動\n- 咄嗟に庇う動き\n- 足運び\n- 抱き寄せる時と同じ腕の軌道\n- 構えに入る前のわずかな癖\n\n### 効果\n他者にはただの戦技に見えるが、\nジェイドだけはそれを「姉の癖」として見抜ける。\n\nこれは再会シーンにおいて極めて強い演出要素となる。"
+    },
+    {
+      "id": "17-ジェイドにとっての意味",
+      "title": "17. ジェイドにとっての意味",
+      "type": "text",
+      "content": "ジェイドにとってカーネルは、\n単なる守るべき姉ではない。\n\n彼女は、\n\n- 良心の原型\n- 強さの原型\n- 家族の象徴\n- 喪失の核\n- 真相追求の理由\n- 再会すべき過去\n\nそのすべてを兼ねている。\n\n### 定義文\nジェイドにとってカーネルは、\n「強さとは誰かを支えるために使うものだ」という価値観の原型である。\nその原型が敵として現れることは、\nジェイドの人格そのものへの攻撃となる。"
+    },
+    {
+      "id": "18-象徴",
+      "title": "18. 象徴",
+      "type": "text",
+      "content": "### 表層象徴\n- 太陽\n- 行動\n- 現実\n- 生活の熱\n- 家族の日常\n- 姉\n\n### 深層象徴\n- 守護\n- 神性残滓\n- 選別された死\n- 回収された魂\n- 喪失の兵器化\n- 消えない結びつき\n- 再会する悲劇"
+    },
+    {
+      "id": "19-内部用キーワード",
+      "title": "19. 内部用キーワード",
+      "type": "list",
+      "content": [
+        "元下級天使",
+        "神性適合率",
+        "神性残滓",
+        "高価値魂",
+        "選別殺害",
+        "炎槍選別",
+        "魂回収",
+        "サンギナリア黒幕",
+        "聖骸騎士",
+
+==================================================
+FILE: ./viewer/character/kernel/軽量版/index.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>カーネル・レオンハルト | MERITOCRACIA</title>
+  <link rel="stylesheet" href="./kernel.css" />
+</head>
+<body>
+  <div class="char-page">
+
+    <a class="char-back-link" href="../index.html">← CHARACTER LIST</a>
+
+    <header class="angel-label-header">
+      <p class="char-brand-logo">MERITOCRACIA — ZERO / FAMILY ARCHIVE</p>
+      <div class="char-divider"><span>✦</span></div>
+      <h1 class="char-name-ja">カーネル・レオンハルト</h1>
+      <p class="char-name-en">KERNEL LEONHART</p>
+      <div class="char-divider"><span>✦</span></div>
+      <p class="char-flavor-text">
+        明るさと行動力を併せ持つ、ZERO編の「日常」と「ぬくもり」を象徴する存在。<br>
+        ジェイドの過去に確かにあった、守りたかった日々の残光。
+      </p>
+    </header>
+
+    <div class="char-color-strip" aria-hidden="true">
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <span class="c3"></span>
+      <span class="c4"></span>
+      <span class="c5"></span>
+      <span class="c6"></span>
+    </div>
+
+    <main>
+      <div class="char-hero-grid">
+        <div class="char-visual-card">
+          <div class="char-visual-wrap">
+            <img src="../../assets/characters/kernel/kernel_main.png" alt="カーネル・レオンハルト 正式ビジュアル">
+          </div>
+          <div class="char-visual-note">
+            <p class="visual-label">FORMAL VISUAL</p>
+            <p>
+              ハニーゴールド〜赤橙寄りのポニーテールと、アンバーの瞳を持つ活発な少女。
+              明るさと責任感を同時に感じさせる、生命感の強いビジュアル。
+            </p>
+          </div>
+        </div>
+
+        <div class="char-profile-grid">
+          <article class="char-card">
+            <h2 class="char-card-title">Basic Profile</h2>
+            <dl class="char-status-list">
+              <dt>NAME</dt>
+              <dd>カーネル・レオンハルト</dd>
+
+              <dt>AGE</dt>
+              <dd>16歳</dd>
+
+              <dt>POSITION</dt>
+              <dd>メリトクラシア一般教育校の学生</dd>
+
+              <dt>FAMILY</dt>
+              <dd>ジェイド・レオンハルトの姉</dd>
+
+              <dt>ORIGIN</dt>
+              <dd>メリトクラシア都市圏の平民家庭</dd>
+            </dl>
+          </article>
+
+          <article class="char-card">
+            <h2 class="char-card-title">Symbol Tags</h2>
+            <div class="char-tag-row">
+              <span class="char-tag">ZERO</span>
+              <span class="char-tag">FAMILY</span>
+              <span class="char-tag">SUNLIGHT</span>
+              <span class="char-tag">DAILY LIFE</span>
+              <span class="char-tag">PROTECTIVE</span>
+            </div>
+
+            <div class="char-notes-inner">
+              <p><strong>象徴：</strong>太陽 / 行動 / 現実 / 生活の熱 / 家族の日常</p>
+              <p><strong>印象：</strong>活発 / 芯が強い / 面倒見が良い / 弟をからかう姉</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Appearance</h2>
+        <p class="char-concept-text">
+          カーネルは、ハニーゴールド〜赤橙寄りの髪を高い位置で結んだポニーテールと、
+          アンバーの瞳を持つ活発な少女である。<br><br>
+          健康的で引き締まった体格と、前へ出る意志の強い目つきが特徴。
+          明るさと行動力をそのまま形にしたような、生命感の強い印象を与える。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Personality</h2>
+        <p class="char-concept-text">
+          元気で現実的。少し勝ち気で、思い立ったらすぐ動く行動派。<br><br>
+          弟のジェイドをからかうことも多いが、面倒見がよく、
+          家族や周囲の人のために自然と身体が動くタイプ。
+          市場でも教会でも頼られやすく、本人もそれを苦にしない。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Relation with Jade</h2>
+        <p class="char-concept-text">
+          ジェイドにとってカーネルは、ただの姉ではなく「日常そのもの」を象徴する存在である。<br><br>
+          思索に沈みがちなジェイドに対し、カーネルは現実の中で笑い、動き、支える側の人間として描かれる。
+          家族の中では、ジェイドを外の世界へ引っ張り出す役割を担っている。
+        </p>
+      </section>
+
+      <section class="char-full-section char-card">
+        <h2 class="char-card-title">Role in the Story</h2>
+        <p class="char-concept-text">
+          カーネルはZERO編において、ジェイドの平穏な日常と人間的な感情の起点を象徴する重要人物である。<br><br>
+          彼女の存在によって、メリトクラシアの庶民生活、市場の温度感、家族のぬくもりが具体的なものとして描かれる。
+          そのため彼女は、単なる家族キャラではなく、物語の感情軸を支える中核人物の一人である。
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="char-footer">
+      <p>光のようにそこにいて、失われたあとで初めて重さが分かる存在</p>
+      <small>MERITOCRACIA — ZERO FAMILY RECORD</small>
+    </footer>
+
+  </div>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/character/kiel.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHARACTER PROFILE | KIEL</title>
+
+  <!-- World Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-main: #0f0f10;
+      --bg-panel: #171718;
+      --bg-panel-2: #1d1d1f;
+      --bg-nav: rgba(12, 12, 13, 0.92);
+      --text-main: #e8e3da;
+      --text-sub: #b8b0a4;
+      --text-dim: #7f786e;
+      --line: #2e2a27;
+      --line-strong: #4e433d;
+
+      --primary-color: #4a4a4a;   /* 鈍い鉄色 */
+      --accent-color: #8b0000;    /* 抑えた血の赤 */
+      --accent-soft: rgba(139, 0, 0, 0.18);
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+
+      --nav-width: 240px;
+      --content-max: 1100px;
+      --radius: 14px;
+
+      --hero-letter-spacing: 0.18em;
+      --section-gap: 28px;
+      --transition: 180ms ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(139, 0, 0, 0.10), transparent 28%),
+        linear-gradient(180deg, #111112 0%, #0b0b0c 100%);
+      color: var(--text-main);
+      font-family: 'Noto Serif JP', serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ========================
+       Side Navigation
+    ======================== */
+    .side-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--nav-width);
+      height: 100vh;
+      padding: 28px 20px 24px;
+      border-right: 1px solid var(--line);
+      background: var(--bg-nav);
+      backdrop-filter: blur(8px);
+      z-index: 30;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .side-nav__top {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-nav__eyebrow {
+      font-family: 'Cinzel', serif;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+
+    .side-nav__name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.12em;
+      margin: 0;
+    }
+
+    .side-nav__subtitle {
+      margin: 6px 0 0;
+      color: var(--text-sub);
+      font-size: 0.82rem;
+    }
+
+    .side-nav__links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow: auto;
+      padding-right: 2px;
+    }
+
+    .side-nav__link {
+      display: block;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--text-sub);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      transition: color var(--transition), background var(--transition), border-color var(--transition);
+    }
+
+    .side-nav__link:hover,
+    .side-nav__link.is-active {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .side-nav__footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--text-dim);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.7;
+    }
+
+    /* ========================
+       Main
+    ======================== */
+    .main {
+      width: 100%;
+      margin-left: var(--nav-width);
+
+==================================================
+FILE: ./viewer/character/others.css
+--------------------------------------------------
+    :root {
+      --bg: #060b14;
+      --bg2: #0b1320;
+      --line: rgba(212, 175, 55, 0.18);
+      --line-strong: rgba(212, 175, 55, 0.38);
+      --text: #e8dcc0;
+      --muted: #8f8368;
+      --accent: #d4af37;
+      --card: rgba(12, 18, 30, 0.86);
+      --hover: rgba(212, 175, 55, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.06), transparent 30%),
+        linear-gradient(180deg, var(--bg), #050910 70%);
+      color: var(--text);
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,22,36,0.95), rgba(8,12,20,0.95));
+      padding: 28px 24px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .section-title {
+      margin: 34px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 18px 16px;
+      transition: 0.25s ease;
+      min-height: 180px;
+    }
+
+    .card:hover {
+      border-color: var(--line-strong);
+      background: linear-gradient(180deg, var(--hover), rgba(12,18,30,0.92));
+      transform: translateY(-2px);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    .role {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .desc {
+      margin: 0;
+      color: #c7b998;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .coming {
+      opacity: 0.82;
+      border-style: dashed;
+    }
+
+==================================================
+FILE: ./viewer/character/others.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>その他キャラ一覧 | MERITOCRACIA</title>
+  <link rel="stylesheet" href="./others.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="back-link" href="./index.html">← CHARACTER TOP</a>
+
+    <section class="hero">
+      <div class="eyebrow">CHARACTER ARCHIVE / SUB LAYER HUB</div>
+      <h1>その他キャラ一覧</h1>
+      <p class="lead">
+        トップHUBに置かない準主要・周辺人物をまとめる中間層ページ。<br>
+        個別viewの入口として運用し、今後の追加キャラもここへ順次接続していく。
+      </p>
+    </section>
+
+    <h2 class="section-title">ZERO編・事件関係者</h2>
+    <div class="grid">
+      <a class="card" href="./garnet./">
+        <div class="tag">FO / ZERO / DONE</div>
+        <h2>ガーネット</h2>
+        <p class="role">Frontorden リーダー / 中央市場炎槍事件の現場指揮官</p>
+        <p class="desc">歴戦騎士。現実主義だが、市民防衛を優先する前線指揮官。</p>
+      </a>
+
+      <a class="card coming" href="#">
+        <div class="tag">CHURCH / ZERO / WIP</div>
+        <h2>ルカ</h2>
+        <p class="role">星導教会の手伝い少年</p>
+        <p class="desc">宗教の温かさと歪みの両方に触れてしまった被害者側の重要人物。</p>
+      </a>
+
+      <a class="card coming" href="#">
+        <div class="tag">CHURCH / ZERO / WIP</div>
+        <h2>神父エリオス</h2>
+        <p class="role">星導教会の神父 / 思想的協力者</p>
+        <p class="desc">直接の実行犯ではないが、危うい宗教思想を内包した不穏枠。</p>
+      </a>
+
+      <a class="card coming" href="#">
+        <div class="tag">MARKET / ZERO / WIP</div>
+        <h2>クララ</h2>
+        <p class="role">粉屋 / カーネル救済対象</p>
+        <p class="desc">ジェイドの初恋と市場の日常を象徴する存在。事件後は深い爪痕を残す。</p>
+      </a>
+    </div>
+
+    <h2 class="section-title">士官学校・国家関係（仮）</h2>
+    <div class="grid">
+      <a class="card coming" href="#">
+        <div class="tag">FO / ACADEMY / WIP</div>
+        <h2>レオンハルト・クロイツ</h2>
+        <p class="role">FO側特別顧問候補</p>
+        <p class="desc">現場判断主義と最短制圧思想を体現する追加候補キャラ。</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+==================================================
+FILE: ./viewer/character/reinhardt.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ライナルト＝グロース | MERITOCRACIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #060810;
+  --bg2:     #0a0d18;
+  --bg3:     #0f1320;
+  --bg4:     #141928;
+  --silver:  #a8b8cc;
+  --silver2: #c8d8e8;
+  --silver3: #e0eaf4;
+  --blue:    #1e3a5a;
+  --blue2:   #2a5080;
+  --blue3:   #3a6898;
+  --text:    #c4cdd8;
+  --text2:   #6a7888;
+  --text3:   #3a4858;
+  --border:  rgba(168,184,204,0.1);
+  --border2: rgba(168,184,204,0.22);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(42,80,128,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 100% 100%, rgba(168,184,204,0.04) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(168,184,204,0.006) 120px, rgba(168,184,204,0.006) 121px),
+    repeating-linear-gradient(0deg,  transparent, transparent 120px, rgba(168,184,204,0.006) 120px, rgba(168,184,204,0.006) 121px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* ===== サイドナビ ===== */
+.sidenav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid var(--border);
+  padding: 40px 0;
+  overflow-y: auto;
+  background: rgba(6,8,16,0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-logo {
+  padding: 0 20px 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.sidenav-logo .en {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--silver);
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sidenav-logo .ja {
+  font-size: 10px;
+  color: var(--text2);
+  letter-spacing: 1px;
+}
+
+.nav-part {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--text3);
+  padding: 16px 20px 6px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: var(--text);
+  background: rgba(168,184,204,0.04);
+  border-left-color: var(--text3);
+}
+.nav-item.active {
+  color: var(--silver2);
+  border-left-color: var(--silver);
+  background: rgba(168,184,204,0.06);
+}
+
+.nav-spacer { flex: 1; }
+
+.sidenav-meta {
+  padding: 16px 20px 0;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+/* ===== メイン ===== */
+.main {
+  padding: 0;
+  max-width: 820px;
+}
+
+/* ヒーロー */
+.hero {
+  padding: 72px 64px 56px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: 'REINHARDT';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cinzel', serif;
+  font-size: 90px;
+  font-weight: 700;
+
+==================================================
+FILE: ./viewer/character/viola.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヴィオラ＝スティルネン | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: #060810;
+  color: #c4cdd8;
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #a8b8cc;
+  margin-bottom: 10px;
+}
+
+.box {
+  background: #0f1320;
+  padding: 20px;
+  border-left: 3px solid #3a6898;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.note {
+  font-size: 12px;
+  color: #6a7888;
+  margin-top: 10px;
+}
+
+.back {
+  margin-top: 40px;
+  display: inline-block;
+  color: #a8b8cc;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>ヴィオラ＝スティルネン</h1>
+
+<div class="section">
+  <div class="title">一文定義</div>
+  <div class="box">
+    正しさは、常に一つであるべきだと信じていた
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">コンセプト</div>
+  <div class="box">
+    ヴィオラは「制度の擬人化」であり、「正しさの器」である。<br>
+    理性によって世界を定義しようとするが、その基準は外部から与えられたものに過ぎない。<br><br>
+    与えられた正論を捨て、自らの意志で選び直すまでの物語。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">基本情報</div>
+  <table class="table">
+    <tr><td>名前</td><td>ヴィオラ＝スティルネン</td></tr>
+    <tr><td>年齢</td><td>15歳</td></tr>
+    <tr><td>出自</td><td>中〜上位貴族</td></tr>
+    <tr><td>立場</td><td>士官候補生（学術特待）</td></tr>
+    <tr><td>役割</td><td>観測者 / 制度の代弁者</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="title">性格構造</div>
+  <div class="box">
+    ■ 表層：完成された理性<br>
+    感情を排除し、すべてを論理で処理する。<br><br>
+    
+    ■ 内面：未発達な感情<br>
+    感情を「未熟」と認識し、ノイズとして扱う。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">家庭環境</div>
+  <div class="box">
+    正しさは教えるが、幸せは教えない家庭。<br><br>
+    
+    父：結果主義の合理主義者<br>
+    母：感情を抑制する教育<br><br>
+    
+    正しさ＝存在価値という認識が形成されている。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">感情変遷</div>
+  <div class="box">
+    PHASE01：完全な優等生<br>
+    PHASE02：テロ事件（カーネル死亡）<br>
+    PHASE03：違和感の蓄積<br>
+    PHASE04：崩壊と再構築<br><br>
+    
+    正しさに従う存在 → 正しさを選び直す存在
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">対比構造</div>
+  <table class="table">
+    <tr><td>要素</td><td>ジェイド</td><td>ヴィオラ</td></tr>
+    <tr><td>出自</td><td>最下層</td><td>上位層</td></tr>
+    <tr><td>判断</td><td>体験</td><td>理論</td></tr>
+    <tr><td>感情</td><td>生存本能</td><td>抑圧</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="title">関係性</div>
+  <div class="box">
+    ジェイド：理解不能な存在 → 理性崩壊のトリガー<br><br>
+    カーネル：最初の矛盾<br><br>
+    審問庁：理想 → 疑問
+  </div>
+<div class="section">
+
+==================================================
+FILE: ./viewer/character/yumina.html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユミナ | MERITOCRACIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: #060810;
+  color: #c4cdd8;
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #a8b8cc;
+  margin-bottom: 10px;
+}
+
+.box {
+  background: #0f1320;
+  padding: 20px;
+  border-left: 3px solid #3a6898;
+}
+
+.back {
+  margin-top: 40px;
+  display: inline-block;
+  color: #a8b8cc;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>ユミナ</h1>
+
+<div class="section">
+  <div class="title">一文定義</div>
+  <div class="box">
+    正しさを体現し、制度の中で頂点に立った平民出身の教官。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">基本情報</div>
+  <div class="box">
+    ・出身：平民<br>
+    ・立場：審問庁所属／士官学校教官<br>
+    ・経歴：グローリアテスト最優秀成績・一発合格<br>
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">人物像</div>
+  <div class="box">
+    平民出身でありながら、制度の中で頂点に立った実力者。<br>
+    感情ではなく「正しさ」と「責任」に基づいて行動する。<br>
+    ライナルトとは思想は近いが、倫理観において決定的に異なる。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">家族構成</div>
+  <div class="box">
+    ・姉：クララ<br>
+    ・両親：平民<br>
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">役割</div>
+  <div class="box">
+    審問庁所属として、定期的に士官学校へ赴任。<br>
+    ジェイドとアイリスにとって、保護者的な立場を担う。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">対アイリス</div>
+  <div class="box">
+    ダークエルフであり奴隷という立場を理解しながらも、<br>
+    実の妹のように接し、大切にしようとしている。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">対ライナルト</div>
+  <div class="box">
+    教官としては優秀な生徒と評価している。<br>
+    しかしその思想の危うさには気づいており、警戒している。
+  </div>
+</div>
+
+<div class="section">
+  <div class="title">対ジェイド</div>
+  <div class="box">
+    才能を認めつつも、放置すれば危険な存在と判断。<br>
+    導くべき対象として関わる。
+  </div>
+</div>
+
+<a href="../index.html" class="back">← 戻る</a>
+
+</div>
+</body>
+</html>
+

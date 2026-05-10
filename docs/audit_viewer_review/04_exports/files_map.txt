@@ -1,0 +1,14 @@
+./viewer/map/css/style.css
+./viewer/map/index.html
+./viewer/map/js/loader.js
+./viewer/map/js/main.js
+./viewer/map/js/renderer.js
+./viewer/map/js/state.js
+./viewer/map/js/state/archive/state_legacy.js
+./viewer/map/js/ui.js
+./viewer/map/js/utils.js
+./viewer/map/minecraft/assets/minecraft.css
+./viewer/map/minecraft/devlog.html
+./viewer/map/minecraft/index.html
+./viewer/map/minecraft/logs/2026-04-17-devlog.md
+./viewer/map/minecraft/minecraft-roadmap.html
